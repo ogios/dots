@@ -1,4 +1,8 @@
-*
+*/
+*.log
+
+/*
+
 !.gitignore
 
 !ags

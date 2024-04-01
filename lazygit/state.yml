@@ -1,0 +1,61 @@
+lastupdatecheck: 1706671697
+recentrepos:
+- /home/ogios/.config
+- /home/ogios/.config/nvim
+- /home/ogios/.local/share/nvim/lazy/LazyVim
+- /home/ogios/work/nato/apicat.ai
+- /home/ogios/work/temp/RefClassTest/reftest
+- /home/ogios/work/personal_website/ogios.github.io
+- /home/ogios/work/personal_website/blogs
+- /home/ogios/work/personal_website/ogios.github.io/public/blogs
+- /home/ogios/work/temp/RefClassTest/reftest/packages/vue-draggable-plus
+- /home/ogios/work/personal_website/ogios.github.io/projects/json-schema-editor
+- /home/ogios/work/temp/githubio_test/sussybot5258.github.io
+- /home/ogios/work/temp/githubio_test/vue-test1
+- /home/ogios/work/temp/githubio_test/sussybot5258.github.io/projects/test1
+- /home/ogios/work/temp/element-plus
+- /home/ogios/work/other/zed
+- /home/ogios/work/other/lazygit
+- /home/ogios/work/other/AutoGetSteamCommentsWithSelenium
+- /home/ogios/work/nato/apicat.ai.frontend
+- /home/ogios/work/other/npmtest
+- /home/ogios/work/temp/dots-hyprland
+- /home/ogios/work/temp/ags/cache/ags
+- /home/ogios/work/nato/apicat
+- /home/ogios/work/nato/temp/apicat.ai
+- /home/ogios/.config/lf
+- /home/ogios/go/src/apicat.ai
+- /home/ogios/work/nsfocus/ryzeiast-front2
+- /home/ogios/work/personal_website/personal-website-backend
+- /home/ogios/work/temp/html2md
+- /home/ogios/work/personal_website/personal-website
+- /home/ogios/work/go/transfer-server-go
+- /home/ogios/work/transfer-client
+- /home/ogios/work/go/simple-proxy-server
+- /home/ogios/work/nsfocus/ryzeiast-front
+- /home/ogios/work/other/hugging-chat-api
+- /home/ogios/work/nsfocus/syndra-frontend
+- /home/ogios/work/andorid/ogios_sutils
+- /home/ogios/work/nsfocus/syndra-admin-frontend
+- /home/ogios/work/andorid/NotifySend_APP
+- /home/ogios/work/go/Notify-Go
+- /home/ogios/work/andorid/sutils-java
+- /home/ogios/work/go/simple-socket-server
+- /home/ogios/work/go/sutils
+- /home/ogios/work/other/huggingchat-api
+- /home/ogios/work/nsfocus/nsdeca_front
+- /home/ogios/work/go/dap-test
+startuppopupversion: 5
+customcommandshistory:
+- q
+- git pull config.rebase false
+- git pull origin master --norebase
+- git pull origin master --no-rebase
+- git pull origin main --no-rebase
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 1
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
