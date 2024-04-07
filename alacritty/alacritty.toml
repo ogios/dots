@@ -1,6 +1,6 @@
 # import = ["/home/ogios/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
 live_config_reload = true
-window.opacity = 0.7
+window.opacity = 1
 
 [[colors.indexed_colors]]
 color = "#FAB387"

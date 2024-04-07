@@ -1,7 +1,8 @@
 */
+/*
 *.log
 
-/*
+lazygit/state.yml
 
 !.gitignore
 
@@ -25,4 +26,4 @@
 !niri
 
 !waybar
-lazygit/state.yml
+!fastfetch
