@@ -27,3 +27,5 @@ lazygit/state.yml
 
 !waybar
 !fastfetch
+
+!init.zsh
