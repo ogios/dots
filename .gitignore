@@ -11,8 +11,7 @@ lazygit/state.yml
 !bat
 !btop
 !cava
-!foot
-!hypr
+!foot !hypr
 !kitty
 !lazygit
 !lf
@@ -29,3 +28,5 @@ lazygit/state.yml
 !fastfetch
 
 !init.zsh
+!gBar
+!dunst
