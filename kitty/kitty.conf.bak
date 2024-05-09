@@ -1,3 +1,4 @@
+# vim:ft=kitty
 # font_family FiraCode Nerd Font Mono
 # font_family JetBrainsMono Nerd Font Mono
 font_family JetBrainsMonoNL Nerd Font
@@ -32,8 +33,8 @@ inactive_border_color   #6C7086
 bell_border_color       #F9E2AF
 
 # OS Window titlebar colors
-wayland_titlebar_color  #1E1E2E
-macos_titlebar_color    #1E1E2E
+wayland_titlebar_color system
+macos_titlebar_color system
 
 # Tab bar colors
 active_tab_foreground   #11111B
