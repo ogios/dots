@@ -2,6 +2,7 @@
 /*
 *.log
 
+hypr
 lazygit/state.yml
 
 !.gitignore
@@ -11,7 +12,7 @@ lazygit/state.yml
 !bat
 !btop
 !cava
-!foot !hypr
+!foot 
 !kitty
 !lazygit
 !lf
@@ -30,4 +31,4 @@ lazygit/state.yml
 !init.zsh
 !gBar
 !dunst
-hypr
+!pistol
