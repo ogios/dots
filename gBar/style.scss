@@ -32,6 +32,13 @@ $wssize: 24px;
 
 .popup {
   color: #50fa7b;
+  background-color: $bg;
+  border-radius: 16px;
+  margin: 10px;
+}
+
+menu {
+  padding: 8px 8px 8px 8px;
 }
 
 .bar,
