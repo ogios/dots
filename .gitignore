@@ -32,3 +32,7 @@ lazygit/state.yml
 !gBar
 !dunst
 !pistol
+
+!gtklock
+!eww
+!gtk-3.0
