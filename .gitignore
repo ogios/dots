@@ -32,3 +32,4 @@ lazygit/state.yml
 !init.zsh
 !starship.toml
 nvim
+eww
