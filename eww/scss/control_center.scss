@@ -1,0 +1,4 @@
+.control-center {
+  @include window;
+  min-width: 384px;
+}

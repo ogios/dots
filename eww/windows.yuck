@@ -13,8 +13,8 @@
     :stacking "overlay"
     :geometry (geometry
                     :anchor "right bottom"
-                    :width "2px"
-                    :height "2px"
+                    :width "0px"
+                    :height "0px"
                 )
     :namespace "eww"
     (control_center)

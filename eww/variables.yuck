@@ -5,7 +5,7 @@
 (defvar open_launcher false)
 (defvar open_tray false)
 (defvar clipboard "[]")
-(defvar ANIM_DURATION "500ms")
+(defvar ANIM_DURATION "200ms")
 
 (defvar recorder_audio false)
 (defvar recorder_region false)
