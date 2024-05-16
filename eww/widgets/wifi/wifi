@@ -1,0 +1,35 @@
+#!/bin/bash
+
+export LANG=EN_US
+
+# DEVICE="wlp0s20f0u1"
+DEVICE=$(nmcli -f in-use,device dev wifi | rg "\*" | awk '{ print $2 }')
+device_path="/sys/class/net/$DEVICE/statistics/"
+
+current_speed() {
+	while true; do
+		rx1=$(cat ${device_path}rx_bytes)
+		tx1=$(cat ${device_path}tx_bytes)
+		sleep 1
+		rx2=$(cat ${device_path}rx_bytes)
+		tx2=$(cat ${device_path}tx_bytes)
+
+		d_speed=$(((rx2 - rx1) / 1024))
+		u_speed=$(((tx2 - tx1) / 1024))
+
+		d_unit="KB/s"
+		u_unit="KB/s"
+
+		if [[ $d_speed -gt 1024 ]]; then
+			d_speed=$(((d_speed) / 1024))
+			d_unit="MB/s"
+		fi
+		if [[ $u_speed -gt 1024 ]]; then
+			u_speed=$(((u_speed) / 1024))
+			u_unit="MB/s"
+		fi
+		echo "󰛀 $d_speed$d_unit 󰛃 $u_speed$u_unit "
+	done
+}
+
+current_speed

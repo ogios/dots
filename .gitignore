@@ -26,10 +26,11 @@ lazygit/state.yml
 !dunst/**
 !pistol/**
 !gtklock/**
-!eww/**
 !gtk-3.0/**
+!eww
+!eww/**
 
 !init.zsh
 !starship.toml
 nvim
-eww
+# !eww

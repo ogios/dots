@@ -1,0 +1,26 @@
+$muted_orange: #dbbc7f;
+$bg: #1f262a;
+$grey: #475258;
+
+.mem_module {
+    background-color: $bg;
+    border-radius: 16px;
+    margin: 0px 10px 0px 3px;
+}
+
+.membar {
+    color: $muted_orange;
+    background-color: $grey;
+    border-radius: 10px;
+}
+
+.iconmem {
+    color: $muted_orange;
+    font-size: 12px;
+    margin: 6px;
+}
+
+.mem_info {
+  margin-left: 10px;
+  margin-right: 10px;
+}

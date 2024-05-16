@@ -1,0 +1,6 @@
+(deflisten wifi_speed "widgets/wifi/wifi")
+
+(defwidget wifi []
+    (label :class "ssid_text"
+        :text wifi_speed
+        :orientation "h"))
