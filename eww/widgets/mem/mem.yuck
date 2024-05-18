@@ -20,13 +20,9 @@
       (revealer :transition "slideleft"
         :reveal show_mem_info
         :duration "350ms"
-        (eventbox
-          :onhover "eww update show_mem_info=true"
-          :onhoverlost "eww update show_mem_info=false"
-          (label
-            :class "mem_info"
-            :text "RAM: ${memory}%"
-          )
+        (label
+          :class "mem_info"
+          :text "RAM: ${memory}%"
         )
       )
     )
