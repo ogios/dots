@@ -6,7 +6,7 @@
             (do-not-disturb_icon)
             (theme_icon)
             (volume_icon)
-            (battery_icon)
+            ; (battery_icon)
             (clock)
         )
     )

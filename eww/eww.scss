@@ -1,7 +1,6 @@
 * {
   all: unset;
-  font-family: 
-    JetBrainsMono Nerd Font Propo;
+  font-family: JetBrainsMono Nerd Font Propo;
   font-weight: bold;
 }
 @import "scripts/colors/colors.scss";
@@ -13,8 +12,6 @@
 
 @import "scss/control_center.scss";
 @import "scss/notifications_popup.scss";
-
-
 
 @import "scss/language.scss";
 // @import "scss/taskbar.scss";
@@ -32,4 +29,4 @@
 @import "scss/recorder_menu.scss";
 @import "scss/picker.scss";
 
-@import "widgets/mem/style.scss"
+@import "widgets/mem/style.scss";
