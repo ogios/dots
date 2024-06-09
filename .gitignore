@@ -30,4 +30,5 @@ lazygit/state.yml
 
 !init.zsh
 !starship.toml
+!code-flags.conf
 nvim
