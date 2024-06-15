@@ -20,7 +20,15 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "widgets": ["buttons-grid", "volume", "backlight", "notifications"],
+  "widgets": [
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "notifications",
+    "mpris",
+    "title",
+    "dnd"
+  ],
   "widget-config": {
     "title": {
       "text": "Notification Center",
@@ -29,10 +37,6 @@
     },
     "dnd": {
       "text": "Do Not Disturb"
-    },
-    "label": {
-      "max-lines": 1,
-      "text": "Notification Center"
     },
     "mpris": {
       "image-size": 50,
