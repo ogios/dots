@@ -27,8 +27,11 @@ lazygit/state.yml
 !pistol/**
 !gtklock/**
 !gtk-3.0/**
+!mako
+!mako/**
 
 !init.zsh
 !starship.toml
 !code-flags.conf
 nvim
+btop
