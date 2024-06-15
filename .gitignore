@@ -29,6 +29,8 @@ lazygit/state.yml
 !gtk-3.0/**
 !mako
 !mako/**
+!swaync
+!swaync/**
 
 !init.zsh
 !starship.toml
