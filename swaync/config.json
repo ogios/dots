@@ -20,7 +20,7 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "widgets": ["buttons-grid", "volume", "backlight"],
+  "widgets": ["buttons-grid", "volume", "backlight", "notifications"],
   "widget-config": {
     "title": {
       "text": "Notification Center",
@@ -42,7 +42,9 @@
       "label": "󰕾"
     },
     "backlight": {
-      "label": "󰃟"
+      "label": "󰃟",
+      "subsystem": "backlight",
+      "device": "amdgpu_bl1"
     },
     "buttons-grid": {
       "actions": [
