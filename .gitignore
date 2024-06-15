@@ -26,6 +26,7 @@ lazygit/state.yml
 !dunst/**
 !pistol/**
 !gtklock/**
+!gtk-3.0
 !gtk-3.0/**
 !mako
 !mako/**
