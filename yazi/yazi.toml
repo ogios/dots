@@ -1,0 +1,39 @@
+# yazi.toml
+[manager]
+show_hidden = true
+linemode = "mtime"
+show_symlink = true
+
+[opener]
+edit = [{ run = 'nvim "$@"', block = true }]
+edit_gui = [{ run = 'neovide "$@"', block = false, orphan = true }]
+
+[open]
+prepend_rules = [
+  { mime = "text/*", use = [
+    "edit",
+    "edit_gui",
+    "reveal",
+  ] },
+  { mime = "inode/x-empty", use = [
+    "edit",
+    "edit_gui",
+    "reveal",
+  ] },
+  { name = "*/", use = [
+    "edit",
+    "edit_gui",
+    "open",
+    "reveal",
+  ] },
+  { mime = "application/json", use = [
+    "edit",
+    "edit_gui",
+    "reveal",
+  ] },
+  { mime = "*/javascript", use = [
+    "edit",
+    "edit_gui",
+    "reveal",
+  ] },
+]

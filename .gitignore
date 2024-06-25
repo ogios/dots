@@ -32,6 +32,8 @@ lazygit/state.yml
 !mako/**
 !swaync
 !swaync/**
+!yazi
+!yazi/**
 
 !init.zsh
 !starship.toml
