@@ -40,3 +40,4 @@ lazygit/state.yml
 !code-flags.conf
 nvim
 btop
+eww
