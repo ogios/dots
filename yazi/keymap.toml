@@ -11,6 +11,11 @@ prepend_keymap = [
   ], run = [
     "plugin --sync max-preview",
   ], desc = "Maximize or restore preview" },
+  # { on = [
+  #   "P",
+  # ], run = [
+  #   "plugin --sync test",
+  # ], desc = "Maximize or restore preview" },
 
   # other
   ## movement through parent directories
@@ -51,10 +56,10 @@ prepend_keymap = [
   ], run = "cd ~/.config/hypr", desc = "Go to the hyprland config directory" },
 
   # exec
-  { on = [
-    "p",
-    "l",
-  ], run = "shell --confirm --block lazygit", desc = "run lazygit in current dir" },
+  # { on = [
+  #   "p",
+  #   "l",
+  # ], run = "shell --confirm --block lazygit", desc = "run lazygit in current dir" },
 ]
 
 
@@ -246,10 +251,10 @@ keymap = [
   ], run = "rename --cursor=before_ext", desc = "Rename a file or directory" },
   { on = [
     ";",
-  ], run = "shell", desc = "Run a shell command" },
+  ], run = "shell --interactive", desc = "Run a shell command" },
   { on = [
     ":",
-  ], run = "shell --block", desc = "Run a shell command (block the UI until the command finishes)" },
+  ], run = "shell --interactive --block", desc = "Run a shell command (block the UI until the command finishes)" },
   { on = [
     ".",
   ], run = "hidden toggle", desc = "Toggle the visibility of hidden files" },
