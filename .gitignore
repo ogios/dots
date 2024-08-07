@@ -36,6 +36,8 @@ lazygit/state.yml
 !yazi/**
 !ly
 !ly/**
+!way-edges
+!way-edges/**
 
 !init.zsh
 !starship.toml

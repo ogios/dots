@@ -1,0 +1,54 @@
+// this is an example
+{
+  // remember to get schema here
+  "$schema": "https://raw.githubusercontent.com/ogios/way-edges/master/config/config.schema.json",
+  "groups": [
+    {
+      "name": "slidetest",
+      "widgets": [
+        // test debug
+        {
+          "name": "box",
+          "edge": "left",
+          // "monitor_id": 1,
+          "layer": "overlay",
+          "widget": {
+            "type": "box",
+            "widgets": [
+              {
+                "index": [-1, -1],
+                "widget": {
+                  "frame_rate": 144,
+                  "type": "ring",
+                  "radius": 50,
+                  "font_size": 20,
+                  "prefix": "Disk ",
+                  "preset": "disk"
+                }
+              },
+              {
+                "index": [-1, -1],
+                "widget": {
+                  "type": "text",
+                  "preset": {
+                    "type": "time"
+                  }
+                }
+              },
+              {
+                "index": [-1, -1],
+                "widget": {
+                  "type": "text",
+                  "font_size": 20,
+                  "preset": {
+                    "type": "time"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
