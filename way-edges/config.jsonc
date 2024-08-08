@@ -6,7 +6,6 @@
     {
       "name": "slidetest",
       "widgets": [
-        // test debug
         {
           "name": "stats",
           "edge": "left",
@@ -78,7 +77,8 @@
                 "widget": {
                   "type": "text",
                   "fg_color": "#FFFFFF",
-                  "font_size": 20,
+                  "font_size": 16,
+                  "font_family": "JetBrainsMono Nerd Font",
                   "preset": {
                     "type": "time",
                     "format": "%m-%d\n%H:%M"
@@ -149,7 +149,7 @@
             "type": "btn",
             "frame_rate": 60,
             "event_map": [
-              [1, "hyprctl dispatch scroller:movefocus l"],
+              [1, "hyprctl dispatch movefocus l"],
               [3, "hyprctl dispatch 'workspace -1'"]
             ]
           }
@@ -168,7 +168,7 @@
             "type": "btn",
             "frame_rate": 60,
             "event_map": [
-              [1, "hyprctl dispatch scroller:movefocus r"],
+              [1, "hyprctl dispatch movefocus r"],
               [3, "hyprctl dispatch 'workspace +1'"]
             ]
           }
