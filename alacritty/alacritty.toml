@@ -1,6 +1,5 @@
 import = ["/home/ogios/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
 live_config_reload = true
-# window.opacity = 1
 
 [[colors.indexed_colors]]
 color = "#FAB387"
@@ -75,11 +74,12 @@ cursor = "#B4BEFE"
 text = "#1E1E2E"
 
 [font]
-size = 16
+size = 15
 
 [font.normal]
 # family = "FiraCode Nerd Font"
-family = "JetBrainsMonoNL Nerd Font"
+# family = "JetBrainsMono Nerd Font Propo"
+family = "Mx437ToshibaSat9x 16 Nerd Font Propo"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -87,9 +87,32 @@ action = "SpawnNewInstance"
 key = "Return"
 mods = "Control|Shift"
 
+[[keyboard.bindings]]
+chars = "yy\n"
+key = "O"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "nvim\n"
+key = "M"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "neovide\n"
+key = "I"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "lazygit\n"
+key = "L"
+mods = "Control|Shift"
+
+
 # [shell]
 # program = "/usr/bin/fish"
 
-[window.padding]
-x = 20
-y = 20
+
+[window]
+padding = { x = 5, y = 5 }
+dynamic_padding = true
+opacity = 0.95
