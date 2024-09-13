@@ -1,3 +1,4 @@
+// vi: ft=jsonc
 // this is an example
 {
   // remember to get schema here
@@ -32,8 +33,11 @@
                 "index": [-1, -1],
                 "widget": {
                   "frame_rate": 144,
+                  "font_family": "JetBrainsMono Nerd Font",
+                  "fg_color": "#82B2E3",
+                  "bg_color": "#474747",
                   "type": "ring",
-                  "prefix": "Disk ",
+                  "prefix": " ",
                   "preset": "disk"
                 }
               },
@@ -41,8 +45,11 @@
                 "index": [-1, -1],
                 "widget": {
                   "frame_rate": 144,
+                  "font_family": "JetBrainsMono Nerd Font",
+                  "fg_color": "#FFB77B",
+                  "bg_color": "#474747",
                   "type": "ring",
-                  "prefix": "Battery ",
+                  "prefix": " ",
                   "preset": "battery"
                 }
               },
@@ -50,17 +57,23 @@
                 "index": [-1, -1],
                 "widget": {
                   "frame_rate": 144,
+                  "font_family": "JetBrainsMono Nerd Font",
+                  "fg_color": "#FB8893",
+                  "bg_color": "#474747",
                   "type": "ring",
-                  "prefix": "CPU ",
+                  "prefix": " ",
                   "preset": "cpu"
                 }
               },
               {
                 "index": [-1, -1],
                 "widget": {
-                  "type": "ring",
                   "frame_rate": 144,
-                  "prefix": "SWAP ",
+                  "font_family": "JetBrainsMono Nerd Font",
+                  "fg_color": "#BEAFD9",
+                  "bg_color": "#474747",
+                  "type": "ring",
+                  "prefix": "󰾶 ",
                   "preset": "swap"
                 }
               },
@@ -68,8 +81,10 @@
                 "index": [-1, -1],
                 "widget": {
                   "frame_rate": 144,
+                  "font_family": "JetBrainsMono Nerd Font",
+                  "bg_color": "#474747",
                   "type": "ring",
-                  "prefix": "RAM ",
+                  "prefix": " ",
                   "preset": "ram"
                 }
               }
