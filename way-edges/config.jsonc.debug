@@ -1,3 +1,4 @@
+// vi: ft=jsonc
 // this is an example
 {
   // remember to get schema here
@@ -7,14 +8,24 @@
       "name": "slidetest",
       "widgets": [
         {
-          "edge": "bottom",
-          "layer": "overlay",
+          "edge": "left",
+          // "position": "left",
           "monitor_id": 1,
+          "layer": "overlay",
           "widget": {
-            "type": "hyprland-workspace",
-            "width": 15,
-            "height": "25%",
-            "frame_rate": 90
+            "type": "box",
+            "frame_rate": 144,
+            "widgets": [
+              {
+                "index": [-1, -1],
+                "widget": {
+                  "frame_rate": 500,
+                  "type": "ring",
+                  "prefix": "RAM ",
+                  "preset": "ram"
+                }
+              }
+            ]
           }
         }
       ]
