@@ -8,16 +8,19 @@
       "name": "slidetest",
       "widgets": [
         {
-          "edge": "bottom",
-          "position": "left",
+          "edge": "top",
+          "position": "right",
           "layer": "overlay",
           "monitor_id": 1,
           "widget": {
             "type": "hyprland-workspace",
-            "thickness": 15,
+            "thickness": 25,
             "length": "25%",
             "frame_rate": 144,
-            "hover_color": "#ffffff55"
+            "hover_color": "#ffffff22",
+            "active_increase": 0.2,
+            "active_color": "#6B8EF0",
+            "deactive_color": "#000"
           }
         },
         {
