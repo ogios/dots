@@ -72,7 +72,7 @@ function yy() {
 export EDITOR=neovide
 
 function ware() {
-  systemctl --user restart way-edges.service
+  nohup way-edges daemon >/dev/null &
   sleep 1 && way-edges add slidetest
 }
 
