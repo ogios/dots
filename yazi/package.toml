@@ -1,6 +1,6 @@
 [plugin]
 deps = [
-  { use = "yazi-rs/plugins#max-preview", commit = "a882e38" },
+  { use = "yazi-rs/plugins:max-preview", rev = "a882e38" },
   { use = "yazi-rs/plugins:chmod", rev = "102a0cd" },
   { use = "pirafrank/what-size", rev = "f08f7f2" },
   { use = "dawsers/toggle-view", rev = "d326a53" },
