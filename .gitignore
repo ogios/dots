@@ -43,3 +43,4 @@ lazygit/state.yml
 !code-flags.conf
 !.bashrc
 !.gitconfig
+!ssh-config
