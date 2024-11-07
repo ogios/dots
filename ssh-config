@@ -6,7 +6,7 @@ Host github.com-ogios
   Hostname ssh.github.com
   User git
   Port 443
-  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/github-ogios
 
 Host github.com-sussybot5258
   Hostname ssh.github.com
