@@ -1,0 +1,17 @@
+[user]
+	email = ogios@foxmail.com
+	name = ogios
+
+; [url "git@github.com:"]
+; 	insteadOf = https://github.com/
+
+[url "git@github.com-ogios:ogios/"]
+    insteadOf = git@github.com:ogios/
+
+[url "git@github.com-sussybot5258:sussybot5258/"]
+    insteadOf = git@github.com:sussybot5258/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
