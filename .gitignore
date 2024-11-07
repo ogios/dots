@@ -39,10 +39,6 @@ lazygit/state.yml
 !way-edges
 !way-edges/**
 
-!init.zsh
 !starship.toml
 !code-flags.conf
-nvim
-btop
-eww
-init.zsh
+!.bashrc
