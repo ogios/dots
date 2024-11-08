@@ -72,6 +72,7 @@ function yy() {
 export EDITOR=neovide
 
 function ware() {
+  pkill -9 way-edges
   nohup way-edges daemon >/dev/null &
   sleep 1 && way-edges add slidetest
 }
