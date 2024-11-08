@@ -13,7 +13,7 @@ if type(groups) is not list:
     exit()
 
 name = "slidetest"
-to_monitor_id = 0
+to_monitor_id = 1
 
 
 group = None
@@ -32,7 +32,7 @@ for widget in group["widgets"]:
     widget["monitor_id"] = to_monitor_id
 
 
-res = json5.dumps(raw, indent=2, ensure_ascii=False)
+res = json5.dumps(raw, indent=2, ensure_ascii=False, quote_keys=True)
 
 if res is None:
     exit()
