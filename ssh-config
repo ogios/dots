@@ -1,9 +1,11 @@
-# default IdentityFile
-IdentityFile ~/.ssh/github-ogios
 
 Host github.com
   Hostname ssh.github.com
   Port 443
+  IdentityFile ~/.ssh/github-ogios
+
+Host codeup.aliyun.com
+  IdentityFile ~/.ssh/yunxiao
 
 Host github.com-ogios
   Hostname ssh.github.com
