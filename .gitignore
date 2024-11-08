@@ -38,6 +38,8 @@ lazygit/state.yml
 !ly/**
 !way-edges
 !way-edges/**
+!fcitx5
+!fcitx5/**
 
 !starship.toml
 !code-flags.conf
