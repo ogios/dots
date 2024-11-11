@@ -54,8 +54,9 @@ export HSTR_TIOCSTI=n
 
 export PATH=/home/ogios/go/bin:/home/ogios/.cargo/bin:$PATH
 
-alias tserv="systemctl --user restart tserv"
-alias tcli=/home/ogios/app/tcli/bundle/transfer_client
+alias tserv_start="systemctl --user restart cptserv-server"
+alias tserv_close="systemctl --user stop cptserv-server"
+
 alias ssh-agent-cyg='eval `ssh-agent -s`'
 
 # yazi
