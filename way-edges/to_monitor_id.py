@@ -13,7 +13,7 @@ if type(groups) is not list:
     exit()
 
 name = "slidetest"
-to_monitor_id = 1
+to_monitor = 0  # or str
 
 
 group = None
@@ -29,7 +29,7 @@ if group is None or matched_index is None:
     exit()
 
 for widget in group["widgets"]:
-    widget["monitor_id"] = to_monitor_id
+    widget["monitor"] = to_monitor
 
 
 res = json5.dumps(raw, indent=2, ensure_ascii=False, quote_keys=True)
