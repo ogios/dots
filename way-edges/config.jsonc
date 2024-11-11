@@ -1,7 +1,4 @@
-// vi: ft=jsonc
-// this is an example
 {
-  // remember to get schema here
   "$schema": "https://raw.githubusercontent.com/ogios/way-edges/master/config/config.schema.json",
   "groups": [
     {
@@ -11,7 +8,7 @@
           "edge": "top",
           "position": "right",
           "layer": "overlay",
-          "monitor_id": 1,
+          "monitor": 0,
           "widget": {
             "type": "hyprland-workspace",
             "thickness": 25,
@@ -26,7 +23,7 @@
         {
           "name": "stats",
           "edge": "left",
-          "monitor_id": 1,
+          "monitor": 0,
           "layer": "overlay",
           "widget": {
             "type": "box",
@@ -97,7 +94,7 @@
         {
           "name": "time",
           "edge": "bottom",
-          "monitor_id": 1,
+          "monitor": 0,
           "layer": "overlay",
           "widget": {
             "type": "box",
@@ -121,7 +118,7 @@
         },
         {
           "edge": "top",
-          "monitor_id": 1,
+          "monitor": 0,
           "layer": "overlay",
           "position": "left",
           "widget": {
@@ -129,17 +126,14 @@
             "width": 20,
             "height": "12.5%",
             "frame_rate": 60
-            // "device": "EDIFIER W860NB Pro Analog Stereo",
-            // "device": "Family 17h/19h HD Audio Controller Analog Stereo",
-            // "redraw_only_on_pa_change": true,
           }
         },
         {
           "edge": "top",
-          "monitor_id": 1,
+          "monitor": 0,
           "position": "left",
           "layer": "overlay",
-          "margin": {
+          "margins": {
             "left": "12.5%"
           },
           "widget": {
@@ -150,28 +144,12 @@
             "fg_color": "#BD93F9"
           }
         },
-        // {
-        //   "edge": "top",
-        //   "monitor_id": 1,
-        //   "position": "right",
-        //   "layer": "overlay",
-        //   "margin": {
-        //     "right": "12.5%"
-        //   },
-        //   "widget": {
-        //     "type": "backlight",
-        //     "width": 20,
-        //     "height": "12.5%",
-        //     "frame_rate": 60,
-        //     "fg_color": "#82AAFF"
-        //   }
-        // },
         {
           "edge": "top",
           "position": "left",
-          "monitor_id": 1,
+          "monitor": 0,
           "layer": "overlay",
-          "margin": {
+          "margins": {
             "left": "25%"
           },
           "widget": {
@@ -188,9 +166,9 @@
         {
           "edge": "top",
           "position": "right",
-          "monitor_id": 1,
+          "monitor": 0,
           "layer": "overlay",
-          "margin": {
+          "margins": {
             "right": "25%"
           },
           "widget": {
