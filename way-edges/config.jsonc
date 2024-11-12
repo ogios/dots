@@ -27,12 +27,12 @@
           "layer": "overlay",
           "widget": {
             "type": "box",
-            "frame_rate": 144,
+            "frame_rate": 120,
             "widgets": [
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 144,
+                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#82B2E3",
                   "bg_color": "#474747",
@@ -44,7 +44,7 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 144,
+                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FFB77B",
                   "bg_color": "#474747",
@@ -56,7 +56,7 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 144,
+                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FB8893",
                   "bg_color": "#474747",
@@ -68,7 +68,7 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 144,
+                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#BEAFD9",
                   "bg_color": "#474747",
@@ -80,7 +80,7 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 144,
+                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "bg_color": "#474747",
                   "type": "ring",
@@ -125,7 +125,7 @@
             "type": "speaker",
             "width": 20,
             "height": "12.5%",
-            "frame_rate": 60
+            "frame_rate": 144
           }
         },
         {
@@ -140,7 +140,7 @@
             "type": "microphone",
             "width": 20,
             "height": "12.5%",
-            "frame_rate": 60,
+            "frame_rate": 144,
             "fg_color": "#BD93F9"
           }
         },
@@ -156,7 +156,7 @@
             "width": 15,
             "height": "25%",
             "type": "btn",
-            "frame_rate": 60,
+            "frame_rate": 144,
             "event_map": [
               [1, "hyprctl dispatch movefocus l"],
               [3, "hyprctl dispatch 'workspace -1'"]
@@ -175,7 +175,7 @@
             "width": 15,
             "height": "25%",
             "type": "btn",
-            "frame_rate": 60,
+            "frame_rate": 144,
             "event_map": [
               [1, "hyprctl dispatch movefocus r"],
               [3, "hyprctl dispatch 'workspace +1'"]
