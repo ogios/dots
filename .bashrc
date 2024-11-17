@@ -72,13 +72,23 @@ function yy() {
 # default editor
 export EDITOR=neovide
 
-function ware() {
+function wre() {
   pkill -9 way-edges
   nohup way-edges daemon >/dev/null &
-  sleep 1 && way-edges add slidetest
-}
+  sleep 1 && way-edges add common
 
-alias wre=ware
+  case $CURRENT_COMPOSITOR in
+  hyprland)
+    way-edges add hyprland
+    ;;
+  niri)
+    way-edges add niri
+    ;;
+  *)
+    echo NO COMPOSITOR SPECIFIED
+    ;;
+  esac
+}
 
 # Created by `pipx` on 2024-11-12 10:24:56
 export PATH="$PATH:/home/ogios/.local/bin"
