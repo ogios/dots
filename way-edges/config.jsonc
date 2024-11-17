@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/ogios/way-edges/master/config/config.schema.json",
   "groups": [
     {
-      "name": "slidetest",
+      "name": "hyprland",
       "widgets": [
         {
           "edge": "top",
@@ -17,9 +17,14 @@
             "hover_color": "#ffffff22",
             "active_increase": 0.2,
             "active_color": "#6B8EF0",
-            "deactive_color": "#000",
-          },
-        },
+            "deactive_color": "#000"
+          }
+        }
+      ]
+    },
+    {
+      "name": "common",
+      "widgets": [
         {
           "name": "stats",
           "edge": "left",
@@ -30,10 +35,7 @@
             "frame_rate": 120,
             "widgets": [
               {
-                "index": [
-                  -1,
-                  -1,
-                ],
+                "index": [-1, -1],
                 "widget": {
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
@@ -41,14 +43,11 @@
                   "bg_color": "#474747",
                   "type": "ring",
                   "prefix": " ",
-                  "preset": "disk",
-                },
+                  "preset": "disk"
+                }
               },
               {
-                "index": [
-                  -1,
-                  -1,
-                ],
+                "index": [-1, -1],
                 "widget": {
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
@@ -56,14 +55,11 @@
                   "bg_color": "#474747",
                   "type": "ring",
                   "prefix": " ",
-                  "preset": "battery",
-                },
+                  "preset": "battery"
+                }
               },
               {
-                "index": [
-                  -1,
-                  -1,
-                ],
+                "index": [-1, -1],
                 "widget": {
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
@@ -71,14 +67,11 @@
                   "bg_color": "#474747",
                   "type": "ring",
                   "prefix": " ",
-                  "preset": "cpu",
-                },
+                  "preset": "cpu"
+                }
               },
               {
-                "index": [
-                  -1,
-                  -1,
-                ],
+                "index": [-1, -1],
                 "widget": {
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
@@ -86,25 +79,22 @@
                   "bg_color": "#474747",
                   "type": "ring",
                   "prefix": "󰾶 ",
-                  "preset": "swap",
-                },
+                  "preset": "swap"
+                }
               },
               {
-                "index": [
-                  -1,
-                  -1,
-                ],
+                "index": [-1, -1],
                 "widget": {
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "bg_color": "#474747",
                   "type": "ring",
                   "prefix": " ",
-                  "preset": "ram",
-                },
-              },
-            ],
-          },
+                  "preset": "ram"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "time",
@@ -116,10 +106,7 @@
             "frame_rate": 144,
             "widgets": [
               {
-                "index": [
-                  -1,
-                  -1,
-                ],
+                "index": [-1, -1],
                 "widget": {
                   "type": "text",
                   "fg_color": "#FFFFFF",
@@ -127,12 +114,12 @@
                   "font_family": "JetBrainsMono Nerd Font",
                   "preset": {
                     "type": "time",
-                    "format": "%m-%d\n%H:%M",
-                  },
-                },
-              },
-            ],
-          },
+                    "format": "%m-%d\n%H:%M"
+                  }
+                }
+              }
+            ]
+          }
         },
         {
           "edge": "top",
@@ -143,8 +130,8 @@
             "type": "speaker",
             "width": 20,
             "height": "12.5%",
-            "frame_rate": 144,
-          },
+            "frame_rate": 144
+          }
         },
         {
           "edge": "top",
@@ -152,15 +139,15 @@
           "position": "left",
           "layer": "overlay",
           "margins": {
-            "left": "12.5%",
+            "left": "12.5%"
           },
           "widget": {
             "type": "microphone",
             "width": 20,
             "height": "12.5%",
             "frame_rate": 144,
-            "fg_color": "#BD93F9",
-          },
+            "fg_color": "#BD93F9"
+          }
         },
         {
           "edge": "top",
@@ -168,7 +155,7 @@
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
-            "left": "25%",
+            "left": "25%"
           },
           "widget": {
             "width": 15,
@@ -176,16 +163,10 @@
             "type": "btn",
             "frame_rate": 144,
             "event_map": [
-              [
-                1,
-                "hyprctl dispatch movefocus l",
-              ],
-              [
-                3,
-                "hyprctl dispatch 'workspace -1'",
-              ],
-            ],
-          },
+              [1, "hyprctl dispatch movefocus l"],
+              [3, "hyprctl dispatch 'workspace -1'"]
+            ]
+          }
         },
         {
           "edge": "top",
@@ -193,7 +174,7 @@
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
-            "right": "25%",
+            "right": "25%"
           },
           "widget": {
             "width": 15,
@@ -201,18 +182,13 @@
             "type": "btn",
             "frame_rate": 144,
             "event_map": [
-              [
-                1,
-                "hyprctl dispatch movefocus r",
-              ],
-              [
-                3,
-                "hyprctl dispatch 'workspace +1'",
-              ],
-            ],
-          },
-        },
-      ],
-    },
-  ],
+              [1, "hyprctl dispatch movefocus r"],
+              [3, "hyprctl dispatch 'workspace +1'"]
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }
+
