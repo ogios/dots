@@ -40,7 +40,7 @@
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#82B2E3",
-                  "bg_color": "#474747",
+                  "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
                   "preset": "disk"
@@ -52,7 +52,7 @@
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FFB77B",
-                  "bg_color": "#474747",
+                  "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
                   "preset": "battery"
@@ -64,7 +64,7 @@
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FB8893",
-                  "bg_color": "#474747",
+                  "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
                   "preset": "cpu"
@@ -76,7 +76,7 @@
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#BEAFD9",
-                  "bg_color": "#474747",
+                  "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": "󰾶 ",
                   "preset": "swap"
@@ -87,7 +87,7 @@
                 "widget": {
                   "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
-                  "bg_color": "#474747",
+                  "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
                   "preset": "ram"
@@ -191,4 +191,3 @@
     }
   ]
 }
-
