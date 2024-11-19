@@ -2,15 +2,16 @@
 // this is an example
 {
   // remember to get schema here
-  "$schema": "https://raw.githubusercontent.com/ogios/way-edges/master/config/config.schema.json",
+  "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
   "groups": [
     {
       "name": "slidetest",
       "widgets": [
         {
-          "edge": "left",
-          // "position": "left",
-          "monitor_id": 1,
+          "name": "time",
+          "edge": "bottom",
+          "position": "left",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
             "type": "box",
@@ -19,10 +20,17 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 500,
-                  "type": "ring",
-                  "prefix": "RAM ",
-                  "preset": "ram"
+                  "type": "text",
+                  "fg_color": "#FFFFFF",
+                  "font_size": 16,
+                  "font_family": "JetBrainsMono Nerd Font",
+                  "preset": {
+                    "type": "custom",
+                    "update_with_interval_ms": [
+                      1000,
+                      "python /home/ogios/.config/way-edges/test.py"
+                    ]
+                  }
                 }
               }
             ]
