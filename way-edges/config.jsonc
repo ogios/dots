@@ -22,6 +22,7 @@
         }
       ]
     },
+
     {
       "name": "common",
       "widgets": [
@@ -37,12 +38,14 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 120,
+                  "frame_rate": 144,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#82B2E3",
                   "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
+                  "suffix": " {preset}",
+                  "suffix_hide": true,
                   "preset": "disk"
                 }
               },
@@ -55,6 +58,8 @@
                   "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
+                  "suffix": " {preset}",
+                  "suffix_hide": true,
                   "preset": "battery"
                 }
               },
@@ -67,6 +72,8 @@
                   "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
+                  "suffix": " {preset}",
+                  "suffix_hide": true,
                   "preset": "cpu"
                 }
               },
@@ -79,6 +86,8 @@
                   "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": "󰾶 ",
+                  "suffix": " {preset}",
+                  "suffix_hide": true,
                   "preset": "swap"
                 }
               },
@@ -90,6 +99,8 @@
                   "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
+                  "suffix": " {preset}",
+                  "suffix_hide": true,
                   "preset": "ram"
                 }
               }
@@ -128,8 +139,8 @@
           "position": "left",
           "widget": {
             "type": "speaker",
-            "width": 20,
-            "height": "12.5%",
+            "thickness": 20,
+            "length": "12.5%",
             "frame_rate": 144
           }
         },
@@ -143,8 +154,8 @@
           },
           "widget": {
             "type": "microphone",
-            "width": 20,
-            "height": "12.5%",
+            "thickness": 20,
+            "length": "12.5%",
             "frame_rate": 144,
             "fg_color": "#BD93F9"
           }
@@ -158,8 +169,8 @@
             "left": "25%"
           },
           "widget": {
-            "width": 15,
-            "height": "25%",
+            "thickness": 15,
+            "length": "25%",
             "type": "btn",
             "frame_rate": 144,
             "event_map": [
@@ -177,8 +188,8 @@
             "right": "25%"
           },
           "widget": {
-            "width": 15,
-            "height": "25%",
+            "thickness": 15,
+            "length": "25%",
             "type": "btn",
             "frame_rate": 144,
             "event_map": [
