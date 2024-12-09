@@ -121,7 +121,7 @@
                 "widget": {
                   "type": "text",
                   "fg_color": "#FFFFFF",
-                  "font_size": 16,
+                  "font_size": 60,
                   "font_family": "JetBrainsMono Nerd Font",
                   "preset": {
                     "type": "time",
@@ -195,6 +195,35 @@
             "event_map": [
               [1, "hyprctl dispatch movefocus r"],
               [3, "hyprctl dispatch 'workspace +1'"]
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "tray",
+      "widgets": [
+        {
+          "name": "tray",
+          "edge": "bottom",
+          "position": "left",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "widget": {
+            "type": "box",
+            "frame_rate": 144,
+            "align": "bottom_left",
+            "widgets": [
+              {
+                "index": [-1, -1],
+                "widget": {
+                  "type": "tray",
+                  "header_menu_stack": "menu_top",
+                  "header_menu_align": "left",
+                  "grid_align": "bottom_left"
+                }
+              }
             ]
           }
         }
