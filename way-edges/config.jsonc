@@ -219,6 +219,7 @@
                 "index": [-1, -1],
                 "widget": {
                   "type": "tray",
+                  "icon_size": 30,
                   "header_menu_stack": "menu_top",
                   "header_menu_align": "left",
                   "grid_align": "bottom_left"
