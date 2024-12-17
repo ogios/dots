@@ -17,7 +17,7 @@ Host github.com-sussybot5258
   Hostname ssh.github.com
   User git
   Port 443
-  IdentityFile ~/.ssh/sussybot5258
+  IdentityFile ~/.ssh/github-sussybot5258
 
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
