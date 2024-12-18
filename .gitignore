@@ -40,6 +40,8 @@ lazygit/state.yml
 !way-edges/**
 !fcitx5
 !fcitx5/**
+!spicetify
+!spicetify/config-xpui.ini
 
 !starship.toml
 !code-flags.conf
