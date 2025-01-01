@@ -10,10 +10,9 @@
           "layer": "overlay",
           "monitor": "HDMI-A-1",
           "widget": {
-            "type": "hyprland-workspace",
+            "type": "hypr-workspace",
             "thickness": 25,
             "length": "25%",
-            "frame_rate": 144,
             "hover_color": "#ffffff22",
             "active_increase": 0.2,
             "active_color": "#6B8EF0",
@@ -32,13 +31,11 @@
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
-            "type": "box",
-            "frame_rate": 120,
+            "type": "wrap-box",
             "widgets": [
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 144,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#82B2E3",
                   "bg_color": "#00000044",
@@ -46,13 +43,14 @@
                   "prefix": " ",
                   "suffix": " {preset}",
                   "suffix_hide": true,
-                  "preset": "disk"
+                  "preset": {
+                    "type": "disk"
+                  }
                 }
               },
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FFB77B",
                   "bg_color": "#00000044",
@@ -60,13 +58,14 @@
                   "prefix": " ",
                   "suffix": " {preset}",
                   "suffix_hide": true,
-                  "preset": "battery"
+                  "preset": {
+                    "type": "battery"
+                  }
                 }
               },
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FB8893",
                   "bg_color": "#00000044",
@@ -74,13 +73,14 @@
                   "prefix": " ",
                   "suffix": " {preset}",
                   "suffix_hide": true,
-                  "preset": "cpu"
+                  "preset": {
+                    "type": "cpu"
+                  }
                 }
               },
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#BEAFD9",
                   "bg_color": "#00000044",
@@ -88,20 +88,23 @@
                   "prefix": "󰾶 ",
                   "suffix": " {preset}",
                   "suffix_hide": true,
-                  "preset": "swap"
+                  "preset": {
+                    "type": "swap"
+                  }
                 }
               },
               {
                 "index": [-1, -1],
                 "widget": {
-                  "frame_rate": 120,
                   "font_family": "JetBrainsMono Nerd Font",
                   "bg_color": "#00000044",
                   "type": "ring",
                   "prefix": " ",
                   "suffix": " {preset}",
                   "suffix_hide": true,
-                  "preset": "ram"
+                  "preset": {
+                    "type": "ram"
+                  }
                 }
               }
             ]
@@ -113,8 +116,7 @@
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
-            "type": "box",
-            "frame_rate": 144,
+            "type": "wrap-box",
             "widgets": [
               {
                 "index": [-1, -1],
@@ -132,16 +134,21 @@
             ]
           }
         },
+
         {
           "edge": "top",
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "position": "left",
           "widget": {
-            "type": "speaker",
-            "thickness": 20,
+            "type": "slider",
+            "thickness": 40,
+            "border_width": 6,
             "length": "12.5%",
-            "frame_rate": 144
+            "redraw_only_on_internal_update": true,
+            "preset": {
+              "type": "speaker"
+            }
           }
         },
         {
@@ -153,13 +160,18 @@
             "left": "12.5%"
           },
           "widget": {
-            "type": "microphone",
-            "thickness": 20,
+            "type": "slider",
+            "thickness": 40,
+            "border_width": 6,
             "length": "12.5%",
-            "frame_rate": 144,
-            "fg_color": "#BD93F9"
+            "fg_color": "#BD93F9",
+            "redraw_only_on_internal_update": true,
+            "preset": {
+              "type": "microphone"
+            }
           }
         },
+
         {
           "edge": "top",
           "position": "left",
@@ -169,14 +181,13 @@
             "left": "25%"
           },
           "widget": {
-            "thickness": 15,
+            "thickness": 20,
             "length": "25%",
             "type": "btn",
-            "frame_rate": 144,
-            "event_map": [
-              [1, "hyprctl dispatch movefocus l"],
-              [3, "hyprctl dispatch 'workspace -1'"]
-            ]
+            "event_map": {
+              "1": "hyprctl dispatch movefocus l",
+              "3": "hyprctl dispatch 'workspace -1'"
+            }
           }
         },
         {
@@ -188,14 +199,14 @@
             "right": "25%"
           },
           "widget": {
-            "thickness": 15,
+            "thickness": 20,
             "length": "25%",
             "type": "btn",
             "frame_rate": 144,
-            "event_map": [
-              [1, "hyprctl dispatch movefocus r"],
-              [3, "hyprctl dispatch 'workspace +1'"]
-            ]
+            "event_map": {
+              "1": "hyprctl dispatch movefocus r",
+              "3": "hyprctl dispatch 'workspace +1'"
+            }
           }
         }
       ]
@@ -211,8 +222,7 @@
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
-            "type": "box",
-            "frame_rate": 144,
+            "type": "wrap-box",
             "align": "bottom_left",
             "widgets": [
               {
