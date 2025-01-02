@@ -140,10 +140,11 @@
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "position": "left",
+          "preview_size": 7,
           "widget": {
             "type": "slider",
-            "thickness": 40,
-            "border_width": 6,
+            "thickness": 35,
+            "border_width": 4,
             "length": "12.5%",
             "redraw_only_on_internal_update": true,
             "preset": {
@@ -159,10 +160,11 @@
           "margins": {
             "left": "12.5%"
           },
+          "preview_size": 7,
           "widget": {
             "type": "slider",
-            "thickness": 40,
-            "border_width": 6,
+            "thickness": 35,
+            "border_width": 4,
             "length": "12.5%",
             "fg_color": "#BD93F9",
             "redraw_only_on_internal_update": true,
