@@ -42,6 +42,8 @@ lazygit/state.yml
 !fcitx5/**
 !spicetify
 !spicetify/config-xpui.ini
+!niri
+!niri/**
 
 !starship.toml
 !code-flags.conf
