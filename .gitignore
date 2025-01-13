@@ -15,10 +15,7 @@ lazygit/state.yml
 !kitty/**
 !lazygit/**
 !mpv/**
-!neofetch/**
 !niri/**
-!waybar/**
-!fastfetch/**
 !gtk-3.0
 !gtk-3.0/**
 !swaync
