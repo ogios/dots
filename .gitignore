@@ -6,8 +6,6 @@ lazygit/state.yml
 
 !.gitignore
 
-!ags/**
-!alacritty/**
 !bat/**
 !btop/**
 !cava/**
