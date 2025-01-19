@@ -232,6 +232,7 @@ spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
 spawn-at-startup "sh" "-c" "sleep 1 && hyprpaper"
+spawn-at-startup "xwayland-satellite" ":12"
 
 // spawn-at-startup dbus-update-activation-environment --all &
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
@@ -239,6 +240,9 @@ spawn-at-startup "sh" "-c" "sleep 1 && hyprpaper"
 environment {
     // GSK_RENDERER "cairo"
     // WAYLAND_DISPLAY null
+
+  // xwayland-satellite
+  DISPLAY ":12"
 
   CURRENT_COMPOSITOR "niri"
 
@@ -458,6 +462,9 @@ window-rule {
   match title=r#"^(Open Folder)(.*)$"#
   match title=r#"^(Save As)(.*)$"#
   match title=r#"^(Library)(.*)$"#
+
+  // dingtalk
+  match title="MainMenuPanelView" app-id="com.alibabainc.dingtalk"
 
   open-floating true
 }
