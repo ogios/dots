@@ -2,6 +2,48 @@
   "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
   "groups": [
     {
+      "name": "niri",
+      "widgets": [
+        {
+          "edge": "top",
+          "position": "left",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "margins": {
+            "left": "25%"
+          },
+          "widget": {
+            "thickness": 20,
+            "length": "25%",
+            "type": "btn",
+            "event_map": {
+              "1": "niri msg action focus-column-left",
+              "3": "niri msg action focus-workspace-up"
+            }
+          }
+        },
+        {
+          "edge": "top",
+          "position": "right",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "margins": {
+            "right": "25%"
+          },
+          "widget": {
+            "thickness": 20,
+            "length": "25%",
+            "type": "btn",
+            "frame_rate": 144,
+            "event_map": {
+              "1": "niri msg action focus-column-right",
+              "3": "niri msg action focus-workspace-down"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "hyprland",
       "widgets": [
         {
@@ -17,6 +59,43 @@
             "active_increase": 0.2,
             "active_color": "#6B8EF0",
             "deactive_color": "#000"
+          }
+        },
+        {
+          "edge": "top",
+          "position": "left",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "margins": {
+            "left": "25%"
+          },
+          "widget": {
+            "thickness": 20,
+            "length": "25%",
+            "type": "btn",
+            "event_map": {
+              "1": "hyprctl dispatch movefocus l",
+              "3": "hyprctl dispatch 'workspace -1'"
+            }
+          }
+        },
+        {
+          "edge": "top",
+          "position": "right",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "margins": {
+            "right": "25%"
+          },
+          "widget": {
+            "thickness": 20,
+            "length": "25%",
+            "type": "btn",
+            "frame_rate": 144,
+            "event_map": {
+              "1": "hyprctl dispatch movefocus r",
+              "3": "hyprctl dispatch 'workspace +1'"
+            }
           }
         }
       ]
@@ -113,21 +192,31 @@
         {
           "name": "time",
           "edge": "bottom",
+          "position": "right",
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
+            "outlook": {
+              "type": "window",
+              "margins": {
+                "top": 10,
+                "left": 30,
+                "right": 30,
+                "bottom": 10
+              }
+            },
             "widgets": [
               {
                 "index": [-1, -1],
                 "widget": {
                   "type": "text",
                   "fg_color": "#FFFFFF",
-                  "font_size": 60,
+                  "font_size": 30,
                   "font_family": "JetBrainsMono Nerd Font",
                   "preset": {
                     "type": "time",
-                    "format": "%m-%d\n%H:%M"
+                    "format": "%v %T %A"
                   }
                 }
               }
@@ -170,44 +259,6 @@
             "redraw_only_on_internal_update": true,
             "preset": {
               "type": "microphone"
-            }
-          }
-        },
-
-        {
-          "edge": "top",
-          "position": "left",
-          "monitor": "HDMI-A-1",
-          "layer": "overlay",
-          "margins": {
-            "left": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "event_map": {
-              "1": "hyprctl dispatch movefocus l",
-              "3": "hyprctl dispatch 'workspace -1'"
-            }
-          }
-        },
-        {
-          "edge": "top",
-          "position": "right",
-          "monitor": "HDMI-A-1",
-          "layer": "overlay",
-          "margins": {
-            "right": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "frame_rate": 144,
-            "event_map": {
-              "1": "hyprctl dispatch movefocus r",
-              "3": "hyprctl dispatch 'workspace +1'"
             }
           }
         }
