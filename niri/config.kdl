@@ -33,8 +33,8 @@ input {
             // rules ""
         }
 
-        repeat-delay 500
-        repeat-rate 30
+        repeat-delay 250
+        repeat-rate 35
 
         // track-layout "window"
     }
@@ -97,12 +97,12 @@ input {
 // }
 
 output "HDMI-A-1" {
-  mode "2560x1440@144"
+  mode "2560x1440@143.912"
   position x=0 y=0
 }
 
 output "eDP-1" {
-  mode "2560x1600@240"
+  mode "2560x1600@240.001"
   position x=2560 y=0
   scale 2
 }
@@ -823,16 +823,15 @@ binds {
     Mod+B { spawn "firefox"; }
     Mod+Ctrl+B { spawn "zen-browser"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
-    Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "walker" "--modules" "emojis"; }
     Mod+V { spawn "walker" "--modules" "clipboard"; }
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
-    Mod+V { spawn "swaync-client" "-t" "-sw"; }
+    Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "common:stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "common:time"; }
-    Mod+Shift+S { spawn "way-edges" "togglepin" "tray:tray"; }
+    Mod+Shift+E { spawn "way-edges" "togglepin" "tray:tray"; }
 
 
     XF86AudioRaiseVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
