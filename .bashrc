@@ -97,3 +97,5 @@ function wre() {
 
 # Created by `pipx` on 2024-11-12 10:24:56
 export PATH="$PATH:/home/ogios/.local/bin"
+
+alias ghc="git clone"
