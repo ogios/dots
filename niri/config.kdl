@@ -473,6 +473,7 @@ window-rule {
 window-rule {
   // clipse
   match title=r#"^(clipse)(.*)$"#
+  match app-id="it.mijorus.smile"
 
   open-floating true
 
@@ -841,7 +842,7 @@ binds {
     Mod+B { spawn "firefox"; }
     Mod+Ctrl+B { spawn "zen-browser"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
-    Mod+Shift+Period { spawn "walker" "--modules" "emojis"; }
+    Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
