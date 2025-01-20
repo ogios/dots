@@ -30,6 +30,8 @@ lazygit/state.yml
 !spicetify/config-xpui.ini
 !niri
 !niri/**
+!clipse
+!clipse/**
 
 !starship.toml
 !code-flags.conf

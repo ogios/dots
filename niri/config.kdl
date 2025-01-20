@@ -230,7 +230,8 @@ spawn-at-startup "fcitx5"
 spawn-at-startup "xwaylandvideobridge"
 spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
-spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
+// spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
+spawn-at-startup "clipse" "--listen"
 spawn-at-startup "sh" "-c" "sleep 1 && hyprpaper"
 spawn-at-startup "xwayland-satellite" ":12"
 
@@ -467,6 +468,16 @@ window-rule {
   match title="MainMenuPanelView" app-id="com.alibabainc.dingtalk"
 
   open-floating true
+}
+
+window-rule {
+  // clipse
+  match title=r#"^(clipse)(.*)$"#
+
+  open-floating true
+
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 870; }
 }
 
 window-rule {
@@ -831,7 +842,7 @@ binds {
     Mod+Ctrl+B { spawn "zen-browser"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "walker" "--modules" "emojis"; }
-    Mod+V { spawn "walker" "--modules" "clipboard"; }
+    Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
