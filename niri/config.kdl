@@ -885,6 +885,9 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
+    Mod+Ctrl+H     { focus-monitor-left; }
+    Mod+Ctrl+L     { focus-monitor-right; }
+
     // Mod+Shift+H     { focus-monitor-left; }
     // Mod+Shift+J     { focus-monitor-down; }
     // Mod+Shift+K     { focus-monitor-up; }
