@@ -38,3 +38,4 @@ lazygit/state.yml
 !.bashrc
 !.gitconfig
 !ssh-config
+!spotify-launcher.conf
