@@ -7,7 +7,7 @@
         {
           "edge": "top",
           "position": "left",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "margins": {
             "left": "25%"
@@ -17,15 +17,15 @@
             "length": "25%",
             "type": "btn",
             "event_map": {
-              "1": "niri msg action focus-column-left",
-              "3": "niri msg action focus-workspace-up"
+              "272": "niri msg action focus-column-left",
+              "273": "niri msg action focus-workspace-up"
             }
           }
         },
         {
           "edge": "top",
           "position": "right",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "margins": {
             "right": "25%"
@@ -36,8 +36,8 @@
             "type": "btn",
             "frame_rate": 144,
             "event_map": {
-              "1": "niri msg action focus-column-right",
-              "3": "niri msg action focus-workspace-down"
+              "272": "niri msg action focus-column-right",
+              "273": "niri msg action focus-workspace-down"
             }
           }
         }
@@ -74,8 +74,8 @@
             "length": "25%",
             "type": "btn",
             "event_map": {
-              "1": "hyprctl dispatch movefocus l",
-              "3": "hyprctl dispatch 'workspace -1'"
+              "272": "hyprctl dispatch movefocus l",
+              "273": "hyprctl dispatch 'workspace -1'"
             }
           }
         },
@@ -93,21 +93,20 @@
             "type": "btn",
             "frame_rate": 144,
             "event_map": {
-              "1": "hyprctl dispatch movefocus r",
-              "3": "hyprctl dispatch 'workspace +1'"
+              "272": "hyprctl dispatch movefocus r",
+              "273": "hyprctl dispatch 'workspace +1'"
             }
           }
         }
       ]
     },
-
     {
       "name": "common",
       "widgets": [
         {
           "name": "stats",
           "edge": "left",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -193,7 +192,7 @@
           "name": "time",
           "edge": "bottom",
           "position": "right",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -223,10 +222,9 @@
             ]
           }
         },
-
         {
           "edge": "top",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "position": "left",
           "preview_size": 7,
@@ -243,7 +241,7 @@
         },
         {
           "edge": "top",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "position": "left",
           "layer": "overlay",
           "margins": {
@@ -264,7 +262,6 @@
         }
       ]
     },
-
     {
       "name": "tray",
       "widgets": [
@@ -272,7 +269,7 @@
           "name": "tray",
           "edge": "bottom",
           "position": "left",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
