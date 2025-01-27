@@ -40,6 +40,22 @@
               "273": "niri msg action focus-workspace-down"
             }
           }
+        },
+        {
+          "edge": "left",
+          "position": "bottom",
+          "layer": "overlay",
+          "monitor": "eDP-1",
+          "widget": {
+            "type": "workspace",
+            "thickness": 30,
+            "length": "50%",
+            "hover_color": "#ffffff22",
+            "active_increase": 0.2,
+            "active_color": "#ed8e86",
+            "deactive_color": "#000",
+            "preset": "niri"
+          }
         }
       ]
     },
@@ -47,24 +63,25 @@
       "name": "hyprland",
       "widgets": [
         {
-          "edge": "top",
-          "position": "right",
+          "edge": "bottom",
+          "position": "left",
           "layer": "overlay",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "widget": {
-            "type": "hypr-workspace",
+            "type": "workspace",
             "thickness": 25,
             "length": "25%",
             "hover_color": "#ffffff22",
             "active_increase": 0.2,
             "active_color": "#6B8EF0",
-            "deactive_color": "#000"
+            "deactive_color": "#000",
+            "preset": "hyprland"
           }
         },
         {
           "edge": "top",
           "position": "left",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "margins": {
             "left": "25%"
@@ -82,7 +99,7 @@
         {
           "edge": "top",
           "position": "right",
-          "monitor": "HDMI-A-1",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "margins": {
             "right": "25%"
@@ -106,6 +123,10 @@
         {
           "name": "stats",
           "edge": "left",
+          "position": "top",
+          "margins": {
+            "top": 40
+          },
           "monitor": "eDP-1",
           "layer": "overlay",
           "widget": {
@@ -190,7 +211,7 @@
         },
         {
           "name": "time",
-          "edge": "bottom",
+          "edge": "top",
           "position": "right",
           "monitor": "eDP-1",
           "layer": "overlay",
@@ -268,7 +289,7 @@
         {
           "name": "tray",
           "edge": "bottom",
-          "position": "left",
+          "position": "right",
           "monitor": "eDP-1",
           "layer": "overlay",
           "widget": {
