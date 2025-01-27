@@ -104,7 +104,7 @@ output "HDMI-A-1" {
 output "eDP-1" {
   mode "2560x1600@240.001"
   position x=2560 y=0
-  scale 2
+  scale 1.5
 }
 
 output "winit" {
@@ -847,6 +847,7 @@ binds {
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
+    Mod+Shift+C { spawn "hyprpicker" "-a"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "common:stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "common:time"; }
