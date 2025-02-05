@@ -7,7 +7,7 @@
         {
           "edge": "top",
           "position": "left",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
             "left": "25%"
@@ -25,7 +25,7 @@
         {
           "edge": "top",
           "position": "right",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
             "right": "25%"
@@ -45,7 +45,7 @@
           "edge": "left",
           "position": "bottom",
           "layer": "overlay",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "widget": {
             "type": "workspace",
             "thickness": 30,
@@ -127,7 +127,7 @@
           "margins": {
             "top": 40
           },
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -135,9 +135,9 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "radius": 18,
-                  "ring_width": 8,
-                  "font_size": 26,
+                  // "radius": 18,
+                  // "ring_width": 8,
+                  "font_size": 20,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#82B2E3",
                   "bg_color": "#00000044",
@@ -153,9 +153,9 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "radius": 18,
-                  "ring_width": 8,
-                  "font_size": 26,
+                  // "radius": 18,
+                  // "ring_width": 8,
+                  "font_size": 20,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FFB77B",
                   "bg_color": "#00000044",
@@ -171,9 +171,9 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "radius": 18,
-                  "ring_width": 8,
-                  "font_size": 26,
+                  // "radius": 18,
+                  // "ring_width": 8,
+                  "font_size": 20,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#FB8893",
                   "bg_color": "#00000044",
@@ -189,9 +189,9 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "radius": 18,
-                  "ring_width": 8,
-                  "font_size": 26,
+                  // "radius": 18,
+                  // "ring_width": 8,
+                  "font_size": 20,
                   "font_family": "JetBrainsMono Nerd Font",
                   "fg_color": "#BEAFD9",
                   "bg_color": "#00000044",
@@ -207,9 +207,9 @@
               {
                 "index": [-1, -1],
                 "widget": {
-                  "radius": 18,
-                  "ring_width": 8,
-                  "font_size": 26,
+                  // "radius": 18,
+                  // "ring_width": 8,
+                  "font_size": 20,
                   "font_family": "JetBrainsMono Nerd Font",
                   "bg_color": "#00000044",
                   "type": "ring",
@@ -228,7 +228,7 @@
           "name": "time",
           "edge": "top",
           "position": "right",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -260,14 +260,14 @@
         },
         {
           "edge": "top",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "position": "left",
           "preview_size": 7,
           "widget": {
             "type": "slider",
-            "thickness": 35,
-            "border_width": 6,
+            "thickness": 30,
+            "border_width": 4,
             "length": "12.5%",
             "redraw_only_on_internal_update": true,
             "preset": {
@@ -277,7 +277,7 @@
         },
         {
           "edge": "top",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "position": "left",
           "layer": "overlay",
           "margins": {
@@ -286,8 +286,8 @@
           "preview_size": 7,
           "widget": {
             "type": "slider",
-            "thickness": 35,
-            "border_width": 6,
+            "thickness": 30,
+            "border_width": 4,
             "length": "12.5%",
             "fg_color": "#BD93F9",
             "redraw_only_on_internal_update": true,
@@ -305,7 +305,7 @@
           "name": "tray",
           "edge": "bottom",
           "position": "right",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -315,7 +315,7 @@
                 "index": [-1, -1],
                 "widget": {
                   "type": "tray",
-                  "icon_size": 50,
+                  "icon_size": 40,
                   "header_menu_stack": "menu_top",
                   "header_menu_align": "left",
                   "grid_align": "bottom_left"
