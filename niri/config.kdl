@@ -248,6 +248,10 @@ environment {
   CURRENT_COMPOSITOR "niri"
 
   XMODIFIERS "@im=fcitx"
+  GTK_IM_MODULE "fcitx"
+  QT_IM_MODULE "fcitx"
+  INPUT_METHOD "fcitx"
+  SDL_IM_MODULE "fcitx"
 
   GDK_BACKEND "wayland,x11,*"
   QT_QPA_PLATFORM "wayland;xcb"
