@@ -7,6 +7,43 @@
         {
           "edge": "top",
           "position": "left",
+          "monitor": "eDP-1",
+          "layer": "overlay",
+          "margins": {
+            "left": "25%"
+          },
+          "widget": {
+            "thickness": 20,
+            "length": "25%",
+            "type": "btn",
+            "event_map": {
+              "272": "niri msg action focus-column-left",
+              "273": "niri msg action focus-workspace-up"
+            }
+          }
+        },
+        {
+          "edge": "top",
+          "position": "right",
+          "monitor": "eDP-1",
+          "layer": "overlay",
+          "margins": {
+            "right": "25%"
+          },
+          "widget": {
+            "thickness": 20,
+            "length": "25%",
+            "type": "btn",
+            "frame_rate": 144,
+            "event_map": {
+              "272": "niri msg action focus-column-right",
+              "273": "niri msg action focus-workspace-down"
+            }
+          }
+        },
+        {
+          "edge": "top",
+          "position": "left",
           "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
@@ -296,6 +333,60 @@
             }
           }
         }
+        // {
+        //   "edge": "top",
+        //   "monitor": "HDMI-A-1",
+        //   "layer": "overlay",
+        //   "position": "left",
+        //   "preview_size": 7,
+        //   "widget": {
+        //     "type": "slider",
+        //     "thickness": 30,
+        //     "border_width": 4,
+        //     "length": "12.5%",
+        //     "preset": {
+        //       "type": "custom",
+        //       "interval_update": [10, "seq 0 .01 1 | shuf | head -n1"]
+        //     }
+        //   }
+        // }
+        // {
+        //   "name": "time",
+        //   "edge": "top",
+        //   "position": "right",
+        //   "monitor": "HDMI-A-1",
+        //   "layer": "overlay",
+        //   "widget": {
+        //     "type": "wrap-box",
+        //     "outlook": {
+        //       "type": "window",
+        //       "margins": {
+        //         "top": 10,
+        //         "left": 30,
+        //         "right": 30,
+        //         "bottom": 10
+        //       }
+        //     },
+        //     "widgets": [
+        //       {
+        //         "index": [-1, -1],
+        //         "widget": {
+        //           "type": "text",
+        //           "fg_color": "#FFFFFF",
+        //           "font_size": 30,
+        //           "font_family": "JetBrainsMono Nerd Font",
+        //           "preset": {
+        //             "type": "custom",
+        //             "update_with_interval_ms": [
+        //               10,
+        //               "/home/ogios/.config/way-edges/random_str.sh"
+        //             ]
+        //           }
+        //         }
+        //       }
+        //     ]
+        //   }
+        // }
       ]
     },
     {
