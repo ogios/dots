@@ -1,0 +1,5 @@
+[default]
+# mode = "tile"
+
+[any]
+path = "/home/ogios/.config/wallpaper/simple.png"

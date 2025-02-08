@@ -232,7 +232,7 @@ spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 // spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
 spawn-at-startup "clipse" "--listen"
-spawn-at-startup "sh" "-c" "sleep 1 && hyprpaper"
+spawn-at-startup "wpaperd"
 spawn-at-startup "xwayland-satellite" ":12"
 
 // spawn-at-startup dbus-update-activation-environment --all &

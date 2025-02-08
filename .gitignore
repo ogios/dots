@@ -35,6 +35,8 @@ lazygit/state.yml
 !clipse/**
 !wallpaper
 !wallpaper/**
+!wpaperd
+!wpaperd/**
 
 !starship.toml
 !code-flags.conf
