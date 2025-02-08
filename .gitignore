@@ -40,5 +40,6 @@ lazygit/state.yml
 !code-flags.conf
 !.bashrc
 !.gitconfig
+!.gitattributes
 !ssh-config
 !spotify-launcher.conf
