@@ -851,7 +851,7 @@ binds {
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
-    Mod+Shift+C { spawn "hyprpicker" "-a"; }
+    Mod+Shift+C { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; hyprpicker -a; kill $PID"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "common:stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "common:time"; }
