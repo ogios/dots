@@ -78,9 +78,7 @@ export EDITOR=neovide
 function wre() {
   pkill -9 way-edges
   nohup way-edges daemon 2>&1 >/tmp/way-edges.log &
-  sleep 1
-  way-edges add common
-  way-edges add tray
+  sleep 0.5
 
   case $CURRENT_COMPOSITOR in
   hyprland)

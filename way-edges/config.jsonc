@@ -1,5 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
+  "ensure_load_group": ["tray", "common"],
   "groups": [
     {
       "name": "niri",
@@ -415,6 +416,9 @@
                   "icon_size": 40,
                   "header_menu_stack": "menu_top",
                   "header_menu_align": "left",
+                  "menu_draw_config": {
+                    "font_pixel_height": 18
+                  },
                   "grid_align": "bottom_left"
                 }
               }
