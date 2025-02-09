@@ -37,6 +37,8 @@ lazygit/state.yml
 !wallpaper/**
 !wpaperd
 !wpaperd/**
+!nwg-drawer
+!nwg-drawer/**
 
 !starship.toml
 !code-flags.conf
