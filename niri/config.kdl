@@ -118,6 +118,9 @@ output "winit" {
 }
 
 layout {
+
+  empty-workspace-above-first
+
     focus-ring {
         // off
         width 4
