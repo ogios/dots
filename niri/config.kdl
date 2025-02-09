@@ -485,6 +485,9 @@ window-rule {
   // dingtalk
   match title="MainMenuPanelView" app-id="com.alibabainc.dingtalk"
 
+  // zen browser video
+  match title="Picture-in-Picture"
+
   open-floating true
 }
 
