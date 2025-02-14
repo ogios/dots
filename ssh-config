@@ -22,3 +22,4 @@ Host github.com-sussybot5258
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
+  AddressFamily inet
