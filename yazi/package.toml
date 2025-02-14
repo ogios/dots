@@ -1,11 +1,27 @@
-[plugin]
-deps = [
-  { use = "yazi-rs/plugins:max-preview", rev = "a882e38" },
-  { use = "yazi-rs/plugins:chmod", rev = "102a0cd" },
-  { use = "pirafrank/what-size", rev = "f08f7f2" },
-  { use = "dawsers/toggle-view", rev = "d326a53" },
-  { use = "yazi-rs/plugins:full-border", rev = "102a0cd" },
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "a882e38"
+hash = "665369300b627aeb7a33b29960b9328d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "102a0cd"
+hash = "36c82bb433078e8e752351d961cac777"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "f08f7f2"
+hash = "6de1e859aa4f9832aa00a1a65e552ea3"
+
+[[plugin.deps]]
+use = "dawsers/toggle-view"
+rev = "d326a53"
+hash = "fc99d5a9e5b588e5c43c836c5d61c2ca"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "102a0cd"
+hash = "3a73613fc702a5f8369791b3401f52f1"
 
 [flavor]
 deps = []
