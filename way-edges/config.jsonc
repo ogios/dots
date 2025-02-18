@@ -90,8 +90,9 @@
             "length": "50%",
             "hover_color": "#ffffff22",
             "active_increase": 0.2,
-            "active_color": "#ed8e86",
-            "deactive_color": "#000",
+            /// "active_color": "#fff",
+            "focus_color": "#ed8e86",
+            "default_color": "#000",
             "preset": "niri"
           }
         }
@@ -104,7 +105,7 @@
           "edge": "bottom",
           "position": "left",
           "layer": "overlay",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "widget": {
             "type": "workspace",
             "thickness": 25,
@@ -119,7 +120,7 @@
         {
           "edge": "top",
           "position": "left",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
             "left": "25%"
@@ -137,7 +138,7 @@
         {
           "edge": "top",
           "position": "right",
-          "monitor": "eDP-1",
+          "monitor": "HDMI-A-1",
           "layer": "overlay",
           "margins": {
             "right": "25%"
@@ -169,6 +170,10 @@
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
+            "outlook": {
+              "type": "window",
+              "color": "#5d3f3c"
+            },
             "widgets": [
               {
                 "index": [-1, -1],
@@ -277,6 +282,7 @@
             "type": "wrap-box",
             "outlook": {
               "type": "window",
+              "color": "#5d3f3c",
               "margins": {
                 "top": 10,
                 "left": 30,
