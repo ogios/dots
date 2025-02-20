@@ -227,13 +227,13 @@ cursor {
     // hide-after-inactive-ms 1000
 }
 
-// prefer-no-csd
+prefer-no-csd
 
 // spawn-at-startup "alacritty" "-e" "fish"
 
 
-spawn-at-startup "way-edges" "daemon"
-spawn-at-startup "sh" "-c" "sleep 1 && way-edges add common && way-edges add tray && way-edges add niri"
+spawn-at-startup "way-edges"
+spawn-at-startup "sh" "-c" "sleep 1 && way-edges add niri"
 spawn-at-startup "swaync"
 spawn-at-startup "fcitx5"
 spawn-at-startup "xwaylandvideobridge"
@@ -467,8 +467,6 @@ animations {
         // curve "ease-out-quad"
     }
 }
-
-prefer-no-csd
 
 window-rule {
   draw-border-with-background false
