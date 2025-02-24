@@ -54,6 +54,7 @@
             "thickness": 20,
             "length": "25%",
             "type": "btn",
+            "color": "#333",
             "event_map": {
               "272": "niri msg action focus-column-left",
               "273": "niri msg action focus-workspace-up"
@@ -72,7 +73,7 @@
             "thickness": 20,
             "length": "25%",
             "type": "btn",
-            "frame_rate": 144,
+            "color": "#333",
             "event_map": {
               "272": "niri msg action focus-column-right",
               "273": "niri msg action focus-workspace-down"
@@ -282,7 +283,7 @@
             "type": "wrap-box",
             "outlook": {
               "type": "window",
-              "color": "#5d3f3c",
+              "color": "#222",
               "margins": {
                 "top": 10,
                 "left": 30,
@@ -414,6 +415,10 @@
           "widget": {
             "type": "wrap-box",
             "align": "bottom_left",
+            "outlook": {
+              "type": "window",
+              "color": "#fff"
+            },
             "widgets": [
               {
                 "index": [-1, -1],
@@ -423,7 +428,12 @@
                   "header_menu_stack": "menu_top",
                   "header_menu_align": "left",
                   "menu_draw_config": {
-                    "font_pixel_height": 18
+                    "font_pixel_height": 18,
+                    "text_color": "#111",
+                    "border_color": "#111"
+                  },
+                  "header_draw_config": {
+                    "text_color": "#111"
                   },
                   "grid_align": "bottom_left"
                 }
