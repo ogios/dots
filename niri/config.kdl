@@ -953,11 +953,13 @@ binds {
     Mod+Ctrl+WheelScrollUp              cooldown-ms=150 { focus-workspace-up; }
     Mod+Alt+WheelScrollDown       cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Alt+WheelScrollUp         cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Shift+WheelScrollDown      { move-column-right; }
+    Mod+Shift+WheelScrollUp       { move-column-left; }
+    Mod+Ctrl+Shift+WheelScrollUp           { set-column-width "+1%"; }
+    Mod+Ctrl+Shift+WheelScrollDown         { set-column-width "-1%"; }
 
     Mod+WheelScrollDown           { focus-column-right; }
     Mod+WheelScrollUp            { focus-column-left; }
-    Mod+Shift+WheelScrollDown      { move-column-right; }
-    Mod+Shift+WheelScrollUp       { move-column-left; }
 
     // Mod+TouchpadScrollUp   allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
     // Mod+TouchpadScrollDown allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
