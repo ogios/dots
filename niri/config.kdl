@@ -123,10 +123,10 @@ layout {
 
     focus-ring {
         // off
-        width 4
+        width 3
         // width 8
         // catppuccin-mocha Sapphire
-        active-color "#E29A5C"
+        active-color "#E23434"
         // catppuccin-mocha Surface2
         inactive-color "#585b70"
         // inactive-color "green"
@@ -134,6 +134,16 @@ layout {
         // active-gradient from="#80c8ff" to="#bbddff" angle=45
         // active-gradient from="#f38ba8" to="#f9e2af" angle=45 relative-to="workspace-view"
         // active-gradient from="red" to="orange" angle=45 relative-to="workspace-view" in="oklch longer hue"
+    }
+
+    shadow {
+        on
+        softness 20
+        spread 5
+        offset x=0 y=0
+        draw-behind-window true
+        color "#E23434f0"
+        inactive-color "#00ff0030"
     }
 
     // focus-ring {
@@ -854,6 +864,16 @@ layer-rule {
     // mako
     match namespace="^notifications$"
     block-out-from "screencast"
+}
+
+layer-rule {
+
+  match namespace="^way-edges-widget$"
+  shadow {
+    on
+    softness 10
+    color "#E23434d0"
+  }
 }
 
 binds {
