@@ -1054,6 +1054,7 @@ binds {
     Alt+Print { screenshot-window; }
 
     Mod+P { screenshot; }
+    Mod+W { toggle-column-tabbed-display; }
 
     // Mod+Shift+E { quit; }
     // Ctrl+Alt+Delete { quit; }
