@@ -161,6 +161,22 @@
       "name": "common",
       "widgets": [
         {
+          "edge": "bottom",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "widget": {
+            "thickness": 20,
+            "length": "40%",
+            "type": "btn",
+            "color": "#333",
+            "event_map": {
+              "272": "niri msg action maximize-column",
+              "273": "sh -c pkill nwg-drawer || nwg-drawer",
+              "276": "niri msg action toggle-column-tabbed-display"
+            }
+          }
+        },
+        {
           "name": "stats",
           "edge": "left",
           "position": "top",
