@@ -39,6 +39,8 @@ lazygit/state.yml
 !wpaperd/**
 !nwg-drawer
 !nwg-drawer/**
+!fastfetch
+!fastfetch/**
 
 !starship.toml
 !code-flags.conf
