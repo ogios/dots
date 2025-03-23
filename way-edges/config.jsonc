@@ -172,6 +172,7 @@
             "event_map": {
               "272": "niri msg action maximize-column",
               "273": "sh -c pkill nwg-drawer || nwg-drawer",
+              "275": "niri msg action close-window",
               "276": "niri msg action toggle-column-tabbed-display"
             }
           }
