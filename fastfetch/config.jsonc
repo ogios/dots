@@ -12,7 +12,14 @@
   // 		"top": 5
   // 	}
   // },
-  "logo": "/home/ogios/.config/fastfetch/amongus.txt",
+  // "logo": "/home/ogios/.config/fastfetch/amongus.txt",
+  "logo": {
+    "source": "/home/ogios/.config/fastfetch/amongus.txt",
+    "width": 20,
+    "padding": {
+      "right": 0,
+    },
+  },
   "display": {
     "separator": "  ",
   },
