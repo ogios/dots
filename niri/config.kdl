@@ -230,6 +230,8 @@ layout {
 }
 
 cursor {
+    xcursor-theme "miku-cursor-linux"
+    xcursor-size 48
     // xcursor-theme "breeze_cursors"
     // xcursor-theme "arstieonart"
     // xcursor-size 48
