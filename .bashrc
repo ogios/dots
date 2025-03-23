@@ -97,3 +97,8 @@ function wre() {
 export PATH="$PATH:/home/ogios/.local/bin"
 
 alias ghc="git clone"
+
+# bun
+export PATH="/home/ogios/.bun/bin:$PATH"
+
+fastfetch
