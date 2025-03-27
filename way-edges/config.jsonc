@@ -434,7 +434,7 @@
             "align": "bottom_left",
             "outlook": {
               "type": "window",
-              "color": "#fff"
+              "color": "#F74F4F"
             },
             "widgets": [
               {
@@ -446,11 +446,11 @@
                   "header_menu_align": "left",
                   "menu_draw_config": {
                     "font_pixel_height": 18,
-                    "text_color": "#111",
+                    "text_color": "#eee",
                     "border_color": "#111"
                   },
                   "header_draw_config": {
-                    "text_color": "#111"
+                    "text_color": "#eee"
                   },
                   "grid_align": "bottom_left"
                 }
