@@ -315,7 +315,7 @@ animations {
         // off
         // duration-ms 2500
         // curve "ease-out-cubic"
-        // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        spring damping-ratio=0.8 stiffness=200 epsilon=0.0001
     }
 
     window-open {
@@ -326,66 +326,222 @@ animations {
         // duration-ms 1000
         // curve "linear"
 
-        /-custom-shader r"
-            vec4 open_color(vec3 coords_geo, vec3 size_geo) {
-                vec3 coords_tex = niri_geo_to_tex * coords_geo;
-                vec4 color = texture2D(niri_tex, coords_tex.st);
+        // custom-shader r"
+        //     vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+        //         vec3 coords_tex = niri_geo_to_tex * coords_geo;
+        //         vec4 color = texture2D(niri_tex, coords_tex.st);
+        //
+        //         vec2 coords = (coords_geo.xy - vec2(0.5, 0.5)) * size_geo.xy * 2.0;
+        //         coords = coords / length(size_geo.xy);
+        //         float p = niri_clamped_progress;
+        //         if (p * p <= dot(coords, coords))
+        //             color = vec4(0.0);
+        //
+        //         return color;
+        //     }
+        // "
 
-                vec2 coords = (coords_geo.xy - vec2(0.5, 0.5)) * size_geo.xy * 2.0;
-                coords = coords / length(size_geo.xy);
-                float p = niri_clamped_progress;
-                if (p * p <= dot(coords, coords))
-                    color = vec4(0.0);
-
-                return color;
-            }
-        "
-
-        /-custom-shader r"
-            vec4 open_color(vec3 coords_geo, vec3 size_geo) {
-                vec3 coords_tex = niri_geo_to_tex * coords_geo;
-                vec4 color = texture2D(niri_tex, coords_tex.st);
-
-                return color;
-            }
-        "
+        duration-ms 250
+        // custom-shader r"
+        //     vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+        //         // Scale up the window.
+        //         float scale = max(0.0, (niri_progress / 2.0 + 0.5));
+        //         coords_geo = vec3((coords_geo.xy - vec2(0.5)) / scale + vec2(0.5), 1.0);
+        //
+        //         // Get color from the window texture.
+        //         vec3 coords_tex = niri_geo_to_tex * coords_geo;
+        //         vec4 color = texture2D(niri_tex, coords_tex.st);
+        //
+        //         // Make the window opaque.
+        //         color *= niri_clamped_progress;
+        //
+        //         return color;
+        //     }
+        // "
+        // custom-shader r"
+        //     vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+        //         vec3 coords_tex = niri_geo_to_tex * coords_geo;
+        //         vec4 color = texture2D(niri_tex, coords_tex.st);
+        //
+        //         return color;
+        //     }
+        // "
     }
 
     window-close {
         // off
         // duration-ms 2500
-        // duration-ms 1000
-        duration-ms 250
-        curve "linear"
+        duration-ms 3000
+        // duration-ms 250
+        // curve "linear"
         // spring damping-ratio=0.8 stiffness=1000 epsilon=0.0001
 
         custom-shader r"
-            mat2 rotate(float angle) {
-                return mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
-            }
+// 2 out, 2 in...
+vec2 hash22(vec2 p) {
+  vec3 p3 = fract(vec3(p.xyx) * vec3(.1031, .1030, .0973));
+  p3 += dot(p3, p3.yzx + 33.33);
+  return fract((p3.xx + p3.yz) * p3.zy);
+}
 
-            vec4 close_color(vec3 coords_geo, vec3 size_geo) {
-                float progress = niri_clamped_progress * niri_clamped_progress;
+// 2D Simplex Noise
+// MIT License, https://www.shadertoy.com/view/Msf3WH
+// Copyright © 2013 Inigo Quilez
+float simplex2D(vec2 p) {
+  const float K1 = 0.366025404;  // (sqrt(3)-1)/2;
+  const float K2 = 0.211324865;  // (3-sqrt(3))/6;
 
-                vec2 coords = (coords_geo.xy - vec2(0.5, 1.0)) * size_geo.xy;
+  vec2 i  = floor(p + (p.x + p.y) * K1);
+  vec2 a  = p - i + (i.x + i.y) * K2;
+  float m = step(a.y, a.x);
+  vec2 o  = vec2(m, 1.0 - m);
+  vec2 b  = a - o + K2;
+  vec2 c  = a - 1.0 + 2.0 * K2;
+  vec3 h  = max(0.5 - vec3(dot(a, a), dot(b, b), dot(c, c)), 0.0);
+  vec3 n  = h * h * h * h *
+           vec3(dot(a, -1.0 + 2.0 * hash22(i + 0.0)), dot(b, -1.0 + 2.0 * hash22(i + o)),
+                dot(c, -1.0 + 2.0 * hash22(i + 1.0)));
+  return 0.5 + 0.5 * dot(n, vec3(70.0));
+}
 
-                coords.y -= progress * 200.0;
+// easeOutQuad 曲线（使动画缓出）
+float easeOutQuad(float x) {
+    return 1.0 - (1.0 - x) * (1.0 - x);
+}
 
-                float random = (niri_random_seed - 0.5) / 2.0;
-                random = sign(random) - random;
-                float max_angle = 0.05 * random;
+// 根据垂直坐标和动画进度计算火焰效果的遮罩，返回
+// x 分量：窗口本身的透明度遮罩（用于让窗口从上到下逐渐消失）
+// y 分量：火焰效果的透明度遮罩（用于控制火焰的显示强度）
+vec2 fireEffectMask(float tCoord, float progress) {
+    const float HIDE_TIME = 0.4;
+    const float FADE_WIDTH = 0.1;
+    
+    float p = easeOutQuad(progress);
+    float burnProgress      = clamp(p / HIDE_TIME, 0.0, 1.0);
+    float afterBurnProgress = clamp((p - HIDE_TIME) / (1.0 - HIDE_TIME), 0.0, 1.0);
 
-                float angle = progress * max_angle;
-                coords = rotate(angle) * coords;
+    float t = tCoord * (1.0 - FADE_WIDTH);
+    float windowMask = 1.0 - clamp((burnProgress - t) / FADE_WIDTH, 0.0, 1.0);
+    float effectMask = clamp(t * (1.0 - windowMask) / burnProgress, 0.0, 1.0);
 
-                coords_geo = vec3(coords / size_geo.xy + vec2(0.5, 1.0), 1.0);
+    if (p > HIDE_TIME) {
+        float fade = sqrt(1.0 - afterBurnProgress * afterBurnProgress);
+        effectMask *= mix(1.0, 1.0 - t, afterBurnProgress) * fade;
+    }
+    return vec2(windowMask, effectMask);
+}
 
-                vec3 coords_tex = niri_geo_to_tex * coords_geo;
-                vec4 color = texture2D(niri_tex, coords_tex.st);
+// 将 0..1 的值映射到火焰颜色梯度（采用 5 个关键颜色）
+vec4 getFireColor(float v) {
+    float steps[5];
+    steps[0] = 0.0;
+    steps[1] = 0.2;
+    steps[2] = 0.35;
+    steps[3] = 0.5;
+    steps[4] = 0.8;
 
-                return color * (1.0 - niri_clamped_progress);
-            }
+    vec4 colors[5];
+    colors[0] = vec4(0.0, 0.0, 0.0, 0.0);
+    colors[1] = vec4(0.6, 0.0, 0.0, 0.5);
+    colors[2] = vec4(0.8, 0.3, 0.0, 0.8);
+    colors[3] = vec4(1.0, 1.0, 0.0, 0.9);
+    colors[4] = vec4(1.0, 0.0, 0.0, 1.0);
+
+    if (v < steps[0]) {
+        return colors[0];
+    }
+    for (int i = 0; i < 4; ++i) {
+        if (v <= steps[i + 1]) {
+            float t = (v - steps[i]) / (steps[i + 1] - steps[i]);
+            return mix(colors[i], colors[i + 1], t);
+        }
+    }
+    return colors[4];
+}
+
+// alphaOver 混合函数，按照预乘 alpha 规则叠加 fg 在 bg 之上
+vec4 alphaOver(vec4 bg, vec4 fg) {
+    return fg + (1.0 - fg.a) * bg;
+}
+
+// 主函数：实现 fire 效果的窗口打开动画
+vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+    bool inside = 0.0 <= coords_geo.x && coords_geo.x <= 1.0
+            && 0.0 <= coords_geo.y && coords_geo.y <= 1.0;
+    // Paint only the area inside the current geometry.
+    if (!inside)
+    {
+      return vec4(0.0, 0.0, 0.0, 0.0);
+    }
+
+    // 将几何坐标映射到 [0,1]
+    vec2 uv = coords_geo.st;
+
+    // 为火焰效果添加垂直运动（向上飘动）
+    float movementSpeed = 1.0;
+    uv.y += niri_progress * movementSpeed;
+
+    // 设定噪声采样的缩放因子
+    float noiseScale = 4.0;
+    vec2 noiseUV = uv * noiseScale;
+
+    // 获取噪声值（假设 simplex2D 已在 common.glsl 中定义）
+    float noiseVal = simplex2D(noiseUV);
+    noiseVal = (noiseVal + 1.0) / 2.0;
+
+    // 生成火焰颜色
+    vec4 fireColor = getFireColor(noiseVal);
+
+    // 根据当前像素的纵向位置和动画进度计算火焰和窗口的遮罩
+    vec2 masks = fireEffectMask(coords_geo.y, niri_progress);
+    float windowMask = masks.x;
+    float effectMask = masks.y;
+
+    // 采样原窗口纹理颜色（修正：使用 vec2 而非 vec3）
+    vec2 texCoords = (niri_geo_to_tex * coords_geo).xy;
+    vec4 windowColor = texture2D(niri_tex, texCoords);
+
+    // 调整窗口颜色的 alpha，使其从上到下逐渐“烧掉”
+    windowColor.a *= windowMask;
+    windowColor.r *= windowMask;
+    windowColor.g *= windowMask;
+    windowColor.b *= windowMask;
+
+    // 将火焰效果调制后叠加在窗口上
+    fireColor *= effectMask;
+    vec4 finalColor = alphaOver(windowColor, fireColor);
+
+    return finalColor;
+}
         "
+
+        // custom-shader r"
+        //     mat2 rotate(float angle) {
+        //         return mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
+        //     }
+        //
+        //     vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+        //         float progress = niri_clamped_progress * niri_clamped_progress;
+        //
+        //         vec2 coords = (coords_geo.xy - vec2(0.5, 1.0)) * size_geo.xy;
+        //
+        //         coords.y -= progress * 200.0;
+        //
+        //         float random = (niri_random_seed - 0.5) / 2.0;
+        //         random = sign(random) - random;
+        //         float max_angle = 0.05 * random;
+        //
+        //         float angle = progress * max_angle;
+        //         coords = rotate(angle) * coords;
+        //
+        //         coords_geo = vec3(coords / size_geo.xy + vec2(0.5, 1.0), 1.0);
+        //
+        //         vec3 coords_tex = niri_geo_to_tex * coords_geo;
+        //         vec4 color = texture2D(niri_tex, coords_tex.st);
+        //
+        //         return color * (1.0 - niri_clamped_progress);
+        //     }
+        // "
 
         /-custom-shader r"
             vec4 close_color(vec3 coords_geo, vec3 size_geo) {
@@ -401,7 +557,7 @@ animations {
         // off
         // duration-ms 500
         // curve "ease-out-cubic"
-        // spring damping-ratio=1.0 stiffness=20 epsilon=0.00001
+        spring damping-ratio=1.0 stiffness=300 epsilon=0.00001
         // spring damping-ratio=10.0 stiffness=800 epsilon=0.0001
     }
 
