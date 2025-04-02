@@ -8,6 +8,7 @@ ratio = [1, 3, 5]
 [opener]
 edit = [{ run = 'nvim "$@"', block = true }]
 edit_gui = [{ run = 'neovide "$@"', block = false, orphan = true }]
+edit_editor = [{ run = '$EDITOR "$@"', block = false, orphan = true }]
 
 
 [open]
@@ -16,6 +17,7 @@ prepend_rules = [
     "edit",
     "edit_gui",
     "reveal",
+    "edit_editor",
   ] },
   { mime = "inode/x-empty", use = [
     "edit",
@@ -27,6 +29,7 @@ prepend_rules = [
     "edit_gui",
     "open",
     "reveal",
+    "edit_editor",
   ] },
   { mime = "application/json", use = [
     "edit",
