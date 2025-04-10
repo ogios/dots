@@ -10,6 +10,11 @@
 
 [url "git@github.com-sussybot5258:sussybot5258/"]
     insteadOf = git@github.com:sussybot5258/
+
+[url "git@github.com-sussybot5258:GreyCatAI/"]
+    insteadOf = git@github.com:GreyCatAI/
+
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -19,3 +24,5 @@
 [diff "lockb"]
 	binary = true
 	textconv = bun
+[https]
+	proxy = http://127.0.0.1:7890
