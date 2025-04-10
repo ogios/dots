@@ -1,12 +1,12 @@
 window {
   /* background-color: rgba(36, 47, 79, 0.95); */
-  background-color: rgba(41, 37, 34, 0.95);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #eeeeee;
 }
 
 /* search entry */
 entry {
-  border-color: #e29a5c;
+  border-color: red;
   color: #ffbcb7;
   background-color: rgba (0, 0, 0, 0.2);
 }
@@ -18,12 +18,12 @@ image {
 }
 
 button {
-  transition: all 0s;
+  transition: all 0.1s ease-out;
 }
 
 button:hover {
-  box-shadow: inset 0px 0px 2px rgba(226, 154, 92, 1);
-  background-color: rgba(226, 154, 92, 0.1);
+  box-shadow: inset 0px 0px 5px rgba(255, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 /* in case you wanted to give category buttons a different look */
