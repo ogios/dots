@@ -1,11 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
-  "ensure_load_group": ["tray", "common"],
+  "ensure_load_group": ["tray", "common", "niri"],
   "groups": [
     {
       "name": "niri",
       "widgets": [
         {
+          "pin_with_key": false,
           "edge": "top",
           "position": "left",
           "monitor": "eDP-1",
@@ -24,6 +25,7 @@
           }
         },
         {
+          "pin_with_key": false,
           "edge": "top",
           "position": "right",
           "monitor": "eDP-1",
@@ -43,6 +45,7 @@
           }
         },
         {
+          "pin_with_key": false,
           "edge": "top",
           "position": "left",
           "monitor": "HDMI-A-1",
@@ -62,6 +65,7 @@
           }
         },
         {
+          "pin_with_key": false,
           "edge": "top",
           "position": "right",
           "monitor": "HDMI-A-1",
@@ -77,6 +81,24 @@
             "event_map": {
               "272": "niri msg action focus-column-right",
               "273": "niri msg action focus-workspace-down"
+            }
+          }
+        },
+        {
+          "pin_with_key": false,
+          "edge": "bottom",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "widget": {
+            "thickness": 20,
+            "length": "40%",
+            "type": "btn",
+            "color": "#333",
+            "event_map": {
+              "273": "niri msg action maximize-column",
+              "272": "sh -c pkill nwg-drawer || nwg-drawer",
+              "274": "niri msg action close-window",
+              "276": "niri msg action toggle-column-tabbed-display"
             }
           }
         },
@@ -160,23 +182,6 @@
     {
       "name": "common",
       "widgets": [
-        {
-          "edge": "bottom",
-          "monitor": "HDMI-A-1",
-          "layer": "overlay",
-          "widget": {
-            "thickness": 20,
-            "length": "40%",
-            "type": "btn",
-            "color": "#333",
-            "event_map": {
-              "273": "niri msg action maximize-column",
-              "272": "sh -c pkill nwg-drawer || nwg-drawer",
-              "274": "niri msg action close-window",
-              "276": "niri msg action toggle-column-tabbed-display"
-            }
-          }
-        },
         {
           "name": "stats",
           "edge": "left",
