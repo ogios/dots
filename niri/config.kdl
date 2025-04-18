@@ -1139,7 +1139,7 @@ binds {
 
     Mod+Q { close-window; }
 
-    Mod+Tab { focus-window-previous; }
+    // Mod+Tab { toggle-overview; }
 
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
@@ -1149,6 +1149,9 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
+
+    Mod+Alt+Down    { move-workspace-down; }
+    Mod+Alt+Up      { move-workspace-up; }
 
     Mod+Shift+H     { move-column-left; }
     Mod+Shift+J     { move-window-down; }
@@ -1258,8 +1261,7 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+D { maximize-column; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+F { fullscreen-window; }
     Mod+C { center-column; }
 
     Mod+Minus { set-column-width "-10%"; }
