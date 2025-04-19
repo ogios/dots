@@ -241,8 +241,6 @@ cursor {
 
 prefer-no-csd
 
-// spawn-at-startup "alacritty" "-e" "fish"
-
 
 spawn-at-startup "way-edges"
 spawn-at-startup "sh" "-c" "sleep 1 && way-edges add niri"
@@ -255,6 +253,7 @@ spawn-at-startup "blueman-applet"
 spawn-at-startup "clipse" "--listen"
 spawn-at-startup "wpaperd"
 spawn-at-startup "xwayland-satellite" ":12"
+spawn-at-startup "bash" "-c" "sleep 1 && ~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4 2>&1 > /tmp/woqu.log"
 
 // spawn-at-startup dbus-update-activation-environment --all &
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
@@ -1139,7 +1138,7 @@ binds {
 
     Mod+Q { close-window; }
 
-    // Mod+Tab { toggle-overview; }
+    Mod+Tab { toggle-overview; }
 
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
