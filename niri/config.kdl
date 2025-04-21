@@ -126,7 +126,7 @@ layout {
         width 3
         // width 8
         // catppuccin-mocha Sapphire
-        active-color "#E23434"
+        active-color "#4E884F"
         // catppuccin-mocha Surface2
         inactive-color "#585b70"
         // inactive-color "green"
@@ -140,10 +140,9 @@ layout {
         on
         softness 20
         spread 5
-        offset x=0 y=0
-        draw-behind-window true
-        color "#E23434f0"
-        inactive-color "#00ff0030"
+        offset x=5 y=5
+        draw-behind-window false
+        color "#000000aa"
     }
 
     // focus-ring {
@@ -1108,7 +1107,7 @@ layer-rule {
   shadow {
     on
     softness 10
-    color "#E23434d0"
+    color "#00000055"
   }
 }
 
@@ -1125,7 +1124,7 @@ binds {
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
-    Mod+Shift+C { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; hyprpicker -a; kill $PID"; }
+    Mod+Shift+C { spawn "sh" "-c" "hyprpicker -a"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "common:stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "common:time"; }
