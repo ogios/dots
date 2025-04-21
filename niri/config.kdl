@@ -141,7 +141,7 @@ layout {
         softness 20
         spread 5
         offset x=5 y=5
-        draw-behind-window false
+        draw-behind-window true
         color "#000000aa"
     }
 
