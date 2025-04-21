@@ -116,7 +116,7 @@
             /// "active_color": "#fff",
             "focus_color": "#ed8e86",
             "default_color": "#000",
-            "preset": "niri"
+            "preset": { "type": "niri", "filter_empty": false }
           }
         }
       ]
