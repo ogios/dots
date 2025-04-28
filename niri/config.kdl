@@ -259,7 +259,7 @@ spawn-at-startup "xwayland-satellite" ":12"
 spawn-at-startup "nwg-drawer" "-r"
 spawn-at-startup "waypaper-engine" "daemon"
 spawn-at-startup "waypaper-engine" "run"
-spawn-at-startup "$HOME/.cargo/bin/woqu" "-f" "$HOME/Downloads/fallback1.wav" "-v" "4"
+spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 spawn-at-startup "xwaylandvideobridge"
 
 // spawn-at-startup dbus-update-activation-environment --all &
@@ -1132,7 +1132,7 @@ binds {
     Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
-    Mod+Shift+C { spawn "wl-color-picker" "clipboard"; }
+    Mod+Shift+C { spawn "hyprpicker" "-a"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "common:stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "common:time"; }
@@ -1252,7 +1252,6 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
-    // Mod+Tab { focus-workspace-previous; }
 
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
