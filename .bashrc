@@ -94,9 +94,10 @@ function wre() {
 }
 
 # Created by `pipx` on 2024-11-12 10:24:56
-export PATH="$PATH:/home/ogios/.local/bin"
+# export PATH="$PATH:/home/ogios/.local/bin"
 
 alias ghc="git clone"
+export NEOVIDE_FORK=1
 
 # bun
 export PATH="/home/ogios/.bun/bin:$PATH"
