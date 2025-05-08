@@ -92,6 +92,10 @@ input {
     // workspace-auto-back-and-forth
 }
 
+overview {
+    backdrop-color "#0E0825"
+}
+
 gestures {
     hot-corners {
         off
@@ -108,7 +112,7 @@ output "HDMI-A-1" {
 }
 
 output "eDP-1" {
-  mode "2560x1600@240.001"
+  mode "2560x1600@144"
   position x=2560 y=0
   scale 1.5
 }
@@ -209,7 +213,7 @@ layout {
     }
 
     // default-column-width { proportion 0.3333333333333333; }
-    default-column-width { }
+    default-column-width { proportion 0.75; }
 
     // gaps 0
     // gaps 8
