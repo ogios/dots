@@ -13,6 +13,7 @@ lazygit/state.yml
 !kitty
 !kitty/**
 !lazygit/**
+!mpv
 !mpv/**
 !niri/**
 !gtk-3.0
