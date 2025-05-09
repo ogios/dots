@@ -108,12 +108,12 @@ gestures {
 
 output "HDMI-A-1" {
   mode "2560x1440@143.912"
-  position x=0 y=0
+  position x=1706 y=0
 }
 
 output "eDP-1" {
-  mode "2560x1600@144"
-  position x=2560 y=0
+  mode "2560x1600@240.001"
+  position x=0 y=500
   scale 1.5
 }
 

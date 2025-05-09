@@ -1,5 +1,6 @@
 {
-  "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
+  // "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
+  "$schema": "./test_schema.json",
   "ensure_load_group": ["tray", "common", "niri"],
   "groups": [
     {
@@ -9,46 +10,7 @@
           "pin_with_key": false,
           "edge": "top",
           "position": "left",
-          "monitor": "eDP-1",
-          "layer": "overlay",
-          "margins": {
-            "left": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "event_map": {
-              "272": "niri msg action focus-column-left",
-              "273": "niri msg action focus-workspace-up"
-            }
-          }
-        },
-        {
-          "pin_with_key": false,
-          "edge": "top",
-          "position": "right",
-          "monitor": "eDP-1",
-          "layer": "overlay",
-          "margins": {
-            "right": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "frame_rate": 144,
-            "event_map": {
-              "272": "niri msg action focus-column-right",
-              "273": "niri msg action focus-workspace-down"
-            }
-          }
-        },
-        {
-          "pin_with_key": false,
-          "edge": "top",
-          "position": "left",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "margins": {
             "left": "25%"
@@ -68,7 +30,7 @@
           "pin_with_key": false,
           "edge": "top",
           "position": "right",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "margins": {
             "right": "25%"
@@ -107,6 +69,23 @@
           "edge": "left",
           "position": "bottom",
           "layer": "overlay",
+          "monitor": "eDP-1",
+          "widget": {
+            "type": "workspace",
+            "thickness": 30,
+            "length": "50%",
+            "hover_color": "#ffffff22",
+            "active_increase": 0.2,
+            /// "active_color": "#fff",
+            "focus_color": "#4E884F",
+            "default_color": "#000",
+            "preset": { "type": "niri", "filter_empty": false }
+          }
+        },
+        {
+          "edge": "right",
+          "position": "bottom",
+          "layer": "overlay",
           "monitor": "HDMI-A-1",
           "widget": {
             "type": "workspace",
@@ -123,64 +102,6 @@
       ]
     },
     {
-      "name": "hyprland",
-      "widgets": [
-        {
-          "edge": "bottom",
-          "position": "left",
-          "layer": "overlay",
-          "monitor": "HDMI-A-1",
-          "widget": {
-            "type": "workspace",
-            "thickness": 25,
-            "length": "25%",
-            "hover_color": "#ffffff22",
-            "active_increase": 0.2,
-            "active_color": "#6B8EF0",
-            "deactive_color": "#000",
-            "preset": "hyprland"
-          }
-        },
-        {
-          "edge": "top",
-          "position": "left",
-          "monitor": "HDMI-A-1",
-          "layer": "overlay",
-          "margins": {
-            "left": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "event_map": {
-              "272": "hyprctl dispatch movefocus l",
-              "273": "hyprctl dispatch 'workspace -1'"
-            }
-          }
-        },
-        {
-          "edge": "top",
-          "position": "right",
-          "monitor": "HDMI-A-1",
-          "layer": "overlay",
-          "margins": {
-            "right": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "frame_rate": 144,
-            "event_map": {
-              "272": "hyprctl dispatch movefocus r",
-              "273": "hyprctl dispatch 'workspace +1'"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "common",
       "widgets": [
         {
@@ -190,7 +111,7 @@
           "margins": {
             "top": 40
           },
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -300,7 +221,7 @@
           "name": "time",
           "edge": "top",
           "position": "right",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
@@ -334,7 +255,7 @@
         },
         {
           "edge": "top",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "position": "left",
           "preview_size": 7,
@@ -351,7 +272,7 @@
         },
         {
           "edge": "top",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "position": "left",
           "layer": "overlay",
           "margins": {
@@ -370,60 +291,6 @@
             }
           }
         }
-        // {
-        //   "edge": "top",
-        //   "monitor": "HDMI-A-1",
-        //   "layer": "overlay",
-        //   "position": "left",
-        //   "preview_size": 7,
-        //   "widget": {
-        //     "type": "slider",
-        //     "thickness": 30,
-        //     "border_width": 4,
-        //     "length": "12.5%",
-        //     "preset": {
-        //       "type": "custom",
-        //       "interval_update": [10, "seq 0 .01 1 | shuf | head -n1"]
-        //     }
-        //   }
-        // }
-        // {
-        //   "name": "time",
-        //   "edge": "top",
-        //   "position": "right",
-        //   "monitor": "HDMI-A-1",
-        //   "layer": "overlay",
-        //   "widget": {
-        //     "type": "wrap-box",
-        //     "outlook": {
-        //       "type": "window",
-        //       "margins": {
-        //         "top": 10,
-        //         "left": 30,
-        //         "right": 30,
-        //         "bottom": 10
-        //       }
-        //     },
-        //     "widgets": [
-        //       {
-        //         "index": [-1, -1],
-        //         "widget": {
-        //           "type": "text",
-        //           "fg_color": "#FFFFFF",
-        //           "font_size": 30,
-        //           "font_family": "JetBrainsMono Nerd Font",
-        //           "preset": {
-        //             "type": "custom",
-        //             "update_with_interval_ms": [
-        //               10,
-        //               "/home/ogios/.config/way-edges/random_str.sh"
-        //             ]
-        //           }
-        //         }
-        //       }
-        //     ]
-        //   }
-        // }
       ]
     },
     {
@@ -433,7 +300,7 @@
           "name": "tray",
           "edge": "bottom",
           "position": "right",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
