@@ -1,1 +1,10 @@
 wallpaper/* filter=lfs diff=lfs merge=lfs -text
+wallpaper/simple.png filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill filter=lfs diff=lfs merge=lfs -text
+wallpaper/red.png filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/snowmoutain-night.png filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/wallhaven-0wyj16.jpg filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/wallhaven-d5wlmj.jpg filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/wallhaven-kxw957.jpg filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/wallhaven-oxxkz9.jpg filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/snowmoutain-lake.jpg filter=lfs diff=lfs merge=lfs -text
