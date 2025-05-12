@@ -49,7 +49,7 @@
         {
           "pin_with_key": false,
           "edge": "bottom",
-          "monitor": "HDMI-A-1",
+          "monitor": "*",
           "layer": "overlay",
           "widget": {
             "thickness": 20,
