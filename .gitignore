@@ -50,3 +50,4 @@ lazygit/state.yml
 !.gitattributes
 !ssh-config
 !spotify-launcher.conf
+!ly-config.ini
