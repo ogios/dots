@@ -10,6 +10,13 @@ edit = [{ run = 'nvim "$@"', block = true }]
 edit_gui = [{ run = 'neovide "$@"', block = false, orphan = true }]
 edit_editor = [{ run = '$EDITOR "$@"', block = false, orphan = true }]
 
+gif = [{ run = 'imv "$@"', block = false }]
+image = [
+  { run = 'imv "$@"', desc = "Open" },
+  { run = 'pinta "$@"', block = false, desc = "Edit" },
+  { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
+]
+
 
 [open]
 prepend_rules = [
@@ -41,4 +48,7 @@ prepend_rules = [
     "edit_gui",
     "reveal",
   ] },
+
+  { name = "*.gif", use = "gif" },
+  { mime = "image/*", use = "image" },
 ]

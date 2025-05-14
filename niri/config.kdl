@@ -739,6 +739,9 @@ window-rule {
   match title=r#"^(Save As)(.*)$"#
   match title=r#"^(Library)(.*)$"#
 
+  // image
+  match app-id="imv"
+
   // dingtalk
   match title="MainMenuPanelView" app-id="com.alibabainc.dingtalk"
 
