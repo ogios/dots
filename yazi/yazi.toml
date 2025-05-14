@@ -16,6 +16,11 @@ image = [
   { run = 'pinta "$@"', block = false, desc = "Edit" },
   { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
 ]
+video = [
+  { run = 'showtime "$@"', desc = "Showtime", orphan = true },
+  { run = 'mpv "$@"', desc = "Mpv", orphan = true },
+  { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
+]
 
 
 [open]
@@ -51,4 +56,5 @@ prepend_rules = [
 
   { name = "*.gif", use = "gif" },
   { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
 ]
