@@ -242,7 +242,7 @@
                   "type": "text",
                   "fg_color": "#FFFFFF",
                   "font_size": 30,
-                  "font_family": "JetBrainsMono Nerd Font",
+                  "font_family": "serif",
                   "preset": {
                     "type": "time",
                     "update_interval": 500,
@@ -313,6 +313,7 @@
               {
                 "index": [-1, -1],
                 "widget": {
+                  "font_family": "sans-serif",
                   "type": "tray",
                   "icon_size": 40,
                   "header_menu_stack": "menu_top",

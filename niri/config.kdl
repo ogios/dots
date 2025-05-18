@@ -129,7 +129,10 @@ output "winit" {
 
 layout {
 
+  always-center-single-column
   empty-workspace-above-first
+
+  background-color "transparent"
 
     focus-ring {
         // off
@@ -263,7 +266,7 @@ spawn-at-startup "xwayland-satellite" ":12"
 spawn-at-startup "nwg-drawer" "-r"
 spawn-at-startup "waypaper-engine" "daemon"
 spawn-at-startup "waypaper-engine" "run"
-spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
+// spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 spawn-at-startup "xwaylandvideobridge"
 
 // spawn-at-startup dbus-update-activation-environment --all &
@@ -722,6 +725,11 @@ vec4 close_color(vec3 coords_geo, vec3 size_geo) {
         // duration-ms 200
         // curve "ease-out-quad"
     }
+}
+
+layer-rule {
+    match namespace="swww"
+    place-within-backdrop true
 }
 
 window-rule {
