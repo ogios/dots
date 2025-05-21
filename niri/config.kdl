@@ -756,6 +756,8 @@ window-rule {
   // zen browser video
   match title="Picture-in-Picture"
 
+  match app-id="mpv"
+
   open-floating true
 }
 
