@@ -51,3 +51,4 @@ lazygit/state.yml
 !ssh-config
 !spotify-launcher.conf
 !ly-config.ini
+!.inputrc
