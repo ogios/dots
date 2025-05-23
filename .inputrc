@@ -1,6 +1,7 @@
 "\ek": previous-history
 "\ej": next-history
-Control-L: "lazygit\n"
-Control-M: "nvim\n"
-Control-I: "neovide\n"
-Control-O: "yy\n"
+
+"\el": "lazygit\n"
+"\em": "nvim\n"
+"\ei": "neovide\n"
+"\eo": "yy\n"

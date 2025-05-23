@@ -247,8 +247,8 @@ cursor {
     // xcursor-theme "breeze_cursors"
     // xcursor-theme "arstieonart"
     // xcursor-size 48
-    // hide-when-typing
-    // hide-after-inactive-ms 1000
+    hide-when-typing
+    hide-after-inactive-ms 1000
 }
 
 prefer-no-csd
