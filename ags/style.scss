@@ -4,7 +4,7 @@
 
 $fg-color: #b5dbe3;
 $bg-color: #252f3c;
-$border-color: #698393;
+$border-color: #8dc1ec;
 $fg-color-dark: #759ca0;
 $bg-color-dark: #192029;
 
@@ -31,7 +31,6 @@ window.Bar {
 
 .info-box {
   background: linear-gradient(to right, $bg-color, $bg-color-dark);
-  // transition background
   border-radius: 5px;
   padding: 10px;
   border: 2px solid $border-color;
@@ -45,4 +44,32 @@ window.Bar {
     font-weight: bold;
     font-size: large;
   }
+}
+
+.usage-blocks {
+  background: $bg-color-dark;
+  padding: 4px;
+  border: 3px solid $border-color;
+
+  .usage-block {
+    font-size: x-large;
+    background-image: radial-gradient(
+      circle closest-side,
+      $fg-color 50%,
+      transparent 50%
+    );
+    background-size: 3px 3px; /* 点与点之间的距离，可调小到 4px 或更少 */
+  }
+
+  .fill {
+    background: $fg-color;
+  }
+}
+
+.usage-num {
+  color: $fg-color;
+  font-weight: bold;
+  background: $bg-color-dark;
+  padding: 4px;
+  border: 3px solid $border-color;
 }

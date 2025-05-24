@@ -39,7 +39,7 @@ function LeftInfoBox() {
     <box
       vertical
       spacing={5}
-      halign={Gtk.Align.CENTER}
+      halign={Gtk.Align.FILL}
       valign={Gtk.Align.CENTER}
       hexpand
     >
@@ -95,18 +95,11 @@ function RightInfoBox() {
   );
 }
 
-export default function Boards() {
+export default function Board1() {
   return (
-    <centerbox cssName="centerbox" vexpand>
+    <centerbox cssName="centerbox" hexpand>
       <LeftInfoBox />
-      <box
-        vexpand
-        hexpand
-        vertical
-        cssClasses={["monospace"]}
-        halign={Gtk.Align.FILL}
-        valign={Gtk.Align.CENTER}
-      >
+      <box vertical cssClasses={["monospace"]} valign={Gtk.Align.CENTER}>
         <label label="─┐   ┌─" halign={Gtk.Align.CENTER} />
         <label label=" [ 2 ] " halign={Gtk.Align.CENTER} />
         <label label="─┘   └─" halign={Gtk.Align.CENTER} />

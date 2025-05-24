@@ -1,7 +1,8 @@
 import { App, Astal, Gtk, Gdk } from "astal/gtk4";
 import { Variable } from "astal";
 import AudioVisualizer from "./AsciiCava";
-import Boards from "./Boards";
+import Board1 from "./Board1";
+import Board2 from "./Board2";
 
 // const time = Variable("").poll(1000, "date");
 
@@ -15,13 +16,14 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       gdkmonitor={gdkmonitor}
       exclusivity={Astal.Exclusivity.EXCLUSIVE}
       anchor={BOTTOM | LEFT | TOP}
-      layer={Astal.Layer.BOTTOM}
+      layer={Astal.Layer.BACKGROUND}
       application={App}
       marginLeft={5}
-      // child={<AudioVisualizer />}
     >
       <box vertical vexpand>
-        <Boards />
+        {/* <AudioVisualizer /> */}
+        <Board1 />
+        <Board2 />
       </box>
     </window>
   );
