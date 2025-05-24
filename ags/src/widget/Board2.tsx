@@ -42,7 +42,7 @@ function Usage({ label, update_func }: UsageProps) {
           })}
         </box>
         <label
-          hexpand
+          widthRequest={60}
           valign={Gtk.Align.END}
           cssClasses={["usage-num"]}
           label={v((v) => `${v}`)}
