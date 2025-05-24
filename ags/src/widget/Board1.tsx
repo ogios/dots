@@ -19,7 +19,7 @@ type InfoBoxProps = {
 };
 
 function BaseInfoBox({ label, label_var, update_func }: InfoBoxProps) {
-  const v = Variable("").poll(1000, update_func);
+  const v = Variable("").poll(500, update_func);
   return (
     <box vertical spacing={10} cssClasses={["info-box"]} hexpand>
       <label
