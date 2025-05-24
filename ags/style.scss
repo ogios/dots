@@ -1,0 +1,48 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+// $fg-color: #{"@theme_fg_color"};
+// $bg-color: #{"@theme_bg_color"};
+
+$fg-color: #b5dbe3;
+$bg-color: #252f3c;
+$border-color: #698393;
+$fg-color-dark: #759ca0;
+$bg-color-dark: #192029;
+
+window.Bar {
+  background: transparent;
+  color: $fg-color;
+  font-weight: bold;
+
+  > centerbox {
+    background: $bg-color;
+    border-radius: 10px;
+    margin: 8px;
+  }
+
+  button {
+    border-radius: 8px;
+    margin: 2px;
+  }
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.info-box {
+  background: linear-gradient(to right, $bg-color, $bg-color-dark);
+  // transition background
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid $border-color;
+
+  .info-box-label {
+    color: $fg-color-dark;
+  }
+
+  .info-box-value {
+    color: $fg-color;
+    font-weight: bold;
+    font-size: large;
+  }
+}
