@@ -1,5 +1,6 @@
-import { Variable, exec } from "astal";
+import { Binding, Variable, exec } from "astal";
 import { Gtk } from "astal/gtk4";
+import AstalBattery from "gi://AstalBattery";
 
 function formatTimeWithPad(totalSeconds: number) {
   const hours = Math.floor(totalSeconds / 3600);
@@ -12,16 +13,23 @@ function formatTimeWithPad(totalSeconds: number) {
 }
 
 type InfoBoxProps = {
-  label: string;
+  label?: string;
+  label_var?: Variable<string>;
   update_func: () => string;
 };
 
-function BaseInfoBox({ label, update_func }: InfoBoxProps) {
-  const v = Variable(label).poll(1000, update_func);
+function BaseInfoBox({ label, label_var, update_func }: InfoBoxProps) {
+  const v = Variable("").poll(1000, update_func);
   return (
     <box vertical spacing={10} cssClasses={["info-box"]} hexpand>
       <label
-        label={`[ ${label} ]`}
+        label={
+          label
+            ? `[ ${label.toString()} ]`
+            : label_var
+              ? label_var((label) => `[ ${label.toString()} ]`)
+              : ""
+        }
         halign={Gtk.Align.CENTER}
         cssClasses={["monospace", "info-box-label"]}
       />
@@ -66,6 +74,15 @@ function LeftInfoBox() {
 }
 
 function RightInfoBox() {
+  const bat = AstalBattery.get_default();
+  const battery_label = Variable("MULTDONW TIME");
+  if (bat.get_charging()) {
+    battery_label.set("IGNITION TIME");
+  }
+  bat.connect("notify::charging", () => {
+    battery_label.set(bat.get_charging() ? "IGNITION TIME" : "MULTDONW TIME");
+  });
+
   return (
     <box
       vertical
@@ -75,9 +92,15 @@ function RightInfoBox() {
       hexpand
     >
       <BaseInfoBox
-        label="AAA"
+        label_var={battery_label}
         update_func={() => {
-          return "aaa";
+          if (bat.get_charging()) {
+            const time = bat.get_time_to_full();
+            return time === 0 ? "FULL" : formatTimeWithPad(time);
+          } else {
+            const time = bat.get_time_to_empty();
+            return formatTimeWithPad(time);
+          }
         }}
       />
       <BaseInfoBox
