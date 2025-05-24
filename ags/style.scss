@@ -29,11 +29,14 @@ window.Bar {
   font-family: monospace;
 }
 
-.info-box {
+.common-box {
   background: linear-gradient(to right, $bg-color, $bg-color-dark);
   border-radius: 5px;
-  padding: 10px;
   border: 2px solid $border-color;
+}
+
+.info-box {
+  padding: 10px;
 
   .info-box-label {
     color: $fg-color-dark;
@@ -47,9 +50,7 @@ window.Bar {
 }
 
 .usage-blocks {
-  background: $bg-color-dark;
   padding: 4px;
-  border: 3px solid $border-color;
 
   .usage-block {
     font-size: x-large;
@@ -69,7 +70,5 @@ window.Bar {
 .usage-num {
   color: $fg-color;
   font-weight: bold;
-  background: $bg-color-dark;
   padding: 4px;
-  border: 3px solid $border-color;
 }

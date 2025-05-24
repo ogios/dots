@@ -26,7 +26,7 @@ function Usage({ label, update_func }: UsageProps) {
         cssClasses={["monospace", "usage-label"]}
       />
       <box spacing={6}>
-        <box spacing={4} cssClasses={["usage-blocks"]}>
+        <box spacing={4} cssClasses={["usage-blocks", "common-box"]}>
           {[...Array(BLOCK_NUMS).keys()].map((current) => {
             return (
               <label
@@ -44,7 +44,7 @@ function Usage({ label, update_func }: UsageProps) {
         <label
           widthRequest={60}
           valign={Gtk.Align.END}
-          cssClasses={["usage-num"]}
+          cssClasses={["usage-num", "common-box"]}
           label={v((v) => `${v}`)}
           justify={Gtk.Justification.CENTER}
         />
