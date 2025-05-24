@@ -14,7 +14,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       visible
       cssClasses={["Bar"]}
       gdkmonitor={gdkmonitor}
-      exclusivity={Astal.Exclusivity.EXCLUSIVE}
+      // exclusivity={Astal.Exclusivity.EXCLUSIVE}
       anchor={BOTTOM | LEFT | TOP}
       layer={Astal.Layer.BACKGROUND}
       application={App}
