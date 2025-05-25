@@ -24,5 +24,3 @@
 [diff "lockb"]
 	binary = true
 	textconv = bun
-[https]
-	proxy = http://127.0.0.1:7890
