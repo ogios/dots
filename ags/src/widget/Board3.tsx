@@ -95,7 +95,6 @@ export default function Board3() {
       <BlockBox
         label="DOWNLOAD"
         update_func={() => {
-          return 1;
           const MAX = 40 * 1024 * 1024;
           return Math.min(donwload.get()[1] / MAX, 1);
         }}
