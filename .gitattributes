@@ -8,3 +8,4 @@ wallpaper/chill/wallhaven-d5wlmj.jpg filter=lfs diff=lfs merge=lfs -text
 wallpaper/chill/wallhaven-kxw957.jpg filter=lfs diff=lfs merge=lfs -text
 wallpaper/chill/wallhaven-oxxkz9.jpg filter=lfs diff=lfs merge=lfs -text
 wallpaper/chill/snowmoutain-lake.jpg filter=lfs diff=lfs merge=lfs -text
+wallpaper/chill/* filter=lfs diff=lfs merge=lfs -text
