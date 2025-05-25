@@ -7,7 +7,7 @@ function get_ratio(x: number): number {
 }
 
 function block(ratio: number) {
-  const MAX_WIDTH = 20;
+  const MAX_WIDTH = 15;
 
   const w = MAX_WIDTH * Math.max(get_ratio(ratio), 0.1);
   return (
@@ -95,6 +95,7 @@ export default function Board3() {
       <BlockBox
         label="DOWNLOAD"
         update_func={() => {
+          return 1;
           const MAX = 40 * 1024 * 1024;
           return Math.min(donwload.get()[1] / MAX, 1);
         }}
