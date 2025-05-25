@@ -36,8 +36,6 @@ lazygit/state.yml
 !clipse/**
 !wallpaper
 !wallpaper/**
-!wpaperd
-!wpaperd/**
 !nwg-drawer
 !nwg-drawer/**
 !fastfetch
