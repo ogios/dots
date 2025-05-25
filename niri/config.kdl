@@ -267,7 +267,8 @@ spawn-at-startup "nwg-drawer" "-r"
 spawn-at-startup "waypaper-engine" "daemon"
 spawn-at-startup "waypaper-engine" "run"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
-spawn-at-startup "xwaylandvideobridge"
+// spawn-at-startup "xwaylandvideobridge"
+spawn-at-startup "ags" "run"
 
 // spawn-at-startup dbus-update-activation-environment --all &
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
