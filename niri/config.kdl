@@ -762,14 +762,23 @@ window-rule {
 }
 
 window-rule {
-  // clipse
-  match title=r#"^(clipse)(.*)$"#
+  match title="clipse"
   match app-id="it.mijorus.smile"
+  match title="traytui"
 
   open-floating true
 
   default-column-width { fixed 1080; }
   default-window-height { fixed 870; }
+
+  default-floating-position x=0 y=0 relative-to="bottom"
+  baba-is-float true
+}
+
+window-rule {
+  match title="traytui"
+
+  default-column-width { fixed 2000; }
 }
 
 window-rule {
@@ -1146,6 +1155,7 @@ binds {
     Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
+    Mod+T { spawn "kitty" "-T" "traytui" "tray-tui"; }
     // Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+Ctrl+Space { spawn "nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
