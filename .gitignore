@@ -44,6 +44,8 @@ lazygit/state.yml
 !fastfetch/**
 !ags
 !ags/**
+!tray-tui
+!tray-tui/**
 
 !starship.toml
 !code-flags.conf

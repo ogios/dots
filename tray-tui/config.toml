@@ -1,0 +1,72 @@
+# Whether to sort tray items by their titles
+# Not yet implemented
+sorting = false
+
+# max amount of columns in layout
+columns = 100
+
+[key_map]
+# move item focus
+# shift-h = "focus_left"
+# shift-l = "focus_right"
+# shift-k = "focus_up"
+# shift-j = "focus_down"
+
+h = "focus_left"
+l = "focus_right"
+j = "menu_down"
+k = "menu_up"
+
+q = "quit"
+ctrl-c = "quit"
+esc = "quit"
+
+# activate the focused item inside menu tree
+enter = "activate"
+space = "activate"
+
+# Colors used by the elements
+[colors]
+# background color for menu
+bg = "reset"
+
+# background color for focused menu
+bg_focused = "reset"
+
+# foreground color for menu
+fg = "white"
+
+# foreground color for focused menu
+fg_focused = "white"
+
+# background color for highlighted item in menu
+bg_highlighted = "green"
+
+# foreground color for highlighted item in menu
+fg_highlighted = "black"
+
+# foreground color for border
+border_fg = "white"
+
+# foreground color for focused border
+border_fg_focused = "green"
+
+# backrgound color for border
+border_bg = "reset"
+
+# backrgound color for focused border
+border_bg_focused = "reset"
+
+# Symbols used by tree widget
+[symbols]
+# symbol before currently selected item in menu
+highlight_symbol = ""
+
+# symbol used when item with submenus is opened
+node_open_symbol = " ▶ "
+
+# symbol used when item with submenus is closed
+node_closed_symbol = " ⏷ "
+
+# symbol before items with no submenus
+node_no_children_symbol = " "
