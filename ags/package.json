@@ -1,6 +1,7 @@
 {
     "name": "astal-shell",
     "dependencies": {
-        "astal": "/usr/share/astal/gjs"
+        "astal": "/usr/share/astal/gjs",
+        "tiny-byte-size": "^1.1.0"
     }
 }

@@ -124,7 +124,7 @@ export default function Board1() {
       <LeftInfoBox />
       <box vertical cssClasses={["monospace"]} valign={Gtk.Align.CENTER}>
         <label label="─┐   ┌─" halign={Gtk.Align.CENTER} />
-        <label label=" [ 2 ] " halign={Gtk.Align.CENTER} />
+        <label label=" [ o ] " halign={Gtk.Align.CENTER} />
         <label label="─┘   └─" halign={Gtk.Align.CENTER} />
       </box>
       <RightInfoBox />

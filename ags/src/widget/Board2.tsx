@@ -6,13 +6,6 @@ type UsageProps = {
   update_func: () => number; // 0~100
 };
 
-const BLOCK = [
-  // "▒",
-  " ",
-  // "▓",
-  "█",
-];
-
 const BLOCK_NUMS = 10;
 
 function Usage({ label, update_func }: UsageProps) {

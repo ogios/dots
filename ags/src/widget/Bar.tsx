@@ -3,6 +3,7 @@ import { Variable } from "astal";
 import AudioVisualizer from "./AsciiCava";
 import Board1 from "./Board1";
 import Board2 from "./Board2";
+import Board3 from "./Board3";
 
 // const time = Variable("").poll(1000, "date");
 
@@ -18,12 +19,14 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       anchor={BOTTOM | LEFT | TOP}
       layer={Astal.Layer.BACKGROUND}
       application={App}
-      marginLeft={5}
+      margin_left={30}
+      margin_top={50}
     >
-      <box vertical vexpand>
+      <box vertical hexpand spacing={40}>
         {/* <AudioVisualizer /> */}
         <Board1 />
         <Board2 />
+        <Board3 />
       </box>
     </window>
   );
