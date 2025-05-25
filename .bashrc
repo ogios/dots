@@ -102,4 +102,11 @@ export NEOVIDE_FORK=1
 # bun
 export PATH="/home/ogios/.bun/bin:$PATH"
 
-fastfetch
+# random number 0-10
+function rnum() {
+  echo -n $((RANDOM % 11))
+}
+
+sttt scanline -d 0.4 -c "$(rnum)"
+# fastfetch
+yy
