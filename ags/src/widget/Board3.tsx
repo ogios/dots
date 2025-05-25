@@ -51,7 +51,11 @@ function BlockBox({ label, update_func, desc_func }: BlockBoxProps) {
       widthRequest={100}
       halign={Gtk.Align.BASELINE_CENTER}
     >
-      <label label={`[ ${label} ]`} halign={Gtk.Align.CENTER} />
+      <label
+        cssClasses={["monospace"]}
+        label={`[ ${label} ]`}
+        halign={Gtk.Align.CENTER}
+      />
       <box
         vertical
         cssClasses={["common-box", "block-box"]}
@@ -60,7 +64,11 @@ function BlockBox({ label, update_func, desc_func }: BlockBoxProps) {
       >
         {v((v) => block_array(v, 6))}
       </box>
-      <label label={v((v) => desc_func(v))} halign={Gtk.Align.CENTER} />
+      <label
+        cssClasses={["monospace"]}
+        label={v((v) => desc_func(v))}
+        halign={Gtk.Align.CENTER}
+      />
     </box>
   );
 }
@@ -91,7 +99,7 @@ export default function Board3() {
   }
 
   return (
-    <box cssClasses={["Board3"]} hexpand spacing={20}>
+    <box hexpand spacing={20}>
       <BlockBox
         label="DOWNLOAD"
         update_func={() => {
