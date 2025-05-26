@@ -1,4 +1,4 @@
-import { App, Astal, Gtk, Gdk } from "astal/gtk4";
+import { App, Astal, Gdk } from "astal/gtk4";
 import PoweMenu from "./PoweMenu";
 
 export default {
