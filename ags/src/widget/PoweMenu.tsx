@@ -95,11 +95,7 @@ function PowerMenu(monitor: Gdk.Monitor) {
           val === Gdk.KEY_KP_Enter ||
           val === Gdk.KEY_space
         ) {
-          if (current_selection.get() === 0) {
-            btns[0].emit("clicked");
-          } else if (current_selection.get() === 1) {
-            btns[1].emit("clicked");
-          }
+          btns[current_selection.get()].emit("clicked");
         }
 
         if (val === Gdk.KEY_l || val === Gdk.KEY_rightarrow) {
@@ -151,7 +147,8 @@ function PowerMenu(monitor: Gdk.Monitor) {
                   icon: "󰗽",
                   on_click: () => {
                     toggle();
-                    exec(["niri", "msg", "action", "quit"]);
+                    const res = exec(["niri", "msg", "action", "quit"]);
+                    print(res);
                   },
                 },
               ],
