@@ -70,8 +70,8 @@ function PowerMenu(monitor: Gdk.Monitor) {
           cssClasses={current_selection((n) => (n === 0 ? ["selected"] : []))}
           onHoverEnter={() => current_selection.set(0)}
           onClicked={() => {
-            print(1);
-            // exec(["systemctl", "poweroff"]);
+            toggle();
+            exec(["systemctl", "poweroff"]);
           }}
           focusable={false}
           label=""
@@ -83,8 +83,8 @@ function PowerMenu(monitor: Gdk.Monitor) {
           cssClasses={current_selection((n) => (n === 1 ? ["selected"] : []))}
           onHoverEnter={() => current_selection.set(1)}
           onClicked={() => {
-            print(2);
-            // exec(["systemctl", "reboot"]);
+            toggle();
+            exec(["systemctl", "reboot"]);
           }}
           focusable={false}
           label=""
