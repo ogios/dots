@@ -26,7 +26,7 @@ function TogglePowerMenu(gdkmonitor: Gdk.Monitor) {
       cssClasses={["toggle-power-menu"]}
       gdkmonitor={gdkmonitor}
       anchor={RIGHT | TOP}
-      layer={Astal.Layer.TOP}
+      layer={Astal.Layer.BOTTOM}
       application={App}
       margin_right={50}
       margin_top={50}
