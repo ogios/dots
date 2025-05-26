@@ -103,9 +103,9 @@ window.Bar {
     background: radial-gradient(
       circle at 50%,
       transparent,
-      transparent 50%,
-      $fg-color 55%,
-      transparent 75%
+      transparent 30%,
+      $fg-color 40%,
+      transparent 65%
     );
 
     &:hover {
