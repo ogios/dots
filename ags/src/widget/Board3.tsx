@@ -1,4 +1,4 @@
-import { readFile, Variable } from "astal";
+import { readFileAsync, Variable } from "astal";
 import { Gtk } from "astal/gtk4";
 import byte_size from "tiny-byte-size";
 
@@ -85,12 +85,16 @@ export default function Board3() {
     return o;
   }
 
-  const donwload = Variable([-1, 0]).poll(1000, (o) => {
-    const s = readFile(`/sys/class/net/${IFACE}/statistics/rx_bytes`);
+  const donwload = Variable([-1, 0]).poll(1000, async (o) => {
+    const s = await readFileAsync(
+      `/sys/class/net/${IFACE}/statistics/rx_bytes`,
+    );
     return transform(s, o);
   });
-  const upload = Variable([-1, 0]).poll(1000, (o) => {
-    const s = readFile(`/sys/class/net/${IFACE}/statistics/tx_bytes`);
+  const upload = Variable([-1, 0]).poll(1000, async (o) => {
+    const s = await readFileAsync(
+      `/sys/class/net/${IFACE}/statistics/tx_bytes`,
+    );
     return transform(s, o);
   });
 

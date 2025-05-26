@@ -1,4 +1,4 @@
-import { Binding, Variable, exec } from "astal";
+import { Variable, execAsync } from "astal";
 import { Gtk } from "astal/gtk4";
 import AstalBattery from "gi://AstalBattery";
 
@@ -15,7 +15,7 @@ function formatTimeWithPad(totalSeconds: number) {
 type InfoBoxProps = {
   label?: string;
   label_var?: Variable<string>;
-  update_func: () => string;
+  update_func: () => string | Promise<string>;
 };
 
 function BaseInfoBox({ label, label_var, update_func }: InfoBoxProps) {
@@ -53,19 +53,27 @@ function LeftInfoBox() {
     >
       <BaseInfoBox
         label="REACTOR UPTIME"
-        update_func={() => {
-          const time = exec(["uptime", "-r"]).split(" ")[1];
+        update_func={async () => {
+          const time = await execAsync(["uptime", "-r"]).then(
+            (s) => s.split(" ")[1],
+          );
           return formatTimeWithPad(parseInt(time));
         }}
       />
       <BaseInfoBox
         label="CPU TEMP"
-        update_func={() => {
-          const temp = exec(["sensors", "-u", "coretemp-isa-0000"])
-            .split("\n")
-            .find((line) => line.includes("temp1_input"))
-            ?.split(":")[1]
-            .trim();
+        update_func={async () => {
+          const temp = await execAsync([
+            "sensors",
+            "-u",
+            "coretemp-isa-0000",
+          ]).then((s) =>
+            s
+              .split("\n")
+              .find((line) => line.includes("temp1_input"))
+              ?.split(":")[1]
+              .trim(),
+          );
           return temp ? `${parseInt(temp)}°C` : "N/A";
         }}
       />
@@ -105,8 +113,8 @@ function RightInfoBox() {
       />
       <BaseInfoBox
         label="GPU TEMP"
-        update_func={() => {
-          const temp = exec([
+        update_func={async () => {
+          const temp = await execAsync([
             "nvidia-smi",
             "--query-gpu=temperature.gpu",
             "--format=csv,noheader",
@@ -120,6 +128,7 @@ function RightInfoBox() {
 
 export default function Board1() {
   return (
+    // @ts-ignore
     <centerbox cssName="centerbox" hexpand>
       <LeftInfoBox />
       <box vertical cssClasses={["monospace"]} valign={Gtk.Align.CENTER}>

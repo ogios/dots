@@ -1,9 +1,9 @@
-import { exec, Variable } from "astal";
+import { execAsync, Variable } from "astal";
 import { Gtk } from "astal/gtk4";
 
 type UsageProps = {
   label: string;
-  update_func: () => number; // 0~100
+  update_func: () => number | Promise<number>; // 0~100
 };
 
 const BLOCK_NUMS = 10;
@@ -57,36 +57,36 @@ export default function Board2() {
     >
       <Usage
         label="CPU LOAD"
-        update_func={() => {
-          const a = exec([
+        update_func={async () => {
+          const a = await execAsync([
             "bash",
             "-c",
             'top -bn1 | grep "Cpu(s)" | awk \'{printf "%.1f", 100 - $8}\'',
-          ]).trim();
+          ]).then((s) => s.trim());
           return parseInt(a);
         }}
       />
 
       <Usage
         label="RAM USAGE"
-        update_func={() => {
-          const a = exec([
+        update_func={async () => {
+          const a = await execAsync([
             "bash",
             "-c",
             "free | grep Mem | awk '{printf \"%.1f\", $3/$2 * 100.0}'",
-          ]).trim();
+          ]).then((s) => s.trim());
           return parseInt(a);
         }}
       />
 
       <Usage
         label="STORAGE"
-        update_func={() => {
-          const a = exec([
+        update_func={async () => {
+          const a = await execAsync([
             "bash",
             "-c",
             "df -h | grep '/$' | awk '{print $5}' | sed 's/%//'",
-          ]).trim();
+          ]).then((s) => s.trim());
           return parseInt(a);
         }}
       />

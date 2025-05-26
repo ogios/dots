@@ -40,8 +40,13 @@ function PowerMenu(monitor: Gdk.Monitor) {
         if (val === Gdk.KEY_Escape || val === Gdk.KEY_q) {
           toggle();
         }
-
-        if (val === Gdk.KEY_Return || val === Gdk.KEY_KP_Enter) {
+      }}
+      onKeyPressed={(_, val, code, mod) => {
+        if (
+          val === Gdk.KEY_Return ||
+          val === Gdk.KEY_KP_Enter ||
+          val === Gdk.KEY_space
+        ) {
           if (current_selection.get() === 0) {
             btns[0].emit("clicked");
           } else if (current_selection.get() === 1) {
