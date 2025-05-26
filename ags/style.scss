@@ -80,3 +80,18 @@ window.Bar {
 .block-box {
   padding: 20px;
 }
+
+.power-menu {
+  background: rgba(0, 0, 0, 0.5);
+
+  .power-menu-item {
+    color: $fg-color;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+      background: $border-color;
+    }
+  }
+}
