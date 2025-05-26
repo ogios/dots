@@ -85,7 +85,7 @@ window.Bar {
   background: rgba(0, 0, 0, 0.5);
 
   button {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
     background: radial-gradient(ellipse at bottom, #4d9f0c, transparent);
 
     font-size: xx-large;
@@ -94,8 +94,27 @@ window.Bar {
   }
 
   .selected {
-    background:
-      radial-gradient(ellipse at top, #e66465, transparent),
-      radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+    background: radial-gradient(ellipse at top, #e66465, transparent);
+  }
+}
+
+.toggle-power-menu {
+  button {
+    background: radial-gradient(
+      circle at 50%,
+      transparent,
+      transparent 50%,
+      $fg-color 55%,
+      transparent 75%
+    );
+
+    &:hover {
+      background: radial-gradient(
+        circle at 50%,
+        $fg_color,
+        transparent 50%,
+        transparent 100%
+      );
+    }
   }
 }

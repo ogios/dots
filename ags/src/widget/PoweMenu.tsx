@@ -1,5 +1,6 @@
 import { exec, Variable } from "astal";
 import { App, Astal, Gdk, Gtk } from "astal/gtk4";
+import TogglePowerMenu from "./TogglePowerMenu";
 
 export default {
   window: PowerMenu,
@@ -37,25 +38,26 @@ function menus(
         cssClasses={current_selection((n) => (n === i ? ["selected"] : []))}
         onHoverEnter={() => current_selection.set(i)}
         onClicked={p.on_click}
-      >
-        <box
-          spacing={10}
-          vertical
-          valign={Gtk.Align.CENTER}
-          halign={Gtk.Align.CENTER}
-        >
-          <label
-            halign={Gtk.Align.CENTER}
+        child={
+          <box
+            spacing={10}
+            vertical
             valign={Gtk.Align.CENTER}
-            label={p.icon}
-          />
-          <label
             halign={Gtk.Align.CENTER}
-            valign={Gtk.Align.CENTER}
-            label={p.lable}
-          />
-        </box>
-      </button>
+          >
+            <label
+              halign={Gtk.Align.CENTER}
+              valign={Gtk.Align.CENTER}
+              label={p.icon}
+            />
+            <label
+              halign={Gtk.Align.CENTER}
+              valign={Gtk.Align.CENTER}
+              label={p.lable}
+            />
+          </box>
+        }
+      />
     );
   }
 
@@ -109,39 +111,56 @@ function PowerMenu(monitor: Gdk.Monitor) {
           );
         }
       }}
-    >
-      <box halign={Gtk.Align.CENTER} valign={Gtk.Align.CENTER} spacing={20}>
-        {menus(
-          [
-            {
-              lable: "ShutDown",
-              icon: "",
-              on_click: () => {
-                toggle();
-                exec(["systemctl", "poweroff"]);
-              },
-            },
-            {
-              lable: "Reboot",
-              icon: "",
-              on_click: () => {
-                toggle();
-                exec(["systemctl", "reboot"]);
-              },
-            },
-            {
-              lable: "Logout",
-              icon: "󰗽",
-              on_click: () => {
-                toggle();
-                exec(["niri", "msg", "quit"]);
-              },
-            },
-          ],
-          btns,
-          current_selection,
-        )}
-      </box>
-    </window>
+      child={
+        <overlay>
+          <box
+            type="overlay"
+            cssClasses={["toggle-power-menu"]}
+            halign={Gtk.Align.END}
+            valign={Gtk.Align.START}
+            child={TogglePowerMenu.button()}
+            margin_top={50}
+            margin_end={50}
+          />
+          <box
+            type="overlay"
+            halign={Gtk.Align.CENTER}
+            valign={Gtk.Align.CENTER}
+            spacing={20}
+          >
+            {menus(
+              [
+                {
+                  lable: "ShutDown",
+                  icon: "",
+                  on_click: () => {
+                    toggle();
+                    exec(["systemctl", "poweroff"]);
+                  },
+                },
+                {
+                  lable: "Reboot",
+                  icon: "",
+                  on_click: () => {
+                    toggle();
+                    exec(["systemctl", "reboot"]);
+                  },
+                },
+                {
+                  lable: "Logout",
+                  icon: "󰗽",
+                  on_click: () => {
+                    toggle();
+                    exec(["niri", "msg", "quit"]);
+                  },
+                },
+              ],
+              btns,
+              current_selection,
+            )}
+          </box>
+        </overlay>
+      }
+    />
   );
 }
