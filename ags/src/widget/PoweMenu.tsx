@@ -151,7 +151,7 @@ function PowerMenu(monitor: Gdk.Monitor) {
                   icon: "󰗽",
                   on_click: () => {
                     toggle();
-                    exec(["niri", "msg", "quit"]);
+                    exec(["niri", "msg", "action", "quit"]);
                   },
                 },
               ],
