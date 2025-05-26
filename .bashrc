@@ -5,6 +5,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# random number 0-10
+function rnum() {
+  echo -n $((RANDOM % 11))
+}
+
+sttt scanline -d 0.4 -c "$(rnum)"
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
@@ -102,11 +109,5 @@ export NEOVIDE_FORK=1
 # bun
 export PATH="/home/ogios/.bun/bin:$PATH"
 
-# random number 0-10
-function rnum() {
-  echo -n $((RANDOM % 11))
-}
-
-sttt scanline -d 0.4 -c "$(rnum)"
 # fastfetch
 yy
