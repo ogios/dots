@@ -266,7 +266,7 @@ spawn-at-startup "waypaper-engine" "daemon"
 spawn-at-startup "waypaper-engine" "run"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 // spawn-at-startup "xwaylandvideobridge"
-spawn-at-startup "ags" "run" "--gtk4"
+spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk4"
 spawn-at-startup "way-edges"
 
 // spawn-at-startup dbus-update-activation-environment --all &
@@ -312,7 +312,7 @@ environment {
 // screenshot-path "~/Pictures/niri-scale/%M-%S.png"
 
 hotkey-overlay {
-    // skip-at-startup
+    skip-at-startup
 }
 
 animations {

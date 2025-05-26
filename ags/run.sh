@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ags run --gtk4
+GSK_RENDERER=cairo ags run --gtk4
