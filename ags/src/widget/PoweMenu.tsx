@@ -16,6 +16,52 @@ async function toggle() {
   App.toggle_window(`power-menu-${current_output}`);
 }
 
+type Props = {
+  lable: string;
+  icon: string;
+  on_click: () => void;
+};
+function menus(
+  a: Props[],
+  btns: Gtk.Button[],
+  current_selection: Variable<number>,
+) {
+  const ms: Gtk.Widget[] = Array(a.length);
+  for (const [i, p] of a.entries()) {
+    ms[i] = (
+      <button
+        widthRequest={300}
+        heightRequest={300}
+        focusable={false}
+        setup={(b) => (btns[i] = b)}
+        cssClasses={current_selection((n) => (n === i ? ["selected"] : []))}
+        onHoverEnter={() => current_selection.set(i)}
+        onClicked={p.on_click}
+      >
+        <box
+          spacing={10}
+          vertical
+          valign={Gtk.Align.CENTER}
+          halign={Gtk.Align.CENTER}
+        >
+          <label
+            halign={Gtk.Align.CENTER}
+            valign={Gtk.Align.CENTER}
+            label={p.icon}
+          />
+          <label
+            halign={Gtk.Align.CENTER}
+            valign={Gtk.Align.CENTER}
+            label={p.lable}
+          />
+        </box>
+      </button>
+    );
+  }
+
+  return ms;
+}
+
 function PowerMenu(monitor: Gdk.Monitor) {
   const { TOP, LEFT, BOTTOM, RIGHT } = Astal.WindowAnchor;
 
@@ -55,40 +101,46 @@ function PowerMenu(monitor: Gdk.Monitor) {
         }
 
         if (val === Gdk.KEY_l || val === Gdk.KEY_rightarrow) {
-          current_selection.set((current_selection.get() + 1) % 2);
+          current_selection.set((current_selection.get() + 1) % btns.length); // % btns.length to ensure it wraps around correctly
         }
         if (val === Gdk.KEY_h || val === Gdk.KEY_leftarrow) {
-          current_selection.set((current_selection.get() - 1 + 2) % 2); // +2 to ensure it wraps around correctly
+          current_selection.set(
+            (current_selection.get() - 1 + btns.length) % btns.length, // % btns.length to ensure it wraps around correctly
+          );
         }
       }}
     >
       <box halign={Gtk.Align.CENTER} valign={Gtk.Align.CENTER} spacing={20}>
-        <button
-          widthRequest={300}
-          heightRequest={300}
-          setup={(b) => (btns[0] = b)}
-          cssClasses={current_selection((n) => (n === 0 ? ["selected"] : []))}
-          onHoverEnter={() => current_selection.set(0)}
-          onClicked={() => {
-            toggle();
-            exec(["systemctl", "poweroff"]);
-          }}
-          focusable={false}
-          label=""
-        />
-        <button
-          widthRequest={300}
-          heightRequest={300}
-          setup={(b) => (btns[1] = b)}
-          cssClasses={current_selection((n) => (n === 1 ? ["selected"] : []))}
-          onHoverEnter={() => current_selection.set(1)}
-          onClicked={() => {
-            toggle();
-            exec(["systemctl", "reboot"]);
-          }}
-          focusable={false}
-          label=""
-        />
+        {menus(
+          [
+            {
+              lable: "ShutDown",
+              icon: "",
+              on_click: () => {
+                toggle();
+                exec(["systemctl", "poweroff"]);
+              },
+            },
+            {
+              lable: "Reboot",
+              icon: "",
+              on_click: () => {
+                toggle();
+                exec(["systemctl", "reboot"]);
+              },
+            },
+            {
+              lable: "Logout",
+              icon: "󰗽",
+              on_click: () => {
+                toggle();
+                exec(["niri", "msg", "quit"]);
+              },
+            },
+          ],
+          btns,
+          current_selection,
+        )}
       </box>
     </window>
   );
