@@ -84,14 +84,25 @@ window.Bar {
 .power-menu {
   background: rgba(0, 0, 0, 0.5);
 
-  .power-menu-item {
-    color: $fg-color;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 5px;
+  button {
+    transition: background 0.3s;
 
-    &:hover {
-      background: $border-color;
-    }
+    background: radial-gradient(ellipse at top, #e66465, transparent);
+
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Symbols Nerd Font;
+  }
+
+  .selected {
+    // border: 7px solid $border-color;
+
+    background:
+      radial-gradient(ellipse at top, #e66465, transparent),
+      radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+
+    // &:hover {
+    //   background: $border-color;
+    // }
   }
 }

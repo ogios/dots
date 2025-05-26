@@ -1,4 +1,4 @@
-import { exec } from "astal";
+import { exec, Variable } from "astal";
 import { App, Astal, Gdk, Gtk } from "astal/gtk4";
 
 export default {
@@ -6,13 +6,13 @@ export default {
   toggle,
 };
 
-function get_current_output_niri() {
+async function get_current_output_niri() {
   const j = exec(["niri", "msg", "-j", "focused-output"]).trim();
   return JSON.parse(j).name;
 }
 
-function toggle() {
-  const current_output = get_current_output_niri();
+async function toggle() {
+  const current_output = await get_current_output_niri();
   App.toggle_window(`power-menu-${current_output}`);
 }
 
@@ -21,6 +21,9 @@ function PowerMenu(monitor: Gdk.Monitor) {
 
   const name = `power-menu-${monitor.get_connector()}`;
   print(`spawning power menu for ${name}`);
+
+  const btns: Gtk.Button[] = Array(2);
+  let current_selection = Variable(0);
 
   return (
     <window
@@ -37,11 +40,50 @@ function PowerMenu(monitor: Gdk.Monitor) {
         if (val === Gdk.KEY_Escape || val === Gdk.KEY_q) {
           toggle();
         }
+
+        if (val === Gdk.KEY_Return || val === Gdk.KEY_KP_Enter) {
+          if (current_selection.get() === 0) {
+            btns[0].emit("clicked");
+          } else if (current_selection.get() === 1) {
+            btns[1].emit("clicked");
+          }
+        }
+
+        if (val === Gdk.KEY_l || val === Gdk.KEY_rightarrow) {
+          current_selection.set((current_selection.get() + 1) % 2);
+        }
+        if (val === Gdk.KEY_h || val === Gdk.KEY_leftarrow) {
+          current_selection.set((current_selection.get() - 1 + 2) % 2); // +2 to ensure it wraps around correctly
+        }
       }}
     >
       <box halign={Gtk.Align.CENTER} valign={Gtk.Align.CENTER} spacing={20}>
-        <button focusable={false} label="Shutdown" />
-        <button focusable={false} label="Reboot" />
+        <button
+          widthRequest={300}
+          heightRequest={300}
+          setup={(b) => (btns[0] = b)}
+          cssClasses={current_selection((n) => (n === 0 ? ["selected"] : []))}
+          onHoverEnter={() => current_selection.set(0)}
+          onClicked={() => {
+            print(1);
+            // exec(["systemctl", "poweroff"]);
+          }}
+          focusable={false}
+          label=""
+        />
+        <button
+          widthRequest={300}
+          heightRequest={300}
+          setup={(b) => (btns[1] = b)}
+          cssClasses={current_selection((n) => (n === 1 ? ["selected"] : []))}
+          onHoverEnter={() => current_selection.set(1)}
+          onClicked={() => {
+            print(2);
+            // exec(["systemctl", "reboot"]);
+          }}
+          focusable={false}
+          label=""
+        />
       </box>
     </window>
   );
