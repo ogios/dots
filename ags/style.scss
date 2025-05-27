@@ -85,7 +85,7 @@ window.Bar {
   background: rgba(0, 0, 0, 0.5);
 
   button {
-    transition: all 0.1s ease-in-out;
+    transition: all ease-out(300ms);
     background: radial-gradient(ellipse at bottom, #4d9f0c, transparent);
 
     font-size: xx-large;
