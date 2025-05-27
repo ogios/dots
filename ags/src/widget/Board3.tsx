@@ -3,7 +3,7 @@ import { Gtk } from "astal/gtk4";
 import byte_size from "tiny-byte-size";
 
 function get_ratio(x: number): number {
-  return Math.pow(x, 1 / 6);
+  return Math.pow(x, 1 / 8);
 }
 
 function block(ratio: number) {

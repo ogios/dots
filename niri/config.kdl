@@ -533,6 +533,13 @@ window-rule {
   opacity 0.98
 }
 
+window-rule {
+  match app-id="com.alibabainc.dingtalk"
+  match title="QQ"
+
+  block-out-from "screencast"
+}
+
 /-window-rule {
     match at-startup=false
     exclude app-id="^Alacritty$"
