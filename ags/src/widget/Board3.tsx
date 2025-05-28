@@ -9,7 +9,7 @@ function get_ratio(x: number): number {
 function block(ratio: number) {
   const MAX_WIDTH = 15;
 
-  const w = MAX_WIDTH * Math.max(get_ratio(ratio), 0.1);
+  const w = MAX_WIDTH * Math.max(ratio, 0.1);
   return (
     <box
       cssClasses={["fill-block"]}
@@ -21,6 +21,7 @@ function block(ratio: number) {
 }
 
 function block_array(ratio: number, num: number) {
+  ratio = get_ratio(ratio);
   const v = ratio * num;
   const full_block_num = Math.trunc(v);
   const rest = v - full_block_num;
