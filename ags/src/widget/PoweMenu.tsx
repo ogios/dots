@@ -76,6 +76,7 @@ function PowerMenu(monitor: Gdk.Monitor) {
   return (
     <window
       name={name}
+      namespace="ags"
       gdkmonitor={monitor}
       anchor={BOTTOM | LEFT | TOP | RIGHT}
       layer={Astal.Layer.OVERLAY}

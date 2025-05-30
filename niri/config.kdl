@@ -475,6 +475,8 @@ animations {
 
 layer-rule {
     match namespace="swww"
+    match namespace="ags-backdrop"
+
     place-within-backdrop true
 }
 

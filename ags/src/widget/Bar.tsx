@@ -13,9 +13,10 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
   return (
     <window
       visible
+      namespace="ags-backdrop"
       cssClasses={["Bar"]}
       gdkmonitor={gdkmonitor}
-      // exclusivity={Astal.Exclusivity.EXCLUSIVE}
+      exclusivity={Astal.Exclusivity.IGNORE}
       anchor={BOTTOM | LEFT | TOP}
       layer={Astal.Layer.BACKGROUND}
       application={App}

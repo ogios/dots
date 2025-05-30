@@ -23,6 +23,7 @@ function TogglePowerMenu(gdkmonitor: Gdk.Monitor) {
   return (
     <window
       visible
+      namespace="ags"
       cssClasses={["toggle-power-menu"]}
       gdkmonitor={gdkmonitor}
       anchor={RIGHT | TOP}
