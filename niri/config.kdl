@@ -21,6 +21,8 @@ debug {
     wait-for-frame-completion-in-pipewire
 }
 
+prefer-no-csd
+
 input {
     keyboard {
         xkb {
@@ -253,27 +255,6 @@ cursor {
     hide-after-inactive-ms 1000
 }
 
-prefer-no-csd
-
-
-spawn-at-startup "swaync"
-spawn-at-startup "fcitx5"
-spawn-at-startup "nm-applet"
-spawn-at-startup "blueman-applet"
-// spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
-spawn-at-startup "clipse" "--listen"
-spawn-at-startup "xwayland-satellite" ":12"
-spawn-at-startup "nwg-drawer" "-r"
-spawn-at-startup "waypaper-engine" "daemon"
-spawn-at-startup "waypaper-engine" "run"
-// spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
-// spawn-at-startup "xwaylandvideobridge"
-spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk4"
-spawn-at-startup "way-edges"
-
-// spawn-at-startup dbus-update-activation-environment --all &
-// spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
-
 environment {
     // GSK_RENDERER "cairo"
     // WAYLAND_DISPLAY null
@@ -474,8 +455,10 @@ animations {
 }
 
 layer-rule {
-    match namespace="swww"
-    match namespace="ags-backdrop"
+    // match namespace="swww"
+    // match namespace="ags-backdrop"
+
+    match namespace="wp-back"
 
     place-within-backdrop true
 }
@@ -899,6 +882,68 @@ layer-rule {
   //   color "#00000055"
   // }
 }
+
+workspace "chat" {
+  open-on-output "eDP-1"
+}
+
+workspace "industrial" {
+  open-on-output "eDP-1"
+}
+
+workspace "code" {
+  open-on-output "HDMI-A-1"
+}
+
+workspace "browser" {
+  open-on-output "HDMI-A-1"
+}
+
+window-rule {
+  match app-id="com.alibabainc.dingtalk"
+  match title="QQ"
+  match app-id="cinny"
+  match app-id="discord"
+  open-on-workspace "chat"
+}
+
+window-rule {
+  match at-startup=true app-id="kitty"
+  open-on-workspace "code"
+}
+
+window-rule {
+  match app-id="zen"
+  match app-id="chrome"
+  match app-id="firefox"
+  open-on-workspace "browser"
+}
+
+spawn-at-startup "swaync"
+spawn-at-startup "fcitx5"
+spawn-at-startup "nm-applet"
+spawn-at-startup "blueman-applet"
+// spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
+spawn-at-startup "clipse" "--listen"
+spawn-at-startup "xwayland-satellite" ":12"
+spawn-at-startup "nwg-drawer" "-r"
+// spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
+// spawn-at-startup "xwaylandvideobridge"
+
+spawn-at-startup "swww-daemon" "-n" "wp-front"
+spawn-at-startup "swww-daemon" "-n" "wp-back"
+spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
+spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
+spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk4"
+spawn-at-startup "way-edges"
+
+// spawn-at-startup dbus-update-activation-environment --all &
+// spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
+
+spawn-at-startup "kitty"
+spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
+spawn-at-startup "zen-browser"
+
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
