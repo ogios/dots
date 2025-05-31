@@ -321,7 +321,7 @@
         {
           "name": "tray",
           "edge": "bottom",
-          "position": "right",
+          "position": "left",
           "monitor": "*",
           "layer": "overlay",
           "widget": {
