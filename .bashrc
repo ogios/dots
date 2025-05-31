@@ -62,8 +62,6 @@ eval "$(mcfly init bash)"
   # . /usr/share/bash-completion/bash_completion
   . /usr/share/bash-completion/bash_completion
 
-export PATH=/home/ogios/go/bin:/home/ogios/.cargo/bin:$PATH
-
 alias tserv_start="systemctl --user restart cptserv-server"
 alias tserv_close="systemctl --user stop cptserv-server"
 
@@ -105,9 +103,6 @@ function wre() {
 
 alias ghc="git clone"
 export NEOVIDE_FORK=1
-
-# bun
-export PATH="/home/ogios/.bun/bin:$PATH"
 
 # fastfetch
 yy

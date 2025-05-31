@@ -48,6 +48,7 @@ lazygit/state.yml
 !starship.toml
 !code-flags.conf
 !.bashrc
+!.bash_profile
 !.gitconfig
 !.gitattributes
 !ssh-config
