@@ -1,5 +1,5 @@
 # yazi.toml
-[manager]
+[mgr]
 show_hidden = true
 linemode = "mtime"
 show_symlink = true
