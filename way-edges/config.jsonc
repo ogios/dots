@@ -3,28 +3,6 @@
   "$schema": "./schema.json",
   "ensure_load_group": ["tray", "common", "niri"],
   "groups": [
-    // {
-    //   "name": "debug",
-    //   "widgets": [
-    //     {
-    //       "edge": "top",
-    //       "monitor": "*",
-    //       "layer": "overlay",
-    //       "position": "left",
-    //       "preview_size": 7,
-    //       "widget": {
-    //         "type": "slider",
-    //         "thickness": 30,
-    //         "border_width": 4,
-    //         "length": "12.5%",
-    //         "redraw_only_on_internal_update": true,
-    //         "preset": {
-    //           "type": "speaker"
-    //         }
-    //       }
-    //     }
-    //   ]
-    // },
     {
       "name": "niri",
       "widgets": [
@@ -101,6 +79,7 @@
             /// "active_color": "#fff",
             "focus_color": "#4E884F",
             "default_color": "#000",
+            "focused_only": true,
             "preset": { "type": "niri", "filter_empty": false }
           }
         },
@@ -118,6 +97,7 @@
             /// "active_color": "#fff",
             "focus_color": "#4E884F",
             "default_color": "#000",
+            "focused_only": true,
             "preset": { "type": "niri", "filter_empty": false }
           }
         }
@@ -322,7 +302,43 @@
           "name": "tray",
           "edge": "bottom",
           "position": "left",
-          "monitor": "*",
+          "monitor": "HDMI-A-1",
+          "layer": "overlay",
+          "widget": {
+            "type": "wrap-box",
+            "align": "bottom_left",
+            "outlook": {
+              "type": "window",
+              "color": "#F74F4F"
+            },
+            "widgets": [
+              {
+                "index": [-1, -1],
+                "widget": {
+                  "font_family": "sans-serif",
+                  "type": "tray",
+                  "icon_size": 40,
+                  "header_menu_stack": "menu_top",
+                  "header_menu_align": "left",
+                  "menu_draw_config": {
+                    "font_pixel_height": 18,
+                    "text_color": "#eee",
+                    "border_color": "#111"
+                  },
+                  "header_draw_config": {
+                    "text_color": "#eee"
+                  },
+                  "grid_align": "bottom_left"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "tray",
+          "edge": "bottom",
+          "position": "right",
+          "monitor": "eDP-1",
           "layer": "overlay",
           "widget": {
             "type": "wrap-box",
