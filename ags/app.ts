@@ -1,13 +1,14 @@
 import { App } from "astal/gtk4";
 import style from "./style.scss";
-import Bar from "./src/widget/Bar";
+import SystemMonitor from "./src/widget/SystemMonitor";
 import PoweMenu from "./src/widget/PoweMenu";
 import TogglePowerMenu from "./src/widget/TogglePowerMenu";
 
 App.start({
   css: style,
   main() {
-    App.get_monitors().map(Bar);
+    App.get_monitors().map((m) => SystemMonitor(m, "ags-backdrop"));
+    App.get_monitors().map((m) => SystemMonitor(m, "ags-front"));
     App.get_monitors().map(PoweMenu.window);
     App.get_monitors().map(TogglePowerMenu.TogglePowerMenu);
   },

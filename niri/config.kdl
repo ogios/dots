@@ -133,8 +133,9 @@ output "winit" {
 
 layout {
 
-  always-center-single-column
-  empty-workspace-above-first
+  // always-center-single-column
+  center-focused-column "always"
+  // empty-workspace-above-first
 
   background-color "transparent"
 
@@ -459,6 +460,7 @@ layer-rule {
     // match namespace="ags-backdrop"
 
     match namespace="wp-back"
+    match namespace="ags-backdrop"
 
     place-within-backdrop true
 }

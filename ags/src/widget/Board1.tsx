@@ -15,11 +15,10 @@ function formatTimeWithPad(totalSeconds: number) {
 type InfoBoxProps = {
   label?: string;
   label_var?: Variable<string>;
-  update_func: () => string | Promise<string>;
+  v: Variable<string>;
 };
 
-function BaseInfoBox({ label, label_var, update_func }: InfoBoxProps) {
-  const v = Variable("").poll(500, update_func);
+function BaseInfoBox({ label, label_var, v }: InfoBoxProps) {
   return (
     <box vertical spacing={10} cssClasses={["info-box", "common-box"]} hexpand>
       <label
@@ -42,6 +41,23 @@ function BaseInfoBox({ label, label_var, update_func }: InfoBoxProps) {
   );
 }
 
+var REACTOR_UPTIME = Variable("UNKNOWN").poll(500, async (_) => {
+  const time = await execAsync(["uptime", "-r"]).then((s) => s.split(" ")[1]);
+  return formatTimeWithPad(parseInt(time));
+});
+
+var CPU_TEMP = Variable("UNKNOWN").poll(500, async (_) => {
+  const temp = await execAsync(["sensors", "-u", "coretemp-isa-0000"]).then(
+    (s) =>
+      s
+        .split("\n")
+        .find((line) => line.includes("temp1_input"))
+        ?.split(":")[1]
+        .trim(),
+  );
+  return temp ? `${parseInt(temp)}°C` : "N/A";
+});
+
 function LeftInfoBox() {
   return (
     <box
@@ -51,46 +67,41 @@ function LeftInfoBox() {
       valign={Gtk.Align.CENTER}
       hexpand
     >
-      <BaseInfoBox
-        label="REACTOR UPTIME"
-        update_func={async () => {
-          const time = await execAsync(["uptime", "-r"]).then(
-            (s) => s.split(" ")[1],
-          );
-          return formatTimeWithPad(parseInt(time));
-        }}
-      />
-      <BaseInfoBox
-        label="CPU TEMP"
-        update_func={async () => {
-          const temp = await execAsync([
-            "sensors",
-            "-u",
-            "coretemp-isa-0000",
-          ]).then((s) =>
-            s
-              .split("\n")
-              .find((line) => line.includes("temp1_input"))
-              ?.split(":")[1]
-              .trim(),
-          );
-          return temp ? `${parseInt(temp)}°C` : "N/A";
-        }}
-      />
+      <BaseInfoBox label="REACTOR UPTIME" v={REACTOR_UPTIME} />
+      <BaseInfoBox label="CPU TEMP" v={CPU_TEMP} />
     </box>
   );
 }
 
-function RightInfoBox() {
+const bat = AstalBattery.get_default();
+const BATTERY_LABEL = Variable("MULTDONW TIME");
+if (bat.get_charging()) {
+  BATTERY_LABEL.set("IGNITION TIME");
+}
+bat.connect("notify::charging", () => {
+  BATTERY_LABEL.set(bat.get_charging() ? "IGNITION TIME" : "MULTDONW TIME");
+});
+var BATTERY = Variable("UNKNOWN").poll(500, async (_) => {
   const bat = AstalBattery.get_default();
-  const battery_label = Variable("MULTDONW TIME");
   if (bat.get_charging()) {
-    battery_label.set("IGNITION TIME");
+    const time = bat.get_time_to_full();
+    return time === 0 ? "FULL" : formatTimeWithPad(time);
+  } else {
+    const time = bat.get_time_to_empty();
+    return formatTimeWithPad(time);
   }
-  bat.connect("notify::charging", () => {
-    battery_label.set(bat.get_charging() ? "IGNITION TIME" : "MULTDONW TIME");
-  });
+});
 
+var GPU_TEMP = Variable("UNKNOWN").poll(500, async (_) => {
+  const temp = await execAsync([
+    "nvidia-smi",
+    "--query-gpu=temperature.gpu",
+    "--format=csv,noheader",
+  ]);
+  return temp ? `${temp}°C` : "N/A";
+});
+
+function RightInfoBox() {
   return (
     <box
       vertical
@@ -99,29 +110,8 @@ function RightInfoBox() {
       valign={Gtk.Align.CENTER}
       hexpand
     >
-      <BaseInfoBox
-        label_var={battery_label}
-        update_func={() => {
-          if (bat.get_charging()) {
-            const time = bat.get_time_to_full();
-            return time === 0 ? "FULL" : formatTimeWithPad(time);
-          } else {
-            const time = bat.get_time_to_empty();
-            return formatTimeWithPad(time);
-          }
-        }}
-      />
-      <BaseInfoBox
-        label="GPU TEMP"
-        update_func={async () => {
-          const temp = await execAsync([
-            "nvidia-smi",
-            "--query-gpu=temperature.gpu",
-            "--format=csv,noheader",
-          ]);
-          return temp ? `${temp}°C` : "N/A";
-        }}
-      />
+      <BaseInfoBox label_var={BATTERY_LABEL} v={BATTERY} />
+      <BaseInfoBox label="GPU TEMP" v={GPU_TEMP} />
     </box>
   );
 }

@@ -8,23 +8,6 @@ $border-color: #8dc1ec;
 $fg-color-dark: #759ca0;
 $bg-color-dark: #192029;
 
-window.Bar {
-  background: transparent;
-  color: $fg-color;
-  font-weight: bold;
-
-  > centerbox {
-    background: $bg-color;
-    border-radius: 10px;
-    margin: 8px;
-  }
-
-  button {
-    border-radius: 8px;
-    margin: 2px;
-  }
-}
-
 .monospace {
   font-family: monospace;
 }
