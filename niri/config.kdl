@@ -910,6 +910,11 @@ window-rule {
 }
 
 window-rule {
+  match app-id="rviz2"
+  open-on-workspace "industrial"
+}
+
+window-rule {
   match at-startup=true app-id="kitty"
   open-on-workspace "code"
 }

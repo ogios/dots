@@ -78,7 +78,8 @@ function yy() {
 }
 
 # default editor
-export EDITOR=neovide
+# export EDITOR=neovide
+export EDITOR=nvim
 
 function wre() {
   pkill -9 way-edges
