@@ -84,19 +84,6 @@ export EDITOR=nvim
 function wre() {
   pkill -9 way-edges
   nohup way-edges daemon 2>&1 >/tmp/way-edges.log &
-  sleep 0.5
-
-  case $CURRENT_COMPOSITOR in
-  hyprland)
-    way-edges add hyprland
-    ;;
-  niri)
-    way-edges add niri
-    ;;
-  *)
-    echo NO COMPOSITOR SPECIFIED
-    ;;
-  esac
 }
 
 # Created by `pipx` on 2024-11-12 10:24:56

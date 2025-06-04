@@ -1,373 +1,335 @@
 {
   // "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
   "$schema": "./schema.json",
-  "ensure_load_group": ["tray", "common", "niri"],
-  "groups": [
+  "widgets": [
     {
-      "name": "niri",
-      "widgets": [
-        {
-          "pin_with_key": false,
-          "edge": "top",
-          "position": "left",
-          "monitor": "*",
-          "layer": "overlay",
-          "margins": {
-            "left": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "color": "#333",
-            "event_map": {
-              "272": "niri msg action focus-column-left",
-              "273": "niri msg action focus-workspace-up"
-            }
-          }
-        },
-        {
-          "pin_with_key": false,
-          "edge": "top",
-          "position": "right",
-          "monitor": "*",
-          "layer": "overlay",
-          "margins": {
-            "right": "25%"
-          },
-          "widget": {
-            "thickness": 20,
-            "length": "25%",
-            "type": "btn",
-            "color": "#333",
-            "event_map": {
-              "272": "niri msg action focus-column-right",
-              "273": "niri msg action focus-workspace-down"
-            }
-          }
-        },
-        {
-          "pin_with_key": false,
-          "edge": "bottom",
-          "monitor": "*",
-          "layer": "overlay",
-          "widget": {
-            "thickness": 20,
-            "length": "40%",
-            "type": "btn",
-            "color": "#333",
-            "event_map": {
-              "273": "niri msg action maximize-column",
-              "272": "sh -c pkill nwg-drawer || nwg-drawer",
-              "274": "niri msg action close-window",
-              "276": "niri msg action toggle-column-tabbed-display",
-              "275": "niri msg action toggle-overview"
-            }
-          }
-        },
-        {
-          "edge": "left",
-          "position": "bottom",
-          "layer": "overlay",
-          "monitor": "eDP-1",
-          "widget": {
-            "type": "workspace",
-            "thickness": 30,
-            "length": "50%",
-            "hover_color": "#ffffff22",
-            "active_increase": 0.2,
-            /// "active_color": "#fff",
-            "focus_color": "#4E884F",
-            "default_color": "#000",
-            "focused_only": true,
-            "preset": { "type": "niri", "filter_empty": false }
-          }
-        },
-        {
-          "edge": "right",
-          "position": "bottom",
-          "layer": "overlay",
-          "monitor": "HDMI-A-1",
-          "widget": {
-            "type": "workspace",
-            "thickness": 30,
-            "length": "50%",
-            "hover_color": "#ffffff22",
-            "active_increase": 0.2,
-            /// "active_color": "#fff",
-            "focus_color": "#4E884F",
-            "default_color": "#000",
-            "focused_only": true,
-            "preset": { "type": "niri", "filter_empty": false }
-          }
-        }
-      ]
+      "pin_with_key": false,
+      "edge": "top",
+      "position": "left",
+      "monitor": "*",
+      "layer": "overlay",
+      "margins": {
+        "left": "25%"
+      },
+      "thickness": 20,
+      "length": "25%",
+      "type": "btn",
+      "color": "#333",
+      "event_map": {
+        "272": "niri msg action focus-column-left",
+        "273": "niri msg action focus-workspace-up"
+      }
     },
     {
-      "name": "common",
+      "pin_with_key": false,
+      "edge": "top",
+      "position": "right",
+      "monitor": "*",
+      "layer": "overlay",
+      "margins": {
+        "right": "25%"
+      },
+      "thickness": 20,
+      "length": "25%",
+      "type": "btn",
+      "color": "#333",
+      "event_map": {
+        "272": "niri msg action focus-column-right",
+        "273": "niri msg action focus-workspace-down"
+      }
+    },
+    {
+      "pin_with_key": false,
+      "edge": "bottom",
+      "monitor": "*",
+      "layer": "overlay",
+      "thickness": 20,
+      "length": "40%",
+      "type": "btn",
+      "color": "#333",
+      "event_map": {
+        "273": "niri msg action maximize-column",
+        "272": "sh -c pkill nwg-drawer || nwg-drawer",
+        "274": "niri msg action close-window",
+        "276": "niri msg action toggle-column-tabbed-display",
+        "275": "niri msg action toggle-overview"
+      }
+    },
+    {
+      "edge": "left",
+      "position": "bottom",
+      "layer": "overlay",
+      "monitor": "eDP-1",
+      "type": "workspace",
+      "thickness": 30,
+      "length": "50%",
+      "hover_color": "#ffffff22",
+      "active_increase": 0.2,
+      /// "active_color": "#fff",
+      "focus_color": "#4E884F",
+      "default_color": "#000",
+      "focused_only": true,
+      "preset": { "type": "niri", "filter_empty": false }
+    },
+    {
+      "edge": "right",
+      "position": "bottom",
+      "layer": "overlay",
+      "monitor": "HDMI-A-1",
+      "type": "workspace",
+      "thickness": 30,
+      "length": "50%",
+      "hover_color": "#ffffff22",
+      "active_increase": 0.2,
+      /// "active_color": "#fff",
+      "focus_color": "#4E884F",
+      "default_color": "#000",
+      "focused_only": true,
+      "preset": { "type": "niri", "filter_empty": false }
+    },
+    {
+      "namespace": "stats",
+      "edge": "left",
+      "position": "top",
+      "margins": {
+        "top": 40
+      },
+      "monitor": "*",
+      "layer": "overlay",
+      "type": "wrap-box",
+      "outlook": {
+        "type": "window",
+        "color": "#5d3f3c"
+      },
       "widgets": [
         {
-          "name": "stats",
-          "edge": "left",
-          "position": "top",
-          "margins": {
-            "top": 40
-          },
-          "monitor": "*",
-          "layer": "overlay",
+          "index": [-1, -1],
           "widget": {
-            "type": "wrap-box",
-            "outlook": {
-              "type": "window",
-              "color": "#5d3f3c"
-            },
-            "widgets": [
-              {
-                "index": [-1, -1],
-                "widget": {
-                  // "radius": 18,
-                  // "ring_width": 8,
-                  "font_size": 20,
-                  "font_family": "JetBrainsMono Nerd Font",
-                  "fg_color": "#82B2E3",
-                  "bg_color": "#00000044",
-                  "type": "ring",
-                  "prefix": " ",
-                  "suffix": " {preset}",
-                  "suffix_hide": true,
-                  "preset": {
-                    "update_interval": 500,
-                    "type": "disk"
-                  }
-                }
-              },
-              {
-                "index": [-1, -1],
-                "widget": {
-                  // "radius": 18,
-                  // "ring_width": 8,
-                  "font_size": 20,
-                  "font_family": "JetBrainsMono Nerd Font",
-                  "fg_color": "#FFB77B",
-                  "bg_color": "#00000044",
-                  "type": "ring",
-                  "prefix": " ",
-                  "suffix": " {preset}",
-                  "suffix_hide": true,
-                  "preset": {
-                    "update_interval": 500,
-                    "type": "battery"
-                  }
-                }
-              },
-              {
-                "index": [-1, -1],
-                "widget": {
-                  // "radius": 18,
-                  // "ring_width": 8,
-                  "font_size": 20,
-                  "font_family": "JetBrainsMono Nerd Font",
-                  "fg_color": "#FB8893",
-                  "bg_color": "#00000044",
-                  "type": "ring",
-                  "prefix": " ",
-                  "suffix": " {preset}",
-                  "suffix_hide": true,
-                  "preset": {
-                    "update_interval": 500,
-                    "type": "cpu"
-                  }
-                }
-              },
-              {
-                "index": [-1, -1],
-                "widget": {
-                  // "radius": 18,
-                  // "ring_width": 8,
-                  "font_size": 20,
-                  "font_family": "JetBrainsMono Nerd Font",
-                  "fg_color": "#BEAFD9",
-                  "bg_color": "#00000044",
-                  "type": "ring",
-                  "prefix": "󰾶 ",
-                  "suffix": " {preset}",
-                  "suffix_hide": true,
-                  "preset": {
-                    "update_interval": 500,
-                    "type": "swap"
-                  }
-                }
-              },
-              {
-                "index": [-1, -1],
-                "widget": {
-                  // "radius": 18,
-                  // "ring_width": 8,
-                  "font_size": 20,
-                  "font_family": "JetBrainsMono Nerd Font",
-                  "bg_color": "#00000044",
-                  "type": "ring",
-                  "prefix": " ",
-                  "suffix": " {preset}",
-                  "suffix_hide": true,
-                  "preset": {
-                    "update_interval": 500,
-                    "type": "ram"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "name": "time",
-          "edge": "top",
-          "position": "right",
-          "monitor": "*",
-          "layer": "overlay",
-          "widget": {
-            "type": "wrap-box",
-            "outlook": {
-              "type": "window",
-              "color": "#222",
-              "margins": {
-                "top": 10,
-                "left": 30,
-                "right": 30,
-                "bottom": 10
-              }
-            },
-            "widgets": [
-              {
-                "index": [-1, -1],
-                "widget": {
-                  "type": "text",
-                  "fg_color": "#FFFFFF",
-                  "font_size": 30,
-                  "font_family": "serif",
-                  "preset": {
-                    "type": "time",
-                    "update_interval": 500,
-                    "format": "%v %T %A"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "edge": "top",
-          "monitor": "*",
-          "layer": "overlay",
-          "position": "left",
-          "preview_size": 7,
-          "widget": {
-            "type": "slider",
-            "thickness": 30,
-            "border_width": 4,
-            "length": "12.5%",
-            "redraw_only_on_internal_update": true,
+            // "radius": 18,
+            // "ring_width": 8,
+            "font_size": 20,
+            "font_family": "JetBrainsMono Nerd Font",
+            "fg_color": "#82B2E3",
+            "bg_color": "#00000044",
+            "type": "ring",
+            "prefix": " ",
+            "suffix": " {preset}",
+            "suffix_hide": true,
             "preset": {
-              "type": "speaker"
+              "update_interval": 500,
+              "type": "disk"
             }
           }
         },
         {
-          "edge": "top",
-          "monitor": "*",
-          "position": "left",
-          "layer": "overlay",
-          "margins": {
-            "left": "12.5%"
-          },
-          "preview_size": 7,
+          "index": [-1, -1],
           "widget": {
-            "type": "slider",
-            "thickness": 30,
-            "border_width": 4,
-            "length": "12.5%",
-            "fg_color": "#BD93F9",
-            "redraw_only_on_internal_update": true,
+            // "radius": 18,
+            // "ring_width": 8,
+            "font_size": 20,
+            "font_family": "JetBrainsMono Nerd Font",
+            "fg_color": "#FFB77B",
+            "bg_color": "#00000044",
+            "type": "ring",
+            "prefix": " ",
+            "suffix": " {preset}",
+            "suffix_hide": true,
             "preset": {
-              "type": "microphone"
+              "update_interval": 500,
+              "type": "battery"
+            }
+          }
+        },
+        {
+          "index": [-1, -1],
+          "widget": {
+            // "radius": 18,
+            // "ring_width": 8,
+            "font_size": 20,
+            "font_family": "JetBrainsMono Nerd Font",
+            "fg_color": "#FB8893",
+            "bg_color": "#00000044",
+            "type": "ring",
+            "prefix": " ",
+            "suffix": " {preset}",
+            "suffix_hide": true,
+            "preset": {
+              "update_interval": 500,
+              "type": "cpu"
+            }
+          }
+        },
+        {
+          "index": [-1, -1],
+          "widget": {
+            // "radius": 18,
+            // "ring_width": 8,
+            "font_size": 20,
+            "font_family": "JetBrainsMono Nerd Font",
+            "fg_color": "#BEAFD9",
+            "bg_color": "#00000044",
+            "type": "ring",
+            "prefix": "󰾶 ",
+            "suffix": " {preset}",
+            "suffix_hide": true,
+            "preset": {
+              "update_interval": 500,
+              "type": "swap"
+            }
+          }
+        },
+        {
+          "index": [-1, -1],
+          "widget": {
+            // "radius": 18,
+            // "ring_width": 8,
+            "font_size": 20,
+            "font_family": "JetBrainsMono Nerd Font",
+            "bg_color": "#00000044",
+            "type": "ring",
+            "prefix": " ",
+            "suffix": " {preset}",
+            "suffix_hide": true,
+            "preset": {
+              "update_interval": 500,
+              "type": "ram"
             }
           }
         }
       ]
     },
     {
-      "name": "tray",
+      "namespace": "time",
+      "edge": "top",
+      "position": "right",
+      "monitor": "*",
+      "layer": "overlay",
+      "type": "wrap-box",
+      "outlook": {
+        "type": "window",
+        "color": "#222",
+        "margins": {
+          "top": 10,
+          "left": 30,
+          "right": 30,
+          "bottom": 10
+        }
+      },
       "widgets": [
         {
-          "name": "tray",
-          "edge": "bottom",
-          "position": "left",
-          "monitor": "HDMI-A-1",
-          "layer": "overlay",
+          "index": [-1, -1],
           "widget": {
-            "type": "wrap-box",
-            "align": "bottom_left",
-            "outlook": {
-              "type": "window",
-              "color": "#F74F4F"
-            },
-            "widgets": [
-              {
-                "index": [-1, -1],
-                "widget": {
-                  "font_family": "sans-serif",
-                  "type": "tray",
-                  "icon_size": 40,
-                  "header_menu_stack": "menu_top",
-                  "header_menu_align": "left",
-                  "menu_draw_config": {
-                    "font_pixel_height": 18,
-                    "text_color": "#eee",
-                    "border_color": "#111"
-                  },
-                  "header_draw_config": {
-                    "text_color": "#eee"
-                  },
-                  "grid_align": "bottom_left"
-                }
-              }
-            ]
+            "type": "text",
+            "fg_color": "#FFFFFF",
+            "font_size": 30,
+            "font_family": "serif",
+            "preset": {
+              "type": "time",
+              "update_interval": 500,
+              "format": "%v %T %A"
+            }
           }
-        },
+        }
+      ]
+    },
+    {
+      "edge": "top",
+      "monitor": "*",
+      "layer": "overlay",
+      "position": "left",
+      "preview_size": 7,
+      "type": "slider",
+      "thickness": 30,
+      "border_width": 4,
+      "length": "12.5%",
+      "redraw_only_on_internal_update": true,
+      "preset": {
+        "type": "speaker"
+      }
+    },
+    {
+      "edge": "top",
+      "monitor": "*",
+      "position": "left",
+      "layer": "overlay",
+      "margins": {
+        "left": "12.5%"
+      },
+      "preview_size": 7,
+      "type": "slider",
+      "thickness": 30,
+      "border_width": 4,
+      "length": "12.5%",
+      "fg_color": "#BD93F9",
+      "redraw_only_on_internal_update": true,
+      "preset": {
+        "type": "microphone"
+      }
+    },
+    {
+      "namespace": "tray",
+      "edge": "bottom",
+      "position": "left",
+      "monitor": "HDMI-A-1",
+      "layer": "overlay",
+      "type": "wrap-box",
+      "align": "bottom_left",
+      "outlook": {
+        "type": "window",
+        "color": "#F74F4F"
+      },
+      "widgets": [
         {
-          "name": "tray",
-          "edge": "bottom",
-          "position": "right",
-          "monitor": "eDP-1",
-          "layer": "overlay",
+          "index": [-1, -1],
           "widget": {
-            "type": "wrap-box",
-            "align": "bottom_left",
-            "outlook": {
-              "type": "window",
-              "color": "#F74F4F"
+            "font_family": "sans-serif",
+            "type": "tray",
+            "icon_size": 40,
+            "header_menu_stack": "menu_top",
+            "header_menu_align": "left",
+            "menu_draw_config": {
+              "font_pixel_height": 18,
+              "text_color": "#eee",
+              "border_color": "#111"
             },
-            "widgets": [
-              {
-                "index": [-1, -1],
-                "widget": {
-                  "font_family": "sans-serif",
-                  "type": "tray",
-                  "icon_size": 40,
-                  "header_menu_stack": "menu_top",
-                  "header_menu_align": "left",
-                  "menu_draw_config": {
-                    "font_pixel_height": 18,
-                    "text_color": "#eee",
-                    "border_color": "#111"
-                  },
-                  "header_draw_config": {
-                    "text_color": "#eee"
-                  },
-                  "grid_align": "bottom_left"
-                }
-              }
-            ]
+            "header_draw_config": {
+              "text_color": "#eee"
+            },
+            "grid_align": "bottom_left"
+          }
+        }
+      ]
+    },
+    {
+      "namespace": "tray",
+      "edge": "bottom",
+      "position": "right",
+      "monitor": "eDP-1",
+      "layer": "overlay",
+      "type": "wrap-box",
+      "align": "bottom_left",
+      "outlook": {
+        "type": "window",
+        "color": "#F74F4F"
+      },
+      "widgets": [
+        {
+          "index": [-1, -1],
+          "widget": {
+            "font_family": "sans-serif",
+            "type": "tray",
+            "icon_size": 40,
+            "header_menu_stack": "menu_top",
+            "header_menu_align": "left",
+            "menu_draw_config": {
+              "font_pixel_height": 18,
+              "text_color": "#eee",
+              "border_color": "#111"
+            },
+            "header_draw_config": {
+              "text_color": "#eee"
+            },
+            "grid_align": "bottom_left"
           }
         }
       ]
