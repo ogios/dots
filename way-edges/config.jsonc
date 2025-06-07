@@ -103,97 +103,82 @@
       },
       "widgets": [
         {
-          "index": [-1, -1],
-          "widget": {
-            // "radius": 18,
-            // "ring_width": 8,
-            "font_size": 20,
-            "font_family": "JetBrainsMono Nerd Font",
-            "fg_color": "#82B2E3",
-            "bg_color": "#00000044",
-            "type": "ring",
-            "prefix": " ",
-            "suffix": " {preset}",
-            "suffix_hide": true,
-            "preset": {
-              "update_interval": 500,
-              "type": "disk"
-            }
+          // "radius": 18,
+          // "ring_width": 8,
+          "font_size": 20,
+          "font_family": "JetBrainsMono Nerd Font",
+          "fg_color": "#82B2E3",
+          "bg_color": "#00000044",
+          "type": "ring",
+          "prefix": " ",
+          "suffix": " {preset}",
+          "suffix_hide": true,
+          "preset": {
+            "update_interval": 500,
+            "type": "disk"
           }
         },
         {
-          "index": [-1, -1],
-          "widget": {
-            // "radius": 18,
-            // "ring_width": 8,
-            "font_size": 20,
-            "font_family": "JetBrainsMono Nerd Font",
-            "fg_color": "#FFB77B",
-            "bg_color": "#00000044",
-            "type": "ring",
-            "prefix": " ",
-            "suffix": " {preset}",
-            "suffix_hide": true,
-            "preset": {
-              "update_interval": 500,
-              "type": "battery"
-            }
+          // "radius": 18,
+          // "ring_width": 8,
+          "font_size": 20,
+          "font_family": "JetBrainsMono Nerd Font",
+          "fg_color": "#FFB77B",
+          "bg_color": "#00000044",
+          "type": "ring",
+          "prefix": " ",
+          "suffix": " {preset}",
+          "suffix_hide": true,
+          "preset": {
+            "update_interval": 500,
+            "type": "battery"
           }
         },
         {
-          "index": [-1, -1],
-          "widget": {
-            // "radius": 18,
-            // "ring_width": 8,
-            "font_size": 20,
-            "font_family": "JetBrainsMono Nerd Font",
-            "fg_color": "#FB8893",
-            "bg_color": "#00000044",
-            "type": "ring",
-            "prefix": " ",
-            "suffix": " {preset}",
-            "suffix_hide": true,
-            "preset": {
-              "update_interval": 500,
-              "type": "cpu"
-            }
+          // "radius": 18,
+          // "ring_width": 8,
+          "font_size": 20,
+          "font_family": "JetBrainsMono Nerd Font",
+          "fg_color": "#FB8893",
+          "bg_color": "#00000044",
+          "type": "ring",
+          "prefix": " ",
+          "suffix": " {preset}",
+          "suffix_hide": true,
+          "preset": {
+            "update_interval": 500,
+            "type": "cpu"
           }
         },
         {
-          "index": [-1, -1],
-          "widget": {
-            // "radius": 18,
-            // "ring_width": 8,
-            "font_size": 20,
-            "font_family": "JetBrainsMono Nerd Font",
-            "fg_color": "#BEAFD9",
-            "bg_color": "#00000044",
-            "type": "ring",
-            "prefix": "󰾶 ",
-            "suffix": " {preset}",
-            "suffix_hide": true,
-            "preset": {
-              "update_interval": 500,
-              "type": "swap"
-            }
+          // "radius": 18,
+          // "ring_width": 8,
+          "font_size": 20,
+          "font_family": "JetBrainsMono Nerd Font",
+          "fg_color": "#BEAFD9",
+          "bg_color": "#00000044",
+          "type": "ring",
+          "prefix": "󰾶 ",
+          "suffix": " {preset}",
+          "suffix_hide": true,
+          "preset": {
+            "update_interval": 500,
+            "type": "swap"
           }
         },
         {
-          "index": [-1, -1],
-          "widget": {
-            // "radius": 18,
-            // "ring_width": 8,
-            "font_size": 20,
-            "font_family": "JetBrainsMono Nerd Font",
-            "bg_color": "#00000044",
-            "type": "ring",
-            "prefix": " ",
-            "suffix": " {preset}",
-            "suffix_hide": true,
-            "preset": {
-              "update_interval": 500,
-              "type": "ram"
-            }
+          // "radius": 18,
+          // "ring_width": 8,
+          "font_size": 20,
+          "font_family": "JetBrainsMono Nerd Font",
+          "bg_color": "#00000044",
+          "type": "ring",
+          "prefix": " ",
+          "suffix": " {preset}",
+          "suffix_hide": true,
+          "preset": {
+            "update_interval": 500,
+            "type": "ram"
           }
         }
       ]
@@ -217,17 +202,14 @@
       },
       "widgets": [
         {
-          "index": [-1, -1],
-          "widget": {
-            "type": "text",
-            "fg_color": "#FFFFFF",
-            "font_size": 30,
-            "font_family": "serif",
-            "preset": {
-              "type": "time",
-              "update_interval": 500,
-              "format": "%v %T %A"
-            }
+          "type": "text",
+          "fg_color": "#FFFFFF",
+          "font_size": 30,
+          "font_family": "serif",
+          "preset": {
+            "type": "time",
+            "update_interval": 500,
+            "format": "%v %T %A"
           }
         }
       ]
@@ -280,23 +262,20 @@
       },
       "widgets": [
         {
-          "index": [-1, -1],
-          "widget": {
-            "font_family": "sans-serif",
-            "type": "tray",
-            "icon_size": 40,
-            "header_menu_stack": "menu_top",
-            "header_menu_align": "left",
-            "menu_draw_config": {
-              "font_pixel_height": 18,
-              "text_color": "#eee",
-              "border_color": "#111"
-            },
-            "header_draw_config": {
-              "text_color": "#eee"
-            },
-            "grid_align": "bottom_left"
-          }
+          "font_family": "sans-serif",
+          "type": "tray",
+          "icon_size": 40,
+          "header_menu_stack": "menu_top",
+          "header_menu_align": "left",
+          "menu_draw_config": {
+            "font_pixel_height": 18,
+            "text_color": "#eee",
+            "border_color": "#111"
+          },
+          "header_draw_config": {
+            "text_color": "#eee"
+          },
+          "grid_align": "bottom_left"
         }
       ]
     },
@@ -314,23 +293,20 @@
       },
       "widgets": [
         {
-          "index": [-1, -1],
-          "widget": {
-            "font_family": "sans-serif",
-            "type": "tray",
-            "icon_size": 40,
-            "header_menu_stack": "menu_top",
-            "header_menu_align": "left",
-            "menu_draw_config": {
-              "font_pixel_height": 18,
-              "text_color": "#eee",
-              "border_color": "#111"
-            },
-            "header_draw_config": {
-              "text_color": "#eee"
-            },
-            "grid_align": "bottom_left"
-          }
+          "font_family": "sans-serif",
+          "type": "tray",
+          "icon_size": 40,
+          "header_menu_stack": "menu_top",
+          "header_menu_align": "left",
+          "menu_draw_config": {
+            "font_pixel_height": 18,
+            "text_color": "#eee",
+            "border_color": "#111"
+          },
+          "header_draw_config": {
+            "text_color": "#eee"
+          },
+          "grid_align": "bottom_left"
         }
       ]
     }
