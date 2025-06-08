@@ -10,7 +10,6 @@ export default function SystemMonitor(gdkmonitor: Gdk.Monitor, ns: string) {
     <window
       visible
       namespace={ns}
-      cssClasses={["Bar"]}
       gdkmonitor={gdkmonitor}
       exclusivity={Astal.Exclusivity.IGNORE}
       anchor={BOTTOM | LEFT | TOP}
@@ -20,7 +19,6 @@ export default function SystemMonitor(gdkmonitor: Gdk.Monitor, ns: string) {
       margin_top={50}
       child={
         <box vertical hexpand spacing={40}>
-          {/* <AudioVisualizer /> */}
           <Board1 />
           <Board2 />
           <Board3 />

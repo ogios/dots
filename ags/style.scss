@@ -8,6 +8,10 @@ $border-color: #8dc1ec;
 $fg-color-dark: #759ca0;
 $bg-color-dark: #192029;
 
+* {
+  background: none;
+}
+
 .monospace {
   font-family: monospace;
 }
@@ -99,5 +103,18 @@ $bg-color-dark: #192029;
         transparent 100%
       );
     }
+  }
+}
+
+.time {
+  .time-hm {
+    font-family: monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    color: $fg-color;
+  }
+  .time-date {
+    font-size: large;
+    color: $fg-color-dark;
   }
 }
