@@ -101,7 +101,7 @@
         "type": "window",
         "color": "#5d3f3c"
       },
-      "widgets": [
+      "items": [
         {
           // "radius": 18,
           // "ring_width": 8,
@@ -200,7 +200,7 @@
           "bottom": 10
         }
       },
-      "widgets": [
+      "items": [
         {
           "type": "text",
           "fg_color": "#FFFFFF",
@@ -260,7 +260,7 @@
         "type": "window",
         "color": "#F74F4F"
       },
-      "widgets": [
+      "items": [
         {
           "font_family": "sans-serif",
           "type": "tray",
@@ -291,7 +291,7 @@
         "type": "window",
         "color": "#F74F4F"
       },
-      "widgets": [
+      "items": [
         {
           "font_family": "sans-serif",
           "type": "tray",
