@@ -12,6 +12,7 @@ lazygit/state.yml
 !foot/**
 !kitty
 !kitty/**
+!lazygit
 !lazygit/**
 !mpv
 !mpv/**
