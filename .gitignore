@@ -45,6 +45,8 @@ lazygit/state.yml
 !ags/**
 !tray-tui
 !tray-tui/**
+!niriswitcher
+!niriswitcher/**
 
 !starship.toml
 !code-flags.conf

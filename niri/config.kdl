@@ -942,6 +942,7 @@ spawn-at-startup "swww-daemon" "-n" "wp-back"
 spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
 spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
 spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk4"
+spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo niriswitcher"
 spawn-at-startup "way-edges"
 
 // spawn-at-startup dbus-update-activation-environment --all &
@@ -975,6 +976,7 @@ binds {
 
     Mod+m { spawn "ags" "request" "power-menu"; }
 
+    Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
 
     XF86AudioRaiseVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
