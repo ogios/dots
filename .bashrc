@@ -5,12 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# random number 0-10
-function rnum() {
-  echo -n $((RANDOM % 11))
-}
-
-sttt scanline -d 0.4 -c "$(rnum)"
+sttt scanline -d 0.4 -c 11
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'

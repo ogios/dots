@@ -4,6 +4,29 @@
   "widgets": [
     {
       "pin-with-key": false,
+      "edge": "right",
+      "position": "top",
+      "monitor": "*",
+      "layer": "overlay",
+      "margins": {
+        "top": "10%"
+      },
+      "thickness": 40,
+      "length": "25%",
+      "fg-color": "#85C9E8aa",
+      "bg-color": "#0000",
+      "border-color": "#85C9E8ff",
+      "fg-text-color": "#fffa",
+      "bg-text-color": "#fffa",
+      "radius": 10,
+      "obtuse-angle": 90,
+      "type": "slider",
+      "preset": {
+        "type": "backlight"
+      }
+    },
+    {
+      "pin-with-key": false,
       "edge": "top",
       "position": "left",
       "monitor": "*",
@@ -219,11 +242,18 @@
       "monitor": "*",
       "layer": "overlay",
       "position": "left",
-      "preview-size": 7,
+      "preview-size": 9,
       "type": "slider",
-      "thickness": 30,
-      "border-width": 4,
+      "thickness": 40,
+      "border-width": 3,
       "length": "12.5%",
+      "radius": 10,
+      "obtuse-angle": 90,
+      "fg-color": "#18A558aa",
+      "bg-color": "#0000",
+      "border-color": "#18A558",
+      "fg-text-color": "#fffa",
+      "bg-text-color": "#fffa",
       "redraw-only-on-internal-update": true,
       "preset": {
         "type": "speaker"
@@ -237,12 +267,18 @@
       "margins": {
         "left": "12.5%"
       },
-      "preview-size": 7,
+      "preview-size": 9,
       "type": "slider",
-      "thickness": 30,
-      "border-width": 4,
+      "thickness": 40,
+      "border-width": 3,
       "length": "12.5%",
-      "fg-color": "#BD93F9",
+      "radius": 10,
+      "obtuse-angle": 90,
+      "fg-color": "#BD93F9aa",
+      "bg-color": "#0000",
+      "border-color": "#BD93F9",
+      "fg-text-color": "#fffa",
+      "bg-text-color": "#fffa",
       "redraw-only-on-internal-update": true,
       "preset": {
         "type": "microphone"
