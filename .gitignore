@@ -6,6 +6,9 @@ lazygit/state.yml
 
 !.gitignore
 
+!hyprlock/
+!hyprlock/hyprlock.conf
+
 !bat/**
 !btop/**
 !cava/**
