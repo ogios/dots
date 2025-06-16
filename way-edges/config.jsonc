@@ -3,7 +3,6 @@
   "$schema": "./schema.json",
   "widgets": [
     {
-      "pin-with-key": false,
       "edge": "right",
       "position": "top",
       "monitor": "*",
@@ -13,7 +12,7 @@
       },
       "thickness": 40,
       "length": "25%",
-      "fg-color": "#85C9E8aa",
+      "fg-color": "#85C9E8cc",
       "bg-color": "#0000",
       "border-color": "#85C9E8ff",
       "fg-text-color": "#fffa",
@@ -69,7 +68,6 @@
       "thickness": 20,
       "length": "40%",
       "type": "btn",
-      "color": "#333",
       "event-map": {
         "273": "niri msg action maximize-column",
         "272": "sh -c pkill nwg-drawer || nwg-drawer",
@@ -249,7 +247,7 @@
       "length": "12.5%",
       "radius": 10,
       "obtuse-angle": 90,
-      "fg-color": "#18A558aa",
+      "fg-color": "#18A558cc",
       "bg-color": "#0000",
       "border-color": "#18A558",
       "fg-text-color": "#fffa",
@@ -274,7 +272,7 @@
       "length": "12.5%",
       "radius": 10,
       "obtuse-angle": 90,
-      "fg-color": "#BD93F9aa",
+      "fg-color": "#BD93F9cc",
       "bg-color": "#0000",
       "border-color": "#BD93F9",
       "fg-text-color": "#fffa",
@@ -294,7 +292,7 @@
       "align": "bottom-left",
       "outlook": {
         "type": "window",
-        "color": "#F74F4F"
+        "color": "#0C986C"
       },
       "items": [
         {
@@ -325,7 +323,7 @@
       "align": "bottom-left",
       "outlook": {
         "type": "window",
-        "color": "#F74F4F"
+        "color": "#0C986C"
       },
       "items": [
         {
