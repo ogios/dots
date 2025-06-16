@@ -947,6 +947,7 @@ spawn-at-startup "nwg-drawer" "-r"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 // spawn-at-startup "xwaylandvideobridge"
 
+spawn-at-startup "quickshell"
 spawn-at-startup "swww-daemon" "-n" "wp-front"
 spawn-at-startup "swww-daemon" "-n" "wp-back"
 spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
@@ -977,7 +978,8 @@ binds {
     // Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+Ctrl+Space { spawn "nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
-    Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
+    // Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
+    Mod+Shift+S { spawn "/home/ogios/.config/quickshell/ss.sh"; }
     Mod+Shift+C { spawn "hyprpicker" "-a"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "stats"; }

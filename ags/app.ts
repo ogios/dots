@@ -12,7 +12,7 @@ App.start({
     App.get_monitors().map((m) => SystemMonitor(m, "ags-front"));
 
     App.get_monitors().map((m) => Time(m, "ags-backdrop"));
-    App.get_monitors().map((m) => Time(m, "ags-front"));
+    // App.get_monitors().map((m) => Time(m, "ags-front"));
 
     App.get_monitors().map(PoweMenu.window);
     App.get_monitors().map(TogglePowerMenu.TogglePowerMenu);
