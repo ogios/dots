@@ -2,13 +2,14 @@
   // "$schema": "https://raw.githubusercontent.com/way-edges/way-edges/master/config/config.schema.json",
   "$schema": "./schema.json",
   "widgets": [
+    // =========== backlight ===========
     {
-      "edge": "right",
+      "edge": "left",
       "position": "top",
-      "monitor": "*",
+      "monitor": "eDP-1",
       "layer": "overlay",
       "margins": {
-        "top": "10%"
+        "top": "20%"
       },
       "thickness": 40,
       "length": "25%",
@@ -24,6 +25,29 @@
         "type": "backlight"
       }
     },
+    {
+      "edge": "right",
+      "position": "top",
+      "monitor": "HDMI-A-1",
+      "layer": "overlay",
+      "margins": {
+        "top": "20%"
+      },
+      "thickness": 40,
+      "length": "25%",
+      "fg-color": "#85C9E8cc",
+      "bg-color": "#0000",
+      "border-color": "#85C9E8ff",
+      "fg-text-color": "#fffa",
+      "bg-text-color": "#fffa",
+      "radius": 10,
+      "obtuse-angle": 90,
+      "type": "slider",
+      "preset": {
+        "type": "backlight"
+      }
+    },
+    // =========== buttons ===========
     {
       "pin-with-key": false,
       "edge": "top",
@@ -76,6 +100,7 @@
         "275": "niri msg action toggle-overview"
       }
     },
+    // =========== workspace ===========
     {
       "edge": "left",
       "position": "bottom",
@@ -108,6 +133,7 @@
       "focused-only": true,
       "preset": { "type": "niri", "filter-empty": false }
     },
+    // =========== ring stats ===========
     {
       "namespace": "stats",
       "edge": "left",
@@ -204,6 +230,7 @@
         }
       ]
     },
+    // =========== time ===========
     {
       "namespace": "time",
       "edge": "top",
@@ -235,6 +262,58 @@
         }
       ]
     },
+    // =========== battery indicator ===========
+    {
+      "edge": "right",
+      "position": "bottom",
+      "margins": {
+        "bottom": "2%"
+      },
+      "monitor": "eDP-1",
+      "layer": "overlay",
+      "preview-size": "100%",
+      "type": "slider",
+      "thickness": 10,
+      "border-width": 1,
+      "length": "12.5%",
+      "fg-color": "#FF8700cc",
+      "bg-color": "#0000",
+      "border-color": "#FF8700",
+      "fg-text-color": "#0000", // hide text
+      "bg-text-color": "#0000",
+      "redraw-only-on-internal-update": true,
+      "preset": {
+        "type": "custom",
+        "update-interval": 1000,
+        "update-command": "/home/ogios/.config/way-edges/battery.sh"
+      }
+    },
+    {
+      "edge": "right",
+      "position": "top",
+      "margins": {
+        "top": "5%"
+      },
+      "monitor": "HDMI-A-1",
+      "layer": "overlay",
+      "preview-size": "100%",
+      "type": "slider",
+      "thickness": 10,
+      "border-width": 1,
+      "length": "12.5%",
+      "fg-color": "#FF8700cc",
+      "bg-color": "#0000",
+      "border-color": "#FF8700",
+      "fg-text-color": "#0000", // hide text
+      "bg-text-color": "#0000",
+      "redraw-only-on-internal-update": true,
+      "preset": {
+        "type": "custom",
+        "update-interval": 1000,
+        "update-command": "/home/ogios/.config/way-edges/battery.sh"
+      }
+    },
+    // =========== audio ===========
     {
       "edge": "top",
       "monitor": "*",
@@ -282,6 +361,7 @@
         "type": "microphone"
       }
     },
+    // =========== tray ===========
     {
       "namespace": "tray",
       "edge": "bottom",

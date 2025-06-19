@@ -9,8 +9,13 @@ lazygit/state.yml
 !hyprlock/
 !hyprlock/hyprlock.conf
 
+!quickshell/
+!quickshell/**
+
 !bat/**
+!btop
 !btop/**
+btop/btop.log
 !cava/**
 !foot/**
 !kitty
