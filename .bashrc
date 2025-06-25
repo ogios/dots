@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-sttt scanline -d 0.4 -c 11
+# sttt scanline -d 0.4 -c 11
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -87,5 +87,5 @@ function wre() {
 alias ghc="git clone"
 export NEOVIDE_FORK=1
 
-# fastfetch
-yy
+fastfetch
+# yy

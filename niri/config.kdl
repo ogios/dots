@@ -537,6 +537,21 @@ window-rule {
   block-out-from "screencast"
 }
 
+window-rule {
+  match title="gsr notify"
+
+  border {
+    off
+  }
+  shadow {
+    off
+  }
+  geometry-corner-radius 0
+  default-floating-position x=0 y=200 relative-to="top-right"
+  open-focused false
+}
+
+
 /-window-rule {
     match at-startup=false
     exclude app-id="^Alacritty$"
@@ -987,6 +1002,17 @@ binds {
     Mod+Shift+E { spawn "way-edges" "togglepin" "tray"; }
 
     Mod+m { spawn "ags" "request" "power-menu"; }
+
+    // Mod+Print {
+    //     spawn "sh" "-c" r#"
+    //         file=~/Videos/recordings/"$(date +%s)".mp4
+    //         gpu-screen-recorder -w region -region "$(slurp -b '#00000090' -w 0 -f %wx%h+%x+%y)" -o "$file"
+    //         wl-copy file:/"$file" -t text/uri-list
+    //     "#;
+    // }
+    //
+    // Mod+Escape { spawn "pkill" "-SIGINT" "-f" "gpu-screen-recorder"; }
+
 
     XF86AudioRaiseVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
