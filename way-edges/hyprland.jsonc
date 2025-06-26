@@ -1,0 +1,22 @@
+{
+  "$schema": "./schema.json",
+  "widgets": [
+    // =========== workspace ===========
+    {
+      "edge": "right",
+      "position": "bottom",
+      "layer": "overlay",
+      "monitor": "HDMI-A-1",
+      "type": "workspace",
+      "thickness": 30,
+      "length": "50%",
+      "hover-color": "#ffffff22",
+      "active-increase": 0.2,
+      /// "active-color": "#fff",
+      "focus-color": "#4E884F",
+      "default-color": "#000",
+      "focused-only": true,
+      "preset": "hyprland"
+    }
+  ]
+}
