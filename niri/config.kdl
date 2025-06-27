@@ -143,14 +143,14 @@ layout {
 
   background-color "transparent"
 
-  // blur {
-  //   on
-  //   radius 10
-  //   // noise 100
-  // }
+  blur {
+    on
+    radius 1
+    // noise 100
+  }
 
     focus-ring {
-        // off
+        off
         width 3
         // width 8
         // catppuccin-mocha Sapphire
@@ -292,7 +292,7 @@ environment {
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   NVD_BACKEND "direct"
 
-  QT_AUTO_SCREEN_SCALE_FACTOR "1" 
+  // QT_AUTO_SCREEN_SCALE_FACTOR "1" 
   QT_QPA_PLATFORM "wayland;xcb" 
   QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
   QT_QPA_PLATFORMTHEME "qt5ct"
@@ -477,8 +477,9 @@ layer-rule {
 
 window-rule {
   draw-border-with-background false
-  geometry-corner-radius 16
+  // geometry-corner-radius 16
   clip-to-geometry true
+  open-fullscreen true
 }
 
 
@@ -974,8 +975,8 @@ spawn-at-startup "way-edges"
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
 
 spawn-at-startup "kitty"
-spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
 spawn-at-startup "zen-browser"
+spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
 
 
 binds {
