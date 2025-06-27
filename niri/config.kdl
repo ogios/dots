@@ -959,7 +959,7 @@ spawn-at-startup "blueman-applet"
 // spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
 spawn-at-startup "clipse" "--listen"
 spawn-at-startup "xwayland-satellite" ":12"
-spawn-at-startup "nwg-drawer" "-r"
+spawn-at-startup "nwg-drawer" "-r" "-ovl"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 // spawn-at-startup "xwaylandvideobridge"
 
@@ -991,7 +991,6 @@ binds {
     Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
     Mod+T { spawn "kitty" "-T" "traytui" "tray-tui"; }
-    // Mod+Ctrl+Space { spawn "sh" "-c" "pkill nwg-drawer || nwg-drawer"; }
     Mod+Ctrl+Space { spawn "nwg-drawer"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     // Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
