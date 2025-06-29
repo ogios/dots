@@ -963,12 +963,12 @@ spawn-at-startup "nwg-drawer" "-r" "-ovl"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 // spawn-at-startup "xwaylandvideobridge"
 
-spawn-at-startup "quickshell"
+// spawn-at-startup "quickshell"
 spawn-at-startup "swww-daemon" "-n" "wp-front"
 spawn-at-startup "swww-daemon" "-n" "wp-back"
 spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
 spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
-spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk4"
+spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk 4"
 spawn-at-startup "way-edges"
 
 // spawn-at-startup dbus-update-activation-environment --all &
