@@ -8,6 +8,9 @@
     "source": "/home/ogios/Pictures/temp/*",
     "type": "kitty-icat",
     "width": 30,
+    "padding": {
+      "left": 30,
+    },
   },
   "display": {
     "separator": "  ",
