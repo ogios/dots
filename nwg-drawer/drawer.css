@@ -6,9 +6,10 @@ window {
 
 /* search entry */
 entry {
-  border-color: red;
-  color: #ffbcb7;
-  background-color: rgba (0, 0, 0, 0.2);
+  border-color: #0c986c;
+  color: white;
+  font-size: x-large;
+  padding: 20px;
 }
 
 button,
@@ -19,11 +20,13 @@ image {
 
 button {
   transition: all 0.1s ease-out;
+  margin: 0 5px 0 5px;
+  font-size: large;
+  padding: 10px 20px;
 }
 
 button:hover {
-  box-shadow: inset 0px 0px 5px rgba(255, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 0px 4px #0c986c;
 }
 
 /* in case you wanted to give category buttons a different look */
@@ -32,8 +35,9 @@ button:hover {
 }
 
 #pinned-box {
-  padding-bottom: 5px;
-  border-bottom: 1px dotted gray;
+  padding-bottom: 20px;
+  border-bottom: 5px dotted white;
+  margin-bottom: 5px;
 }
 
 #files-box {
