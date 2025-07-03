@@ -544,25 +544,20 @@ window-rule {
 }
 
 window-rule {
-  match title="clipse"
+  match title="^clipse$"
   match app-id="it.mijorus.smile"
-  match title="traytui"
+  match title="^traytui$"
 
   open-floating true
 
-  default-column-width { fixed 1080; }
-  default-window-height { fixed 870; }
+  default-column-width { proportion 1.0; }
+  default-window-height { proportion 0.7; }
 
   default-floating-position x=0 y=0 relative-to="bottom"
   baba-is-float true
   open-fullscreen false
 }
 
-window-rule {
-  match title="traytui"
-
-  default-column-width { fixed 2000; }
-}
 
 window-rule {
   match is-focused=false
