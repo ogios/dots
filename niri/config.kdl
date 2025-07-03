@@ -987,9 +987,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="zen"
-  match app-id="chrome"
-  match app-id="firefox"
+  match at-startup=true app-id="zen" app-id="chrome" app-id="firefox"
   open-on-workspace "browser"
 }
 
@@ -1018,7 +1016,7 @@ spawn-at-startup "way-edges"
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
 
 spawn-at-startup "kitty"
-spawn-at-startup "zen-browser"
+spawn-at-startup "firefox"
 spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
 
 
@@ -1029,7 +1027,7 @@ binds {
     Mod+E { spawn "thunar"; }
     Mod+B { spawn "firefox"; }
     Mod+Alt+L { spawn "hyprlock"; }
-    Mod+Ctrl+B { spawn "zen-browser"; }
+    // Mod+Ctrl+B { spawn "zen-browser"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
