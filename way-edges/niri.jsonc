@@ -6,7 +6,7 @@
     {
       "edge": "left",
       "position": "top",
-      "monitor": "eDP-1",
+      "monitor": ["eDP-1", "eDP-2"],
       "layer": "overlay",
       "margins": {
         "top": "20%"
@@ -105,7 +105,7 @@
       "edge": "left",
       "position": "bottom",
       "layer": "overlay",
-      "monitor": "eDP-1",
+      "monitor": ["eDP-1", "eDP-2"],
       "type": "workspace",
       "thickness": 40,
       "length": "50%",
@@ -269,7 +269,7 @@
       "margins": {
         "bottom": "2%"
       },
-      "monitor": "eDP-1",
+      "monitor": ["eDP-1", "eDP-2"],
       "layer": "overlay",
       "pin-on-startup": true,
       "type": "slider",
@@ -397,7 +397,7 @@
       "namespace": "tray",
       "edge": "bottom",
       "position": "right",
-      "monitor": "eDP-1",
+      "monitor": ["eDP-1", "eDP-2"],
       "layer": "overlay",
       "type": "wrap-box",
       "align": "bottom-left",
