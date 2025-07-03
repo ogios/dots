@@ -68,7 +68,7 @@ prepend_keymap = [
     "g",
     "c",
     "c",
-  ], run = "cd ~/.config/hypr", desc = "Go to the .config directory" },
+  ], run = "cd ~/.config", desc = "Go to the .config directory" },
 
   # exec
   # { on = [
