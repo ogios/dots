@@ -2,6 +2,8 @@
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "bottom",
+  "layer": "overlay",
+  "layer-shell-cover-screen": false,
   "control-center-margin-top": 10,
   "control-center-margin-bottom": 10,
   "control-center-margin-right": 10,

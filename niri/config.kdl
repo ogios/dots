@@ -9,7 +9,7 @@ debug {
     // restrict-primary-scanout-to-matching-format
     // render-drm-device "/dev/dri/renderD129"
     // render-drm-device "/dev/dri/renderD128"
-    // render-drm-device "/dev/dri/card1"
+    render-drm-device "/dev/dri/card1"
     // force-pipewire-invalid-modifier
     // emulate-zero-presentation-time
     // disable-transactions
@@ -112,7 +112,21 @@ gestures {
 
 
 output "eDP-1" {
+  // off
   mode "2560x1600@240.001"
+  // mode "2560x1600@60.001"
+  variable-refresh-rate
+  // mode "2560x1600@60.001"
+  // position x=0 y=500
+  position x=0 y=500
+  scale 1.5
+}
+
+output "eDP-2" {
+  // off
+  mode "2560x1600@240.001"
+  // mode "2560x1600@60.001"
+  variable-refresh-rate
   // mode "2560x1600@60.001"
   // position x=0 y=500
   position x=0 y=500
@@ -143,7 +157,7 @@ layout {
 
   background-color "transparent"
 
-  blur {
+  /-blur {
     // on
     radius 1
     // noise 100
@@ -541,6 +555,7 @@ window-rule {
 
   default-floating-position x=0 y=0 relative-to="bottom"
   baba-is-float true
+  open-fullscreen false
 }
 
 window-rule {
@@ -936,11 +951,13 @@ layer-rule {
 }
 
 workspace "chat" {
-  open-on-output "eDP-1"
+  // open-on-output "eDP-1"
+  open-on-output "eDP-2"
 }
 
 workspace "industrial" {
-  open-on-output "eDP-1"
+  // open-on-output "eDP-1"
+  open-on-output "eDP-2"
 }
 
 workspace "code" {
@@ -990,8 +1007,10 @@ spawn-at-startup "nwg-drawer" "-r" "-ovl"
 // spawn-at-startup "quickshell"
 spawn-at-startup "swww-daemon" "-n" "wp-front"
 spawn-at-startup "swww-daemon" "-n" "wp-back"
-spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
-spawn-at-startup "swww" "img" "~/Pictures/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
+spawn-at-startup "bash" "-c" "sleep 1 && swww img ~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp -n wp-back"
+spawn-at-startup "bash" "-c" "sleep 1 && swww img ~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp -n wp-front"
+// spawn-at-startup "swww" "img" "~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
+// spawn-at-startup "swww" "img" "~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
 spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk 4"
 spawn-at-startup "way-edges"
 
