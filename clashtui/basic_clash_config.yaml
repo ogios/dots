@@ -1,0 +1,53 @@
+# mixed-port: 7890
+# mode: rule
+# log-level: info
+# external-controller: 127.0.0.1:9090
+
+mode: rule
+mixed-port: 7890
+allow-lan: false
+log-level: silent # silent/error/warning/info/debug
+ipv6: true
+
+secret: ""
+external-controller: 127.0.0.1:9090
+#external-ui: /usr/share/metacubexd
+external-ui:
+  uis/ # 以防出现权限问题, 将 metacubexd 放在 clash_cfg_dir 目录下.
+  # `git clone https://github.com/metacubex/metacubexd.git -b gh-pages <clash_cfg_dir>/uis/metacubexd`
+  # OR pacman metacubexd-bin hook: Exec = /bin/sh -c 'rm -rf /srv/mihomo/uis/metacubexd && cp -r /usr/share/metacubexd /srv/mihomo/uis/'
+external-ui-name: metacubexd
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+
+#geox-url:
+#  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+#  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+#  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+#geo-auto-update: false
+#geo-update-interval: 24
+
+profile:
+  store-selected: true
+unified-delay: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  # enhanced-mode: fake-ip
+  # fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    # - 114.114.114.114
+    # - 223.5.5.5
+  fallback: []
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+

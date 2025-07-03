@@ -1,0 +1,11 @@
+basic:
+  clash_config_dir: "/etc/mihomo"
+  clash_bin_path: "/sbin/mihomo"
+  clash_config_path: "/etc/mihomo/config.yaml"
+  timeout: null
+service:
+  clash_srv_name: "mihomo"
+  is_user: false
+extra:
+  edit_cmd: ""
+  open_dir_cmd: ""

@@ -53,8 +53,8 @@ btop/btop.log
 !ags/**
 !tray-tui
 !tray-tui/**
-!niriswitcher
-!niriswitcher/**
+!clashtui
+!clashtui/**
 
 !starship.toml
 !code-flags.conf
