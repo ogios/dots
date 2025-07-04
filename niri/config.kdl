@@ -9,7 +9,8 @@ debug {
     // restrict-primary-scanout-to-matching-format
     // render-drm-device "/dev/dri/renderD129"
     // render-drm-device "/dev/dri/renderD128"
-    render-drm-device "/dev/dri/card1"
+    // render-drm-device "/dev/dri/card1"
+    render-drm-device "/dev/dri/card2"
     // force-pipewire-invalid-modifier
     // emulate-zero-presentation-time
     // disable-transactions
@@ -1011,7 +1012,7 @@ spawn-at-startup "way-edges"
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
 
 spawn-at-startup "kitty"
-spawn-at-startup "firefox"
+spawn-at-startup "zen-browser"
 spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
 
 
@@ -1022,7 +1023,7 @@ binds {
     Mod+E { spawn "thunar"; }
     Mod+B { spawn "firefox"; }
     Mod+Alt+L { spawn "hyprlock"; }
-    // Mod+Ctrl+B { spawn "zen-browser"; }
+    Mod+Ctrl+B { spawn "zen-browser"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
