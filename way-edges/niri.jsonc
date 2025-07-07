@@ -134,102 +134,102 @@
       "preset": { "type": "niri", "filter-empty": false }
     },
     // =========== ring stats ===========
-    {
-      "namespace": "stats",
-      "edge": "left",
-      "position": "top",
-      "margins": {
-        "top": 40
-      },
-      "monitor": "*",
-      "layer": "overlay",
-      "type": "wrap-box",
-      "outlook": {
-        "type": "window",
-        "color": "#5d3f3c"
-      },
-      "items": [
-        {
-          // "radius": 18,
-          // "ring-width": 8,
-          "font-size": 20,
-          "font-family": "0xProto Nerd Font",
-          "fg-color": "#82B2E3",
-          "bg-color": "#00000044",
-          "type": "ring",
-          "prefix": " ",
-          "suffix": " {preset}",
-          "suffix-hide": true,
-          "preset": {
-            "update-interval": 500,
-            "type": "disk"
-          }
-        },
-        {
-          // "radius": 18,
-          // "ring-width": 8,
-          "font-size": 20,
-          "font-family": "0xProto Nerd Font",
-          "fg-color": "#FFB77B",
-          "bg-color": "#00000044",
-          "type": "ring",
-          "prefix": " ",
-          "suffix": " {preset}",
-          "suffix-hide": true,
-          "preset": {
-            "update-interval": 500,
-            "type": "battery"
-          }
-        },
-        {
-          // "radius": 18,
-          // "ring-width": 8,
-          "font-size": 20,
-          "font-family": "0xProto Nerd Font",
-          "fg-color": "#FB8893",
-          "bg-color": "#00000044",
-          "type": "ring",
-          "prefix": " ",
-          "suffix": " {preset}",
-          "suffix-hide": true,
-          "preset": {
-            "update-interval": 500,
-            "type": "cpu"
-          }
-        },
-        {
-          // "radius": 18,
-          // "ring-width": 8,
-          "font-size": 20,
-          "font-family": "0xProto Nerd Font",
-          "fg-color": "#BEAFD9",
-          "bg-color": "#00000044",
-          "type": "ring",
-          "prefix": "󰾶 ",
-          "suffix": " {preset}",
-          "suffix-hide": true,
-          "preset": {
-            "update-interval": 500,
-            "type": "swap"
-          }
-        },
-        {
-          // "radius": 18,
-          // "ring-width": 8,
-          "font-size": 20,
-          "font-family": "0xProto Nerd Font",
-          "bg-color": "#00000044",
-          "type": "ring",
-          "prefix": " ",
-          "suffix": " {preset}",
-          "suffix-hide": true,
-          "preset": {
-            "update-interval": 500,
-            "type": "ram"
-          }
-        }
-      ]
-    },
+    // {
+    //   "namespace": "stats",
+    //   "edge": "left",
+    //   "position": "top",
+    //   "margins": {
+    //     "top": 40
+    //   },
+    //   "monitor": "*",
+    //   "layer": "overlay",
+    //   "type": "wrap-box",
+    //   "outlook": {
+    //     "type": "window",
+    //     "color": "#5d3f3c"
+    //   },
+    //   "items": [
+    //     {
+    //       // "radius": 18,
+    //       // "ring-width": 8,
+    //       "font-size": 20,
+    //       "font-family": "0xProto Nerd Font",
+    //       "fg-color": "#82B2E3",
+    //       "bg-color": "#00000044",
+    //       "type": "ring",
+    //       "prefix": " ",
+    //       "suffix": " {preset}",
+    //       "suffix-hide": true,
+    //       "preset": {
+    //         "update-interval": 500,
+    //         "type": "disk"
+    //       }
+    //     },
+    //     {
+    //       // "radius": 18,
+    //       // "ring-width": 8,
+    //       "font-size": 20,
+    //       "font-family": "0xProto Nerd Font",
+    //       "fg-color": "#FFB77B",
+    //       "bg-color": "#00000044",
+    //       "type": "ring",
+    //       "prefix": " ",
+    //       "suffix": " {preset}",
+    //       "suffix-hide": true,
+    //       "preset": {
+    //         "update-interval": 500,
+    //         "type": "battery"
+    //       }
+    //     },
+    //     {
+    //       // "radius": 18,
+    //       // "ring-width": 8,
+    //       "font-size": 20,
+    //       "font-family": "0xProto Nerd Font",
+    //       "fg-color": "#FB8893",
+    //       "bg-color": "#00000044",
+    //       "type": "ring",
+    //       "prefix": " ",
+    //       "suffix": " {preset}",
+    //       "suffix-hide": true,
+    //       "preset": {
+    //         "update-interval": 500,
+    //         "type": "cpu"
+    //       }
+    //     },
+    //     {
+    //       // "radius": 18,
+    //       // "ring-width": 8,
+    //       "font-size": 20,
+    //       "font-family": "0xProto Nerd Font",
+    //       "fg-color": "#BEAFD9",
+    //       "bg-color": "#00000044",
+    //       "type": "ring",
+    //       "prefix": "󰾶 ",
+    //       "suffix": " {preset}",
+    //       "suffix-hide": true,
+    //       "preset": {
+    //         "update-interval": 500,
+    //         "type": "swap"
+    //       }
+    //     },
+    //     {
+    //       // "radius": 18,
+    //       // "ring-width": 8,
+    //       "font-size": 20,
+    //       "font-family": "0xProto Nerd Font",
+    //       "bg-color": "#00000044",
+    //       "type": "ring",
+    //       "prefix": " ",
+    //       "suffix": " {preset}",
+    //       "suffix-hide": true,
+    //       "preset": {
+    //         "update-interval": 500,
+    //         "type": "ram"
+    //       }
+    //     }
+    //   ]
+    // },
     // =========== time ===========
     {
       "namespace": "time",
