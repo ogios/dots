@@ -9,8 +9,8 @@ debug {
     // restrict-primary-scanout-to-matching-format
     // render-drm-device "/dev/dri/renderD129"
     // render-drm-device "/dev/dri/renderD128"
-    // render-drm-device "/dev/dri/card1"
-    render-drm-device "/dev/dri/card2"
+    render-drm-device "/dev/dri/card1"
+    // render-drm-device "/dev/dri/card2"
     // force-pipewire-invalid-modifier
     // emulate-zero-presentation-time
     // disable-transactions
@@ -983,7 +983,7 @@ window-rule {
 }
 
 window-rule {
-  match at-startup=true app-id="zen" app-id="chrome" app-id="firefox"
+  match app-id="zen" app-id="chrome" app-id="firefox"
   open-on-workspace "browser"
 }
 
