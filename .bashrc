@@ -85,6 +85,8 @@ function wre() {
 # export PATH="$PATH:/home/ogios/.local/bin"
 
 alias ghc="git clone"
+alias carinst="cargo install"
+alias carinstlocal="cargo install --path ."
 export NEOVIDE_FORK=1
 
 fastfetch
