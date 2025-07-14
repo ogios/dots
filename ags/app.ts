@@ -1,9 +1,9 @@
 import { App } from "astal/gtk4";
 import style from "./style.scss";
-import SystemMonitor from "./src/widget/SystemMonitor";
-import PoweMenu from "./src/widget/PoweMenu";
-import TogglePowerMenu from "./src/widget/TogglePowerMenu";
-import Time from "./src/widget/Time";
+import SystemMonitor from "./src/SystemMonitor";
+import PoweMenu from "./src/PoweMenu";
+import TogglePowerMenu from "./src/TogglePowerMenu";
+import Time from "./src/Time";
 
 App.start({
   css: style,

@@ -1,16 +1,41 @@
 import { execAsync, Variable } from "astal";
 import { Gtk } from "astal/gtk4";
 
+const CPU_LOAD = Variable(0).poll(1000, async () => {
+  const a = await execAsync([
+    "bash",
+    "-c",
+    'top -bn1 | grep "Cpu(s)" | awk \'{printf "%.1f", 100 - $8}\'',
+  ]).then((s) => s.trim());
+  return parseInt(a);
+});
+
+const RAM_USAGE = Variable(0).poll(1000, async () => {
+  const a = await execAsync([
+    "bash",
+    "-c",
+    "free | grep Mem | awk '{printf \"%.1f\", $3/$2 * 100.0}'",
+  ]).then((s) => s.trim());
+  return parseInt(a);
+});
+
+const STORAGE_USAGE = Variable(0).poll(1000, async () => {
+  const a = await execAsync([
+    "bash",
+    "-c",
+    "df -h | grep '/$' | awk '{print $5}' | sed 's/%//'",
+  ]).then((s) => s.trim());
+  return parseInt(a);
+});
+
 type UsageProps = {
   label: string;
-  update_func: () => number | Promise<number>; // 0~100
+  v: Variable<number>;
 };
 
 const BLOCK_NUMS = 10;
 
-function Usage({ label, update_func }: UsageProps) {
-  const v = Variable(0).poll(1000, update_func);
-
+function Usage({ label, v }: UsageProps) {
   return (
     <box vertical spacing={2} hexpand>
       <label
@@ -55,41 +80,9 @@ export default function Board2() {
       valign={Gtk.Align.CENTER}
       hexpand
     >
-      <Usage
-        label="CPU LOAD"
-        update_func={async () => {
-          const a = await execAsync([
-            "bash",
-            "-c",
-            'top -bn1 | grep "Cpu(s)" | awk \'{printf "%.1f", 100 - $8}\'',
-          ]).then((s) => s.trim());
-          return parseInt(a);
-        }}
-      />
-
-      <Usage
-        label="RAM USAGE"
-        update_func={async () => {
-          const a = await execAsync([
-            "bash",
-            "-c",
-            "free | grep Mem | awk '{printf \"%.1f\", $3/$2 * 100.0}'",
-          ]).then((s) => s.trim());
-          return parseInt(a);
-        }}
-      />
-
-      <Usage
-        label="STORAGE"
-        update_func={async () => {
-          const a = await execAsync([
-            "bash",
-            "-c",
-            "df -h | grep '/$' | awk '{print $5}' | sed 's/%//'",
-          ]).then((s) => s.trim());
-          return parseInt(a);
-        }}
-      />
+      <Usage label="CPU LOAD" v={CPU_LOAD} />
+      <Usage label="RAM USAGE" v={RAM_USAGE} />
+      <Usage label="STORAGE" v={STORAGE_USAGE} />
     </box>
   );
 }
