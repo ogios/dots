@@ -510,6 +510,7 @@ layer-rule {
 
     match namespace="wp-back"
     match namespace="ags-backdrop"
+    match namespace="shaderbg"
 
     place-within-backdrop true
 }
@@ -973,7 +974,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="rviz2"
+  match app-id="rviz2" app-id="Gazebo GUI"
   open-on-workspace "industrial"
 }
 
