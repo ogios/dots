@@ -974,7 +974,8 @@ window-rule {
 }
 
 window-rule {
-  match app-id="rviz2" app-id="Gazebo GUI"
+  match app-id="Gazebo GUI"
+  match app-id="rviz2"
   open-on-workspace "industrial"
 }
 
@@ -1031,8 +1032,8 @@ binds {
     Mod+T { spawn "kitty" "-T" "traytui" "tray-tui"; }
     Mod+Ctrl+Space { spawn "nwg-drawer" "-ovl"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
-    // Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
-    Mod+S { spawn "/home/ogios/.config/quickshell/ss.sh"; }
+    Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
+    // Mod+S { spawn "/home/ogios/.config/quickshell/ss.sh"; }
     Mod+Shift+C { spawn "hyprpicker" "-a"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "stats"; }

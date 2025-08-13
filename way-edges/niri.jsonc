@@ -94,7 +94,7 @@
       "type": "btn",
       "event-map": {
         "273": "niri msg action maximize-column",
-        "272": "sh -c pkill nwg-drawer || nwg-drawer",
+        "272": "sh -c pkill nwg-drawer || nwg-drawer -ovl",
         "274": "niri msg action close-window",
         "276": "niri msg action toggle-column-tabbed-display",
         "275": "niri msg action toggle-overview"
