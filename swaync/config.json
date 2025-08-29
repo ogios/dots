@@ -50,7 +50,7 @@
     "backlight": {
       "label": "󰃟",
       "subsystem": "backlight",
-      "device": "amdgpu_bl2"
+      "device": "nvidia_0"
     },
     "buttons-grid": {
       "actions": [
