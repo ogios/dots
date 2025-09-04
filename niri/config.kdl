@@ -9,7 +9,7 @@ debug {
     // restrict-primary-scanout-to-matching-format
     // render-drm-device "/dev/dri/renderD129"
     // render-drm-device "/dev/dri/renderD128"
-    render-drm-device "/dev/dri/card1"
+    // render-drm-device "/dev/dri/card1"
     // render-drm-device "/dev/dri/card2"
     // force-pipewire-invalid-modifier
     // emulate-zero-presentation-time
@@ -18,8 +18,6 @@ debug {
     // keep-laptop-panel-on-when-lid-is-closed
     // disable-monitor-names
     // strict-new-window-focus-policy
-
-    wait-for-frame-completion-in-pipewire
 }
 
 prefer-no-csd
@@ -284,9 +282,6 @@ cursor {
 environment {
     // GSK_RENDERER "cairo"
     // WAYLAND_DISPLAY null
-
-  // xwayland-satellite
-  DISPLAY ":12"
 
   CURRENT_COMPOSITOR "niri"
 
@@ -995,7 +990,6 @@ spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 // spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
 spawn-at-startup "clipse" "--listen"
-spawn-at-startup "xwayland-satellite" ":12"
 spawn-at-startup "nwg-drawer" "-r" "-ovl"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 // spawn-at-startup "xwaylandvideobridge"
@@ -1032,7 +1026,7 @@ binds {
     Mod+T { spawn "kitty" "-T" "traytui" "tray-tui"; }
     Mod+Ctrl+Space { spawn "nwg-drawer" "-ovl"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
-    Mod+Shift+S { spawn "sh" "-c" "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
+    Mod+Shift+S { spawn-sh "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
     // Mod+S { spawn "/home/ogios/.config/quickshell/ss.sh"; }
     Mod+Shift+C { spawn "hyprpicker" "-a"; }
 
@@ -1041,16 +1035,6 @@ binds {
     Mod+Shift+E { spawn "way-edges" "togglepin" "tray"; }
 
     Mod+m { spawn "ags" "request" "power-menu"; }
-
-    // Mod+Print {
-    //     spawn "sh" "-c" r#"
-    //         file=~/Videos/recordings/"$(date +%s)".mp4
-    //         gpu-screen-recorder -w region -region "$(slurp -b '#00000090' -w 0 -f %wx%h+%x+%y)" -o "$file"
-    //         wl-copy file:/"$file" -t text/uri-list
-    //     "#;
-    // }
-    //
-    // Mod+Escape { spawn "pkill" "-SIGINT" "-f" "gpu-screen-recorder"; }
 
 
     XF86AudioRaiseVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
