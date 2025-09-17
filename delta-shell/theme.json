@@ -1,0 +1,104 @@
+{
+  "font": {
+    "size": 14,
+    "name": "Rubik"
+  },
+  "colors": {
+    "bg": {
+      "0": "#1d1d20",
+      "1": "#28282c",
+      "2": "#36363a",
+      "3": "#48484b"
+    },
+    "fg": {
+      "0": "#ffffff",
+      "1": "#c0c0c0",
+      "2": "#808080"
+    },
+    "accent": "#c88800",
+    "blue": "#3584e4",
+    "teel": "#2190a4",
+    "green": "#3a944a",
+    "yellow": "#c88800",
+    "orange": "#ed5b00",
+    "red": "#e62d42",
+    "purple": "#9141ac",
+    "slate": "#6f8396"
+  },
+  "border": {
+    "width": 1,
+    "color": "$bg2"
+  },
+  "outline": {
+    "width": 1,
+    "color": "$fg1"
+  },
+  "spacing": 10,
+  "shadow": true,
+  "radius": 0,
+  "window": {
+    "padding": 15,
+    "opacity": 1,
+    "margin": 10,
+    "border": {
+      "width": 1,
+      "color": "$bg2"
+    },
+    "outline": {
+      "width": 1,
+      "color": "$fg1"
+    },
+    "shadow": {
+      "offset": [
+        0,
+        0
+      ],
+      "blur": 10,
+      "spread": 0,
+      "color": "black",
+      "opacity": 0.4
+    }
+  },
+  "bar": {
+    "bg": "$bg0",
+    "opacity": 1,
+    "margin": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "spacing": 6,
+    "border": {
+      "width": 1,
+      "color": "$bg2"
+    },
+    "shadow": {
+      "offset": [
+        0,
+        0
+      ],
+      "blur": 10,
+      "spread": 0,
+      "color": "black",
+      "opacity": 0.4
+    },
+    "button": {
+      "fg": "$fg0",
+      "padding": [
+        0,
+        10
+      ],
+      "bg": {
+        "default": "$bg0",
+        "hover": "$bg1",
+        "active": "$bg2"
+      },
+      "opacity": 1,
+      "border": {
+        "width": 0,
+        "color": "$bg2"
+      }
+    }
+  }
+}

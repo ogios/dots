@@ -1,0 +1,49 @@
+{
+  "transition": 0.3,
+  "bar": {
+    "modules": {
+      "start": ["launcher", "workspaces"],
+      "center": ["clock", "weather"],
+      "end": ["record_indicator", "tray", "keyboard", "notifications", "sysbox"]
+    },
+    "height": 52,
+    "position": "bottom",
+    "workspaces": {
+      "taskbar": true,
+      "taskbar_icons": {}
+    },
+    "date": {
+      "format": "%b %d  %H:%M"
+    }
+  },
+  "launcher": {
+    "clipboard": {
+      "max_items": 50,
+      "image_preview": true
+    },
+    "width": 400,
+    "height": 600
+  },
+  "osd": {
+    "width": 300,
+    "position": "bottom",
+    "timeout": 3
+  },
+  "notifications": {
+    "position": "top",
+    "enabled": true,
+    "timeout": 3,
+    "width": 400,
+    "list": {
+      "height": 600
+    }
+  },
+  "weather": {
+    "enabled": true,
+    "location": {
+      "auto": false,
+      "coords": null,
+      "city": "Xi'an"
+    }
+  }
+}

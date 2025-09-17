@@ -514,7 +514,8 @@ window-rule {
   draw-border-with-background false
   // geometry-corner-radius 16
   clip-to-geometry true
-  open-fullscreen true
+  // open-fullscreen true
+  open-maximized true
 }
 
 
@@ -984,7 +985,7 @@ window-rule {
   open-on-workspace "browser"
 }
 
-spawn-at-startup "swaync"
+// spawn-at-startup "swaync"
 spawn-at-startup "fcitx5"
 spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
@@ -1003,6 +1004,7 @@ spawn-at-startup "bash" "-c" "sleep 1 && swww img ~/.config/wallpaper/chill/Biry
 // spawn-at-startup "swww" "img" "~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
 spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk 4"
 spawn-at-startup "way-edges"
+spawn-at-startup "delta-shell" "run"
 
 // spawn-at-startup dbus-update-activation-environment --all &
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
@@ -1034,7 +1036,8 @@ binds {
     Mod+Shift+A { spawn "way-edges" "togglepin" "time"; }
     Mod+Shift+E { spawn "way-edges" "togglepin" "tray"; }
 
-    Mod+m { spawn "ags" "request" "power-menu"; }
+    // Mod+m { spawn "ags" "request" "power-menu"; }
+    Mod+m { spawn "delta-shell" "toggle" "powermenu"; }
 
 
     XF86AudioRaiseVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
