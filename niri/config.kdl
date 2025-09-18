@@ -150,8 +150,8 @@ output "winit" {
 
 layout {
 
-  // always-center-single-column
-  center-focused-column "always"
+  always-center-single-column
+  // center-focused-column "always"
   // empty-workspace-above-first
 
   background-color "transparent"
