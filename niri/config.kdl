@@ -20,7 +20,7 @@ debug {
     // strict-new-window-focus-policy
 }
 
-prefer-no-csd
+// prefer-no-csd
 
 input {
     keyboard {
