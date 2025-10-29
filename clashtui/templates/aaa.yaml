@@ -62,7 +62,10 @@ proxy-providers:
     <<: *pa_pp
 
 rules:
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
   - GEOIP,lan,DIRECT,no-resolve
+  - GEOSITE,bilibili,DIRECT
   - GEOSITE,biliintl,Entry
   - GEOSITE,ehentai,Entry
   - GEOSITE,github,Entry
@@ -71,7 +74,6 @@ rules:
   - GEOSITE,google,Entry
   - GEOSITE,telegram,Entry
   - GEOSITE,netflix,Entry
-  - GEOSITE,bilibili,Entry-RuleMode
   - GEOSITE,bahamut,Entry
   - GEOSITE,spotify,Entry
   - GEOSITE,geolocation-!cn,Entry
@@ -80,6 +82,4 @@ rules:
   - GEOIP,telegram,Entry
   - GEOIP,twitter,Entry
   - GEOSITE,pixiv,Entry
-  - GEOSITE,CN,Entry-RuleMode
-  - GEOIP,CN,Entry-RuleMode
   - MATCH,Entry-LastMatch
