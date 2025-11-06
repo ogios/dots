@@ -57,6 +57,8 @@ btop/btop.log
 !clashtui/**
 !delta-shell
 !delta-shell/**
+!noctalia
+!noctalia/**
 
 !starship.toml
 !code-flags.conf
