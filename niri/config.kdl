@@ -520,17 +520,6 @@ vec4 close_color(vec3 coords_geo, vec3 size_geo) {
     }
 }
 
-layer-rule {
-    // match namespace="swww"
-    // match namespace="ags-backdrop"
-
-    match namespace="wp-back"
-    match namespace="ags-backdrop"
-    match namespace="shaderbg"
-
-    place-within-backdrop true
-}
-
 window-rule {
   draw-border-with-background false
   // geometry-corner-radius 16
@@ -1016,16 +1005,7 @@ spawn-at-startup "nwg-drawer" "-r" "-ovl"
 // spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
 // spawn-at-startup "xwaylandvideobridge"
 
-// spawn-at-startup "quickshell"
-spawn-at-startup "swww-daemon" "-n" "wp-front"
-spawn-at-startup "swww-daemon" "-n" "wp-back"
-spawn-at-startup "bash" "-c" "sleep 1 && swww img ~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp -n wp-back"
-spawn-at-startup "bash" "-c" "sleep 1 && swww img ~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp -n wp-front"
-// spawn-at-startup "swww" "img" "~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District-blur.webp" "-n" "wp-back"
-// spawn-at-startup "swww" "img" "~/.config/wallpaper/chill/Biryulyovo_Zapadnoye_District.webp" "-n" "wp-front"
-spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk 4"
 spawn-at-startup "way-edges"
-spawn-at-startup "delta-shell" "run"
 
 // spawn-at-startup dbus-update-activation-environment --all &
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
@@ -1056,9 +1036,6 @@ binds {
     Mod+Shift+D { spawn "way-edges" "togglepin" "stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "time"; }
     Mod+Shift+E { spawn "way-edges" "togglepin" "tray"; }
-
-    // Mod+m { spawn "ags" "request" "power-menu"; }
-    Mod+m { spawn "delta-shell" "toggle" "powermenu"; }
 
 
     XF86AudioRaiseVolume allow-when-locked=true repeat=false { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
