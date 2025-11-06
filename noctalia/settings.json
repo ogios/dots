@@ -74,12 +74,6 @@
                     "id": "ScreenRecorder"
                 },
                 {
-                    "blacklist": [
-                    ],
-                    "colorizeIcons": false,
-                    "id": "Tray"
-                },
-                {
                     "hideWhenZero": true,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
