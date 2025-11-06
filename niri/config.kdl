@@ -1,4 +1,25 @@
+// noctalia
+window-rule {
+  // Rounded corners for a modern look.
+  geometry-corner-radius 20
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
+}
+
+// Set the overview wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
+spawn-at-startup "qs" "-c" "noctalia-shell"
+
 debug {
+
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+
     // preview-render "screencast"
     // preview-render "screen-capture"
     // dbus-interfaces-in-non-session-instances
