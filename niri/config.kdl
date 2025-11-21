@@ -137,7 +137,7 @@ output "eDP-1" {
   // mode "2560x1600@60.001"
   // position x=0 y=500
   position x=0 y=500
-  scale 1.5
+  scale 1.6
 }
 
 output "eDP-2" {
@@ -148,7 +148,7 @@ output "eDP-2" {
   // mode "2560x1600@60.001"
   // position x=0 y=500
   position x=0 y=500
-  scale 1.5
+  scale 1.6
 }
 
 output "HDMI-A-1" {
@@ -156,7 +156,7 @@ output "HDMI-A-1" {
   // mode "2560x1440@143.912"
   mode "3840x2160@144.000"
   position x=1706 y=0
-  scale 1.5
+  scale 1.333334
 }
 
 output "winit" {
