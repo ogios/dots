@@ -1,0 +1,6 @@
+// screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+// screenshot-path "~/Pictures/niri-scale/%M-%S.png"
+
+hotkey-overlay {
+    skip-at-startup
+}

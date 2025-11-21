@@ -1,0 +1,29 @@
+output "eDP-1" {
+  // off
+  mode "2560x1600@240.001"
+  // mode "2560x1600@60.001"
+  variable-refresh-rate
+  // mode "2560x1600@60.001"
+  // position x=0 y=500
+  position x=0 y=0
+  scale 1.6
+}
+
+output "HDMI-A-1" {
+  // off
+  // mode "2560x1440@143.912"
+  mode "3840x2160@144.000"
+  position x=1600 y=-500
+  scale 1.333334
+  variable-refresh-rate
+}
+
+output "winit" {
+    // scale 2.0
+    // scale 3.0
+    // scale 1.25
+    // scale 1.333
+    // transform "flipped-90"
+    position x=100 y=200
+    // background-color "#030"
+}

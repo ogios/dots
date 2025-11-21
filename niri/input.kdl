@@ -1,0 +1,78 @@
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            // variant "colemak_dh_ortho,"
+            options "compose:ralt,ctrl:nocaps"
+
+            // layout "us"
+            // variant "colemak_dh_ortho"
+            // options "compose:ralt,ctrl:nocaps"
+            // model ""
+            // rules ""
+        }
+
+        repeat-delay 250
+        repeat-rate 35
+
+        // track-layout "window"
+    }
+
+    touchpad {
+        tap
+        // dwt
+        // dwtp
+        natural-scroll
+        accel-speed 0.4
+        // click-method "clickfinger"
+        // accel-profile "flat"
+        // tap-button-map "left-middle-right"
+        // left-handed
+        // middle-emulation
+        // scroll-factor 0.1
+        // scroll-factor 2
+    }
+
+    mouse {
+        // natural-scroll
+        // accel-speed -1.0
+        // accel-profile "flat"
+        // left-handed
+        // middle-emulation
+        // scroll-factor 0.1
+        // scroll-factor 2
+    }
+
+    trackpoint {
+        // natural-scroll
+        // accel-speed -1.0
+        // accel-profile "flat"
+        // middle-emulation
+    }
+
+    tablet {
+        // map-to-output "eDP-1"
+        // map-to-output "eDP-2"
+        // map-to-output "HDMI-A-1"
+        // map-to-output "DP-1"
+        // map-to-output "Acer Technologies XV320QU LV 420615FCD4200"
+        // left-handed
+    }
+
+    touch {
+        // map-to-output "DP-3"
+        // map-to-output "Interaction Systems, Inc TYPE-C TCH00562020"
+    }
+
+    // disable-power-key-handling
+    // warp-mouse-to-focus
+    // focus-follows-mouse
+    focus-follows-mouse max-scroll-amount="0%"
+    // workspace-auto-back-and-forth
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}

@@ -1,0 +1,41 @@
+window-rule {
+  // Rounded corners for a modern look.
+  geometry-corner-radius 20
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
+}
+
+// Set the overview wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
+
+
+debug {
+
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+
+    // preview-render "screencast"
+    // preview-render "screen-capture"
+    // dbus-interfaces-in-non-session-instances
+    // wait-for-frame-completion-before-queueing
+    // enable-overlay-planes
+    // disable-cursor-plane
+    // disable-direct-scanout
+    // restrict-primary-scanout-to-matching-format
+    // render-drm-device "/dev/dri/renderD129"
+    // render-drm-device "/dev/dri/renderD128"
+    // render-drm-device "/dev/dri/card1"
+    // render-drm-device "/dev/dri/card2"
+    // force-pipewire-invalid-modifier
+    // emulate-zero-presentation-time
+    // disable-transactions
+    // disable-resize-throttling
+    // keep-laptop-panel-on-when-lid-is-closed
+    // disable-monitor-names
+    // strict-new-window-focus-policy
+}

@@ -1,0 +1,475 @@
+
+window-rule {
+  draw-border-with-background false
+  // geometry-corner-radius 16
+  clip-to-geometry true
+  // open-fullscreen true
+  open-maximized true
+}
+
+
+window-rule {
+  match title=r#"^(Open File)(.*)$"#
+  match title=r#"^(Select a File)(.*)$"#
+  match title=r#"^(Choose wallpaper)(.*)$"#
+  match title=r#"^(Open Folder)(.*)$"#
+  match title=r#"^(Save As)(.*)$"#
+  match title=r#"^(Library)(.*)$"#
+
+  // image
+  match app-id="imv"
+
+  // dingtalk
+  match title="MainMenuPanelView" app-id="com.alibabainc.dingtalk"
+
+  // zen browser video
+  match title="Picture-in-Picture"
+
+  match app-id="mpv"
+
+  open-floating true
+}
+
+window-rule {
+  match title="^clipse$"
+  match app-id="it.mijorus.smile"
+  match title="^traytui$"
+
+  open-floating true
+
+  default-column-width { proportion 1.0; }
+  default-window-height { proportion 0.7; }
+
+  default-floating-position x=0 y=0 relative-to="bottom"
+  baba-is-float true
+  open-fullscreen false
+}
+
+
+window-rule {
+  match is-focused=false
+
+  opacity 0.98
+}
+
+window-rule {
+  match app-id="com.alibabainc.dingtalk"
+  match title="QQ"
+
+  block-out-from "screencast"
+}
+
+window-rule {
+  match title="gsr notify"
+
+  border {
+    off
+  }
+  shadow {
+    off
+  }
+  geometry-corner-radius 0
+  default-floating-position x=0 y=200 relative-to="top-right"
+  open-focused false
+}
+
+
+/-window-rule {
+    match at-startup=false
+    exclude app-id="^Alacritty$"
+    exclude app-id="^neovide$"
+    exclude app-id="firefox$"
+
+    open-floating true
+}
+
+/-window-rule {
+    match is-active-in-column=false
+
+    min-height 100
+    max-height 100
+}
+
+/-window-rule {
+    match app-id="Adwaita"
+    // match app-id="TextEditor"
+    // opacity 0.5
+    // block-out-from "screencast"
+    geometry-corner-radius 12
+    // geometry-corner-radius 0 0 8 8
+    clip-to-geometry false
+    border {
+        // off
+        // width 12
+        // width 2
+    }
+}
+
+/-window-rule {
+    match app-id="^gnome-terminal-server$"
+    // opacity 0.5
+    // block-out-from "screen-capture"
+    clip-to-geometry false
+    geometry-corner-radius 8 8 0 0
+    border {
+        width 4
+    }
+}
+
+/-window-rule {
+    match title="~/source"
+    geometry-corner-radius 12 24 32 64
+}
+
+/-window-rule {
+    match title="presentation-shm"
+    geometry-corner-radius 999
+}
+
+/-window-rule {
+    match app-id="code"
+    // opacity 0.98
+    border {
+        // off
+    }
+}
+
+/-window-rule {
+    match app-id="weston."
+    // block-out-from "screencast"
+    geometry-corner-radius 12 24 32 64
+    // geometry-corner-radius 999
+    clip-to-geometry true
+}
+
+// window-rule {
+//     match app-id="Alacritty"
+//     geometry-corner-radius 12 12 0 0
+//     border {
+//         width 8
+//     }
+// }
+
+/-window-rule {
+    match app-id="org.freedesktop.weston.simple-egl"
+    // min-width 128
+    // max-width 128
+    // min-height 128
+    // max-height 128
+    // match is-focused=true
+    // match is-active=false
+    // opacity 0.9
+    // block-out-from "screencast"
+    // block-out-from "screen-capture"
+    // min-width 1000
+    draw-border-with-background false
+    // match app-id="mpv"
+    // open-on-output "HDMI-A-1"
+    // open-maximized true
+    // default-column-width { proportion 0.5; }
+    // default-window-height { fixed 100; }
+    // open-fullscreen false
+    // open-floating false
+    // open-floating true
+}
+
+/-window-rule {
+    match app-id="^gimp" title="^GIMP Startup$"
+
+    open-focused false
+}
+
+/-window-rule {
+    match app-id="^Alacritty$"
+    match app-id="^neovide$"
+    exclude is-active=true
+
+    opacity 0.95
+}
+
+/-window-rule {
+    match app-id="^Alacritty$"
+    match app-id="^neovide$"
+    match app-id="^code$"
+    // match title="^niri$"
+    match app-id="^labwc$"
+
+    border { on; }
+    geometry-corner-radius 8
+    // geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+// window-rule {
+//     match app-id="^Alacritty$"
+//     match app-id="^neovide$"
+//     exclude is-floating=false
+//
+//     border { off; }
+// }
+
+/-window-rule {
+    match app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
+    open-fullscreen false
+    open-floating true
+    // default-column-width { proportion 0.5; }
+}
+
+// window-rule {
+//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
+//     default-column-width {}
+// }
+//
+// window-rule {
+//     match app-id="^mpv$"
+//     match app-id="^hl_linux$"
+//     match app-id="^steam_app_524220$" // NieR:Automata
+//     variable-refresh-rate true
+//     default-column-width {}
+// }
+//
+// window-rule {
+//     match app-id="^blender$"
+//     match app-id="^gimp"
+//     default-column-width { fixed 1200; }
+// }
+//
+// window-rule {
+//     match app-id="^obsidian$"
+//     default-column-width { fixed 1000; }
+// }
+//
+// window-rule {
+//     match at-startup=true app-id="^obsidian$"
+//     // open-on-workspace "notes"
+//     open-on-workspace "chat"
+// }
+//
+// window-rule {
+//     match at-startup=true app-id=r#"^org\.telegram\.desktop$"#
+//     exclude title="^Media viewer$"
+//
+//     open-on-workspace "chat"
+// }
+//
+// window-rule {
+//     match at-startup=true app-id=r#"^org\.gnome\.Fractal$"#
+//     open-on-workspace "chat"
+// }
+//
+// window-rule {
+//     match at-startup=true app-id=r#"^discord"#
+//     match at-startup=true app-id=r#"^com\.discordapp\.Discord$"#
+//     open-on-workspace "discord"
+// }
+//
+// window-rule {
+//     match app-id=r#"^discord"#
+//     match app-id=r#"^com\.discordapp\.Discord$"#
+//     default-column-width { proportion 0.66667; }
+// }
+//
+// window-rule {
+//     match app-id=r#"^org\.mozilla\.firefox$"#
+//     exclude title="^Picture-in-Picture$"
+//
+//     default-column-width { proportion 0.5; }
+// }
+//
+// window-rule {
+//     match at-startup=true app-id=r#"^org\.mozilla\.firefox$"#
+//
+//     open-on-workspace "browser"
+//     open-maximized true
+// }
+//
+// window-rule {
+//     match at-startup=true app-id=r#"^org\.keepassxc\.KeePassXC$"#
+//
+//     open-on-workspace "browser"
+// }
+//
+// window-rule {
+//     match app-id="^code"
+//     default-column-width { proportion 0.66667; }
+// }
+
+// window-rule {
+//     match app-id=r#"^org\.mozilla\.firefox$"# title=" Grafana "
+//
+//     open-on-workspace "dash"
+//     open-maximized true
+// }
+
+// window-rule {
+//     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+//     match app-id=r#"^org\.gnome\.World\.Secrets$"#
+//     match app-id=r#"^org\.telegram\.desktop$"#
+//
+//     // Doesn't quite work: Firefox changes the title one frame early.
+//     match app-id=r#"^org\.mozilla\.firefox$"# title="- Gmail "
+//     match app-id=r#"^org\.mozilla\.firefox$"# title="^Google Calendar "
+//     match app-id=r#"^org\.mozilla\.firefox$"# title="Todoist "
+//     match app-id=r#"^org\.mozilla\.firefox$"# title=r#"^GNOME( \*)?( \[\d+\])? \| "#
+//     match app-id=r#"^org\.mozilla\.firefox$"# title=r#"^Element "#
+//     match app-id=r#"^org\.mozilla\.firefox$"# title=r#"Discord \| "#
+//
+//     block-out-from "screencast"
+//     // block-out-from "screen-capture"
+//
+//     border {
+//         // off
+//         // active-color "red"
+//     }
+//
+//     // clip-to-geometry false
+//     // geometry-corner-radius 12
+// }
+//
+// window-rule {
+//     match app-id="firefox$" title="^Picture-in-Picture$"
+//     match app-id=r#"^AmneziaVPN$"#
+//     match app-id="^mpv$"
+//     match app-id=r#"^org\.gnome\.Loupe$"#
+//     match app-id=r#"^org\.gnome\.Calculator$"#
+//
+//     open-floating true
+// }
+//
+// // Always focus the KeePassXC-Browser unlock dialog.
+// //
+// // This dialog opens parented to the KeePassXC window rather than the browser,
+// // so it doesn't get auto-focused by default.
+// window-rule {
+//     match app-id=r#"^org\.keepassxc\.KeePassXC$"# title="^KeePassXC - Browser Access Request$"
+//     match app-id=r#"^org\.keepassxc\.KeePassXC$"# title="^Unlock Database - KeePassXC$"
+//
+//     open-focused true
+// }
+//
+// window-rule {
+//     // match app-id="Alacritty"
+//     // match app-id="Adwaita"
+//     // match title="About GTK Demo"
+//     // match at-startup=true
+//     // opacity 0.9
+//     // opacity 0.5
+//     // opacity 0.98
+//
+//     // open-on-output "eDP-1"
+//     // open-on-output "Dell Inc. Dell S2716DG #ASOwvAqQj0Dd"
+//     // open-on-workspace "browser"
+//     // default-column-width { proportion 0.5; }
+//     // default-column-width { fixed 400; }
+//     // default-column-width {}
+//     // default-window-height { proportion 0.25; }
+//     // default-window-height { proportion 1.1; }
+//     // default-window-height { fixed 100; }
+//     // open-maximized true
+//     // open-fullscreen true
+//     // open-floating false
+//     // open-floating true
+//     // open-focused false
+//     // open-focused true
+//     // block-out-from "screencast"
+//     // default-floating-position x=0 y=0 relative-to="bottom-right"
+//
+//     // min-width 600
+//     // max-width 600
+//     // min-height 600
+//     // max-height 600
+//
+//     focus-ring {
+//         // off
+//         // on
+//         // active-gradient from="red" to="green"
+//         // active-color "lightgreen"
+//         // width 1
+//     }
+//
+//     border {
+//         // off
+//         // on
+//         // width 12
+//         // width 0
+//         // active-color "#ff808080"
+//         // active-color "red"
+//     }
+//
+//     // draw-border-with-background true
+//     // draw-border-with-background false
+//
+//     // geometry-corner-radius 12 24 32 64
+//     // geometry-corner-radius 999
+//     // geometry-corner-radius 1
+//     // geometry-corner-radius 12
+//     // geometry-corner-radius 6
+//     // clip-to-geometry true
+// }
+//
+// /-layer-rule {
+//     // match namespace="waybar"
+//     // match namespace="launcher"
+//     // match namespace="^notifications$"
+//     opacity 0.5
+//     block-out-from "screencast"
+// }
+
+layer-rule {
+    // mako
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+
+layer-rule {
+
+  match namespace="^way-edges-widget$"
+  // shadow {
+  //   on
+  //   softness 10
+  //   offset x=0 y=0
+  //   color "#00000055"
+  // }
+}
+
+workspace "chat" {
+  // open-on-output "eDP-1"
+  open-on-output "eDP-2"
+}
+
+workspace "industrial" {
+  // open-on-output "eDP-1"
+  open-on-output "eDP-2"
+}
+
+workspace "code" {
+  open-on-output "HDMI-A-1"
+}
+
+workspace "browser" {
+  open-on-output "HDMI-A-1"
+}
+
+window-rule {
+  match app-id="com.alibabainc.dingtalk"
+  match title="QQ"
+  match app-id="cinny"
+  match app-id="discord"
+  open-on-workspace "chat"
+}
+
+window-rule {
+  match app-id="Gazebo GUI"
+  match app-id="rviz2"
+  open-on-workspace "industrial"
+}
+
+window-rule {
+  match at-startup=true app-id="kitty"
+  open-on-workspace "code"
+}
+
+window-rule {
+  match app-id="zen" app-id="chrome" app-id="firefox"
+  open-on-workspace "browser"
+}
