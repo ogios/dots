@@ -4,6 +4,7 @@
   "widgets": [
     // =========== backlight ===========
     {
+      "ignore-exclusive": true,
       "edge": "left",
       "position": "top",
       "monitor": ["eDP-1", "eDP-2"],
@@ -26,6 +27,7 @@
       }
     },
     {
+      "ignore-exclusive": true,
       "edge": "right",
       "position": "top",
       "monitor": "HDMI-A-1",
@@ -49,6 +51,7 @@
     },
     // =========== buttons ===========
     {
+      "ignore-exclusive": true,
       "pin-with-key": false,
       "edge": "top",
       "position": "left",
@@ -66,6 +69,7 @@
       }
     },
     {
+      "ignore-exclusive": true,
       "pin-with-key": false,
       "edge": "top",
       "position": "right",
@@ -83,6 +87,7 @@
       }
     },
     {
+      "ignore-exclusive": true,
       "pin-with-key": false,
       "edge": "bottom",
       "monitor": "*",
@@ -100,6 +105,7 @@
     },
     // =========== workspace ===========
     {
+      "ignore-exclusive": true,
       "edge": "left",
       "position": "bottom",
       "layer": "overlay",
@@ -116,6 +122,7 @@
       "preset": "hyprland"
     },
     {
+      "ignore-exclusive": true,
       "edge": "right",
       "position": "bottom",
       "layer": "overlay",
@@ -230,6 +237,7 @@
     // },
     // =========== time ===========
     {
+      "ignore-exclusive": true,
       "namespace": "time",
       "edge": "top",
       "position": "right",
@@ -262,6 +270,7 @@
     },
     // =========== battery indicator ===========
     {
+      "ignore-exclusive": true,
       "edge": "right",
       "position": "bottom",
       "margins": {
@@ -287,6 +296,7 @@
       }
     },
     {
+      "ignore-exclusive": true,
       "edge": "right",
       "position": "top",
       "margins": {
@@ -313,6 +323,7 @@
     },
     // =========== audio ===========
     {
+      "ignore-exclusive": true,
       "edge": "top",
       "monitor": "*",
       "layer": "overlay",
@@ -335,6 +346,7 @@
       }
     },
     {
+      "ignore-exclusive": true,
       "edge": "top",
       "monitor": "*",
       "position": "left",
@@ -361,6 +373,7 @@
     },
     // =========== tray ===========
     {
+      "ignore-exclusive": true,
       "namespace": "tray",
       "edge": "bottom",
       "position": "left",
@@ -392,6 +405,7 @@
       ]
     },
     {
+      "ignore-exclusive": true,
       "namespace": "tray",
       "edge": "bottom",
       "position": "right",
