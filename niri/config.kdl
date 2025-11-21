@@ -13,8 +13,6 @@ layer-rule {
   place-within-backdrop true
 }
 
-spawn-at-startup "qs" "-c" "noctalia-shell"
-
 debug {
 
     // Allows notification actions and window activation from Noctalia.
@@ -155,8 +153,10 @@ output "eDP-2" {
 
 output "HDMI-A-1" {
   // off
-  mode "2560x1440@143.912"
+  // mode "2560x1440@143.912"
+  mode "3840x2160@144.000"
   position x=1706 y=0
+  scale 1.5
 }
 
 output "winit" {
@@ -1019,7 +1019,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return { spawn "kitty"; }
-    Mod+E { spawn "thunar"; }
+    // Mod+E { spawn "thunar"; }
+    Mod+E { spawn "nautilus"; }
     Mod+B { spawn "firefox"; }
     Mod+Alt+L { spawn "hyprlock"; }
     Mod+Ctrl+B { spawn "zen-browser"; }

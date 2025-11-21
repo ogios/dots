@@ -10,7 +10,7 @@ edit = [{ run = 'nvim "$@"', block = true }]
 edit_gui = [{ run = 'neovide "$@"', block = false, orphan = true }]
 edit_editor = [{ run = '$EDITOR "$@"', block = false, orphan = true }]
 
-gif = [{ run = 'imv "$@"', block = false }]
+gif = [{ run = 'imv-rs "$@"', block = false }]
 image = [
   { run = 'imv "$@"', desc = "Open" },
   { run = 'pinta "$@"', block = false, desc = "Edit" },
