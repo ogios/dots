@@ -62,6 +62,7 @@ proxy-providers:
     <<: *pa_pp
 
 rules:
+  - DOMAIN,software.download.prss.microsoft.com,Entry
   - GEOSITE,CN,DIRECT
   - GEOIP,CN,DIRECT
   - GEOIP,lan,DIRECT,no-resolve
