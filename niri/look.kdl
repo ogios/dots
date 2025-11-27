@@ -21,9 +21,10 @@ layout {
         width 3
         // width 8
         // catppuccin-mocha Sapphire
-        active-color "#4E884F"
+        // active-color "#4E884F"
+        // active-color "orange"
         // catppuccin-mocha Surface2
-        inactive-color "#585b70"
+        // inactive-color "#585b70"
         // inactive-color "green"
 
         // active-gradient from="#80c8ff" to="#bbddff" angle=45
@@ -82,9 +83,9 @@ layout {
     }
 
     preset-column-widths {
-        proportion 0.3333333333333333
+        // proportion 0.3333333333333333
         proportion 0.5
-        proportion 0.66667
+        // proportion 0.66667
         // proportion 0.25
         // fixed 1000
     }
@@ -98,7 +99,7 @@ layout {
     }
 
     // default-column-width { proportion 0.3333333333333333; }
-    default-column-width { proportion 0.75; }
+    default-column-width { proportion 0.5; }
 
     // gaps 0
     // gaps 8

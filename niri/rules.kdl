@@ -50,6 +50,9 @@ window-rule {
   match is-focused=false
 
   opacity 0.98
+  shadow {
+    off
+  }
 }
 
 window-rule {
