@@ -22,6 +22,8 @@ spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    Mod+O { spawn-sh "/home/ogios/work/dark-text/run.sh --death -t wtm吃吃吃吃吃"; }
+
     Mod+Return { spawn "kitty"; }
     // Mod+E { spawn "thunar"; }
     Mod+E { spawn "nautilus"; }
