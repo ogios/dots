@@ -65,8 +65,8 @@
       "type": "btn",
       "color": "#333",
       "event-map": {
-        "272": "niri msg action focus-column-left",
-        "273": "niri msg action focus-workspace-up"
+        "mouse-left": "niri msg action focus-column-left",
+        "mouse-right": "niri msg action focus-workspace-up"
       }
     },
     {
@@ -84,8 +84,8 @@
       "type": "btn",
       "color": "#333",
       "event-map": {
-        "272": "niri msg action focus-column-right",
-        "273": "niri msg action focus-workspace-down"
+        "mouse-left": "niri msg action focus-column-right",
+        "mouse-right": "niri msg action focus-workspace-down"
       }
     },
     {
@@ -98,11 +98,11 @@
       "length": "40%",
       "type": "btn",
       "event-map": {
-        "273": "niri msg action maximize-column",
-        "272": "sh -c pkill nwg-drawer || nwg-drawer -ovl",
-        "274": "niri msg action close-window",
-        "276": "niri msg action toggle-column-tabbed-display",
-        "275": "niri msg action toggle-overview"
+        "mouse-left": "sh -c pkill nwg-drawer || nwg-drawer -ovl",
+        "mouse-right": "niri msg action maximize-column",
+        "mouse-middle": "niri msg action close-window",
+        "mouse-side": "niri msg action toggle-overview",
+        "mouse-extra": "niri msg action toggle-column-tabbed-display"
       }
     },
     // =========== workspace ===========
