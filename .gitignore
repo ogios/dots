@@ -24,11 +24,8 @@ btop/btop.log
 !lazygit/**
 !mpv
 !mpv/**
-!niri/**
 !gtk-3.0
 !gtk-3.0/**
-!swaync
-!swaync/**
 !yazi
 !yazi/**
 !ly
