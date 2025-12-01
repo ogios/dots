@@ -1,0 +1,10 @@
+{
+  "grimblast": {
+    "enabled": false
+  },
+  "niriWindows": {
+    "enabled": true,
+    "noTrigger": false,
+    "trigger": "!"
+  }
+}
