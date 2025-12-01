@@ -49,16 +49,12 @@ btop/btop.log
 !nwg-drawer/**
 !fastfetch
 !fastfetch/**
-!ags
-!ags/**
 !tray-tui
 !tray-tui/**
 !clashtui
 !clashtui/**
-!delta-shell
-!delta-shell/**
-!noctalia
-!noctalia/**
+!DankMaterialShell
+!DankMaterialShell/**
 
 !starship.toml
 !code-flags.conf
