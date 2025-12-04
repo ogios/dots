@@ -4,6 +4,7 @@ include "env.kdl"
 include "input.kdl"
 include "look.kdl"
 include "miscellaneous.kdl"
-include "noctalia.kdl"
 include "output.kdl"
 include "rules.kdl"
+
+// include "noctalia.kdl"

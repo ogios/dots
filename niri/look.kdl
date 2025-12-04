@@ -125,7 +125,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "miku-cursor-linux"
+    // xcursor-theme "miku-cursor-linux"
     xcursor-size 64
     // xcursor-theme "breeze_cursors"
     // xcursor-theme "arstieonart"
