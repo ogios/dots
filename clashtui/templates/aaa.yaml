@@ -64,6 +64,7 @@ proxy-providers:
 rules:
   - DOMAIN,software.download.prss.microsoft.com,Entry
   - DOMAIN,dl.google.com,Entry
+  - DOMAIN,vscode.download.prss.microsoft.com,Entry
   - GEOSITE,CN,DIRECT
   - GEOIP,CN,DIRECT
   - GEOIP,lan,DIRECT,no-resolve
