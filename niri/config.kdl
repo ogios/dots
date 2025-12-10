@@ -7,4 +7,6 @@ include "miscellaneous.kdl"
 include "output.kdl"
 include "rules.kdl"
 
+include "animations.kdl"
+
 // include "noctalia.kdl"
