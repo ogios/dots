@@ -98,7 +98,7 @@
       "length": "40%",
       "type": "btn",
       "event-map": {
-        "mouse-left": "sh -c pkill nwg-drawer || nwg-drawer -ovl",
+        "mouse-left": "sh -c pkill nwg-drawer || nwg-drawer -ovl --closebtn left",
         "mouse-right": "niri msg action maximize-column",
         "mouse-middle": "niri msg action close-window",
         "mouse-side": "niri msg action toggle-overview",
