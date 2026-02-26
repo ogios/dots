@@ -21,7 +21,7 @@
       "bg-text-color": "#fffa",
       "radius": 10,
       "obtuse-angle": 90,
-      "type": "slider",
+      "type": "slide",
       "preset": {
         "type": "backlight"
       }
@@ -44,7 +44,7 @@
       "bg-text-color": "#fffa",
       "radius": 10,
       "obtuse-angle": 90,
-      "type": "slider",
+      "type": "slide",
       "preset": {
         "type": "backlight"
       }
@@ -279,7 +279,7 @@
       "monitor": ["eDP-1", "eDP-2"],
       "layer": "overlay",
       "pin-on-startup": true,
-      "type": "slider",
+      "type": "slide",
       "thickness": 10,
       "border-width": 1,
       "length": "12.5%",
@@ -305,7 +305,7 @@
       "monitor": "HDMI-A-1",
       "layer": "overlay",
       "pin-on-startup": true,
-      "type": "slider",
+      "type": "slide",
       "thickness": 10,
       "border-width": 1,
       "length": "12.5%",
@@ -329,7 +329,7 @@
       "layer": "overlay",
       "position": "left",
       "preview-size": 9,
-      "type": "slider",
+      "type": "slide",
       "thickness": 40,
       "border-width": 3,
       "length": "12.5%",
@@ -355,7 +355,7 @@
         "left": "12.5%"
       },
       "preview-size": 9,
-      "type": "slider",
+      "type": "slide",
       "thickness": 40,
       "border-width": 3,
       "length": "12.5%",
