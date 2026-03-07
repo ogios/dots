@@ -17,13 +17,13 @@
     //   "bg-text-color": "#fffa",
     //   "radius": 10,
     //   "obtuse-angle": 90,
-    //   "type": "slide",
+    //   "type": "slider",
     //   "preset": {
     //     "type": "backlight"
     //   }
     // },
 
-slide {
+slider {
   pinnable
   pin-with-key
   ignore-exclusive
@@ -64,12 +64,12 @@ slide {
     //   "bg-text-color": "#fffa",
     //   "radius": 10,
     //   "obtuse-angle": 90,
-    //   "type": "slide",
+    //   "type": "slider",
     //   "preset": {
     //     "type": "backlight"
     //   }
     // },
-slide {
+slider {
   pinnable
   pin-with-key
   ignore-exclusive
@@ -513,7 +513,7 @@ wrap-box {
     //   "monitor": ["eDP-1", "eDP-2"],
     //   "layer": "overlay",
     //   "pin-on-startup": true,
-    //   "type": "slide",
+    //   "type": "slider",
     //   "thickness": 10,
     //   "border-width": 1,
     //   "length": "12.5%",
@@ -529,7 +529,7 @@ wrap-box {
     //     "update-command": "/home/ogios/.config/way-edges/battery.sh"
     //   }
     // },
-slide {
+slider {
   pinnable
   pin-with-key
   ignore-exclusive
@@ -565,7 +565,7 @@ slide {
     //   "monitor": "HDMI-A-1",
     //   "layer": "overlay",
     //   "pin-on-startup": true,
-    //   "type": "slide",
+    //   "type": "slider",
     //   "thickness": 10,
     //   "border-width": 1,
     //   "length": "12.5%",
@@ -581,7 +581,7 @@ slide {
     //     "update-command": "/home/ogios/.config/way-edges/battery.sh"
     //   }
     // },
-slide {
+slider {
   pinnable
   pin-with-key
   ignore-exclusive
@@ -615,7 +615,7 @@ slide {
     //   "layer": "overlay",
     //   "position": "left",
     //   "preview-size": 9,
-    //   "type": "slide",
+    //   "type": "slider",
     //   "thickness": 40,
     //   "border-width": 3,
     //   "length": "12.5%",
@@ -631,7 +631,7 @@ slide {
     //     "type": "speaker"
     //   }
     // },
-slide {
+slider {
   pinnable
   pin-with-key
   ignore-exclusive
@@ -663,7 +663,7 @@ slide {
     //     "left": "12.5%"
     //   },
     //   "preview-size": 9,
-    //   "type": "slide",
+    //   "type": "slider",
     //   "thickness": 40,
     //   "border-width": 3,
     //   "length": "12.5%",
@@ -679,7 +679,7 @@ slide {
     //     "type": "microphone"
     //   }
     // },
-slide {
+slider {
   pinnable
   pin-with-key
   ignore-exclusive
