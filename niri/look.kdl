@@ -2,6 +2,32 @@ overview {
     backdrop-color "#0E0825"
 }
 
+blur {
+    // off
+    passes 3
+    offset 3
+    noise 0.02
+    saturation 1.5
+}
+
+// Enable blur behind the foot terminal.
+window-rule {
+
+    background-effect {
+        blur true
+
+      xray false
+    }
+}
+
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+
+    background-effect {
+        blur false
+    }
+}
+
 layout {
 
   always-center-single-column

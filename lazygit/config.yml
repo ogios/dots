@@ -207,7 +207,7 @@ customCommands:
   #     - type: "input"
   #       title: "which branch do you want to push to?"
   #   command: "git push origin {{index .PromptResponses 0}}"
-  - key: "<c-P>"
+  - key: "<c+p>"
     description: "Push to a specific remote repository"
     context: "global"
     loadingText: "Pushing ..."

@@ -31,7 +31,7 @@ prepend_rules = [
     "edit_gui",
     "reveal",
   ] },
-  { name = "*/", use = [
+  { url = "*/", use = [
     "edit",
     "edit_gui",
     "open",
@@ -49,6 +49,6 @@ prepend_rules = [
     "reveal",
   ] },
 
-  { name = "*.gif", use = "gif" },
+  { url = "*.gif", use = "gif" },
   { mime = "image/*", use = "image" },
 ]

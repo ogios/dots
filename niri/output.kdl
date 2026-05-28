@@ -1,6 +1,6 @@
 output "eDP-1" {
   // off
-  mode "2560x1600@240.001"
+  // mode "2560x1600@240.001"
   // mode "2560x1600@60.001"
   variable-refresh-rate
   // mode "2560x1600@60.001"
@@ -13,9 +13,12 @@ output "HDMI-A-1" {
   // off
   // mode "2560x1440@143.912"
   mode "3840x2160@144.000"
+  // mode "3840x2160@59.997"
+  // mode "3840x2160@120.000"
+  // mode "2560x1440@120.022"
   position x=1600 y=-500
   scale 1.333334
-  variable-refresh-rate
+  // variable-refresh-rate
 }
 
 output "winit" {

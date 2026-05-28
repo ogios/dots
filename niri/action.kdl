@@ -17,6 +17,8 @@ spawn-at-startup "way-edges"
 spawn-at-startup "kitty"
 spawn-at-startup "zen-browser"
 spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
+spawn-at-startup "wshowlyrics"
+
 
 
 binds {
