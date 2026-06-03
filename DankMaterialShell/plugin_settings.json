@@ -6,5 +6,47 @@
     "enabled": true,
     "noTrigger": false,
     "trigger": "!"
+  },
+  "dankActions": {
+    "enabled": true,
+    "variants": [
+      {
+        "icon": "terminal",
+        "displayText": "",
+        "displayCommand": "",
+        "clickCommand": "niri msg action screenshot",
+        "middleClickCommand": "",
+        "rightClickCommand": "",
+        "updateInterval": 0,
+        "showIcon": true,
+        "showText": true,
+        "visibilityCommand": "",
+        "visibilityInterval": 0,
+        "id": "variant_1768184355664",
+        "name": "shot"
+      }
+    ]
+  },
+  "linuxWallpaperEngine": {
+    "enabled": false,
+    "monitorPlaylists": {},
+    "monitorScenes": {
+      "HDMI-A-1": "1915402495"
+    },
+    "playlistShuffle": false,
+    "pauseOnPowerSaver": false,
+    "pauseOnBattery": false,
+    "generateStaticWallpaper": false,
+    "sceneSettings": {
+      "1915402495": {
+        "scaling": "stretch"
+      },
+      "2955276933": {
+        "scaling": "default"
+      },
+      "3682856905": {
+        "fps": 27
+      }
+    }
   }
 }
