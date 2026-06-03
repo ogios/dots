@@ -30,8 +30,6 @@ PreeditCursorPositionAtBeginning=True
 PinyinInPreedit=True
 # Enable Prediction
 Prediction=False
-# Keep the current typed text for next input prediction
-KeepCurrentContext=True
 # Number of Predictions
 PredictionSize=49
 # Backspace behavior on prediction
