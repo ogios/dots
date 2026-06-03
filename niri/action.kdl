@@ -10,6 +10,7 @@ spawn-at-startup "nwg-drawer" "-r" "-ovl" "--closebtn" "left"
 // spawn-at-startup "xwaylandvideobridge"
 
 spawn-at-startup "way-edges"
+spawn-at-startup "noctalia"
 
 // spawn-at-startup dbus-update-activation-environment --all &
 // spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk

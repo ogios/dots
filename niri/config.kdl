@@ -10,3 +10,5 @@ include "rules.kdl"
 include "animations.kdl"
 
 // include "noctalia.kdl"
+
+include "noctalia.kdl"
