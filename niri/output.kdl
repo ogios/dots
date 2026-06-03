@@ -18,7 +18,7 @@ output "HDMI-A-1" {
   // mode "2560x1440@120.022"
   position x=1600 y=-500
   scale 1.333334
-  // variable-refresh-rate
+  variable-refresh-rate
 }
 
 output "winit" {

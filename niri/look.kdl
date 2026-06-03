@@ -24,7 +24,8 @@ window-rule {
 layer-rule {
 
     background-effect {
-        blur false
+        blur true
+    xray false
     }
 }
 

@@ -13,12 +13,15 @@ spawn-at-startup "way-edges"
 spawn-at-startup "noctalia"
 
 // spawn-at-startup dbus-update-activation-environment --all &
-// spawn-at-startup dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # Some fix idk
+
+// Some fix idk
+// spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" 
 
 spawn-at-startup "kitty"
 spawn-at-startup "zen-browser"
 spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
-spawn-at-startup "wshowlyrics"
+
+// spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
 
 
 
@@ -27,7 +30,7 @@ binds {
 
     Mod+O { spawn-sh "/home/ogios/work/dark-text/run.sh --death -t wtm吃吃吃吃吃"; }
 
-    Mod+Return { spawn "kitty"; }
+    Mod+Return { spawn "ghostty"; }
     // Mod+E { spawn "thunar"; }
     Mod+E { spawn "nautilus"; }
     Mod+B { spawn "firefox"; }
