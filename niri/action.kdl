@@ -30,7 +30,7 @@ binds {
 
     Mod+O { spawn-sh "/home/ogios/work/dark-text/run.sh --death -t wtm吃吃吃吃吃"; }
 
-    Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "kitty"; }
     // Mod+E { spawn "thunar"; }
     Mod+E { spawn "nautilus"; }
     Mod+B { spawn "firefox"; }
