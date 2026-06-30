@@ -180,6 +180,7 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
     Mod+D { maximize-column; }
     Mod+F { fullscreen-window; }
+    Mod+G { maximize-window-to-edges; }
     Mod+C { center-column; }
 
     Mod+Minus { set-column-width "-10%"; }

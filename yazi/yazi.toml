@@ -16,6 +16,9 @@ image = [
   { run = 'pinta "$@"', block = false, desc = "Edit" },
   { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
 ]
+mpv_open = [
+  { run = 'mpv --player-operation-mode=pseudo-gui "$@"', block = false, orphan = true },
+]
 
 
 [open]
@@ -51,4 +54,6 @@ prepend_rules = [
 
   { url = "*.gif", use = "gif" },
   { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "mpv_open" },
+  { mime = "audio/*", use = "mpv_open" },
 ]
