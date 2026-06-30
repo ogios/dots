@@ -1,5 +1,10 @@
 core_type: mihomo
 mihomo:
-  profiles: {}
+  cur_profile: aaa.yaml.tpl
+  profiles:
+    aaa.yaml.tpl:
+      dtype: !Template
+        template: aaa.yaml
+      no_pp: false
 singbox:
   profiles: {}
