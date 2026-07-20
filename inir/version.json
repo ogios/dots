@@ -1,0 +1,19 @@
+{
+  "version": "0.0.0",
+  "commit": "unknown",
+  "installed_at": "2026-07-20T15:38:45+08:00",
+  "installedAt": "2026-07-20T15:38:45+08:00",
+  "source": "setup",
+  "repo_path": "/home/ogios/.config/quickshell/inir",
+  "repoPath": "/home/ogios/.config/quickshell/inir",
+  "install_mode": "repo-link",
+  "installMode": "repo-link",
+  "update_strategy": "repo-setup",
+  "updateStrategy": "repo-setup",
+  "package_manager": "",
+  "packageManager": "",
+  "package_name": "",
+  "packageName": "",
+  "package_update_hint": "",
+  "packageUpdateHint": ""
+}

@@ -56,6 +56,16 @@ prepend_keymap = [
   ], run = "cd ~/work/", desc = "Go to work directory" },
   { on = [
     "g",
+    "p",
+    "m",
+  ], run = "cd /home/ogios/work/huimao/paint-robot/moveit_control", desc = "Go to paint robot moveit control" },
+  { on = [
+    "g",
+    "p",
+    "u",
+  ], run = "cd /home/ogios/work/huimao/paint-robot/paint-robot-ui", desc = "Go to paint robot UI" },
+  { on = [
+    "g",
     "c",
     "n",
   ], run = "cd ~/.config/nvim", desc = "Go to the nvim config directory" },

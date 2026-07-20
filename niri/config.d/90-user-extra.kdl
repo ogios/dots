@@ -1,41 +1,83 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// 90 — Your personal overrides
+// ─────────────────────────────────────────────────────────────────────────────
+//
+// This file is YOURS. iNiR updates will never overwrite it.
+// Put any custom configuration here: extra binds, per-app window rules,
+// output configuration, named workspaces, etc.
+//
+// Since Niri evaluates config top-to-bottom, settings here take effect
+// after all other config.d files. For window-rule properties, all matching
+// rules accumulate. For scalar values (like gaps), the last one wins.
+//
+// Examples:
+//
+//   // Named workspaces (sticky, always present)
+//   workspace "browser"
+//   workspace "code"
+//   workspace "music"
+//
+//   // Per-app workspace assignment
+//   window-rule {
+//       match app-id="firefox"
+//       open-on-workspace "browser"
+//   }
+//
+//   // Extra keybind
+//   binds {
+//       Mod+P { spawn "rofi" "-show" "drun"; }
+//   }
+//
+//   // Output config for your specific monitor
+//   output "DP-1" {
+//       mode "3440x1440@100.000"
+//       scale 1
+//       position x=0 y=0
+//   }
+// ─────────────────────────────────────────────────────────────────────────────
 
-// spawn-at-startup "swaync"
-spawn-at-startup "fcitx5"
-spawn-at-startup "nm-applet"
-spawn-at-startup "blueman-applet"
-// spawn-at-startup "sh" "-c" "GSK_RENDERER=cairo walker --gapplication-service"
-spawn-at-startup "clipse" "--listen"
-spawn-at-startup "nwg-drawer" "-r" "-ovl" "--closebtn" "left"
-// spawn-at-startup "bash" "-c" "~/.cargo/bin/woqu -f ~/Downloads/fallback1.wav -v 4"
-// spawn-at-startup "xwaylandvideobridge"
+// blur {
+//     // off
+//     passes 3
+//     offset 3
+//     noise 0.02
+//     saturation 1.5
+// }
+
+// Enable blur behind the foot terminal.
+window-rule {
+
+    background-effect {
+        blur true
+
+      xray false
+    }
+}
+
+// // Enable blur behind the fuzzel launcher.
+// layer-rule {
+//
+//     background-effect {
+//         blur true
+//     xray false
+//     }
+// }
 
 spawn-at-startup "way-edges"
-spawn-at-startup "noctalia"
+spawn-at-startup "clipse" "--listen"
 
-// spawn-at-startup dbus-update-activation-environment --all &
-
-// Some fix idk
-// spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" 
-
-spawn-at-startup "kitty"
-spawn-at-startup "zen-browser"
-spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
-
-// spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
-
+cursor {
+    // xcursor-theme "miku-cursor-linux"
+    xcursor-size 64
+    // xcursor-theme "breeze_cursors"
+    // xcursor-theme "arstieonart"
+    // xcursor-size 48
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
 
 
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
-
-    Mod+O { spawn-sh "/home/ogios/work/dark-text/run.sh --death -t wtm吃吃吃吃吃"; }
-
-    Mod+Return { spawn "kitty"; }
-    // Mod+E { spawn "thunar"; }
-    Mod+E { spawn "nautilus"; }
-    Mod+B { spawn "firefox"; }
-    Mod+Alt+L { spawn "hyprlock"; }
-    Mod+Ctrl+B { spawn "zen-browser"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
@@ -44,7 +86,6 @@ binds {
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn-sh "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
     // Mod+S { spawn "/home/ogios/.config/quickshell/ss.sh"; }
-    Mod+Shift+C { spawn "hyprpicker" "-a"; }
 
     Mod+Shift+D { spawn "way-edges" "togglepin" "stats"; }
     Mod+Shift+A { spawn "way-edges" "togglepin" "time"; }
@@ -56,18 +97,6 @@ binds {
     XF86AudioMute        allow-when-locked=true repeat=false { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true repeat=false { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    Mod+Q { close-window; }
-
-    Mod+Tab { toggle-overview; }
-
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
-    Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-down; }
-    Mod+Up    { focus-window-up; }
-    Mod+Right { focus-column-right; }
 
     Mod+Alt+Down    { move-workspace-down; }
     Mod+Alt+Up      { move-workspace-up; }
@@ -224,3 +253,5 @@ binds {
     // Mod+Ctrl+MouseLeft { close-window; }
     // Mod+MouseMiddle    { maximize-column; }
 }
+
+include "rules.kdl"

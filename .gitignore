@@ -52,6 +52,8 @@ btop/btop.log
 !clashtui/**
 !DankMaterialShell
 !DankMaterialShell/**
+!inir
+!inir/**
 
 !starship.toml
 !code-flags.conf

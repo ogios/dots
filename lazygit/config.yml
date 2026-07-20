@@ -228,3 +228,28 @@ customCommands:
 services: {}
 notARepository: skip
 promptToReturnFromSubprocess: true
+
+theme:
+  activeBorderColor:
+    - "#BCC6E5"
+    - bold
+  inactiveBorderColor:
+    - "#8F9097"
+  optionsTextColor:
+    - "#BCC6E5"
+  selectedLineBgColor:
+    - "#1F1F22"
+  selectedRangeBgColor:
+    - "#1F1F22"
+  cherryPickedCommitFgColor:
+    - "#BCC6E5"
+  cherryPickedCommitBgColor:
+    - "#1F1F22"
+  markedBaseCommitFgColor:
+    - "#F9F0B2"
+  markedBaseCommitBgColor:
+    - "#1F1F22"
+  unstagedChangesColor:
+    - "#E1A9B2"
+  defaultFgColor:
+    - "#E4E2E6"

@@ -1,1 +1,124 @@
-@import url("noctalia.css");
+/*
+ * GTK Colors - Generated with iNiR theming
+ * This file is overwritten when you change wallpaper
+ */
+
+@define-color accent_color #B8C9D6;
+@define-color accent_fg_color #23323D;
+@define-color accent_bg_color #B8C9D6;
+
+@define-color window_bg_color #131414;
+@define-color window_fg_color #E4E2E3;
+
+@define-color headerbar_bg_color #131414;
+@define-color headerbar_fg_color #E4E2E3;
+
+@define-color popover_bg_color #1F2020;
+@define-color popover_fg_color #C5C6CA;
+
+@define-color view_bg_color #131414;
+@define-color view_fg_color #E4E2E3;
+
+@define-color card_bg_color #1B1C1C;
+@define-color card_fg_color #C5C6CA;
+
+@define-color sidebar_bg_color #131414;
+@define-color sidebar_fg_color #E4E2E3;
+@define-color sidebar_border_color #131414;
+@define-color sidebar_backdrop_color #131414;
+
+headerbar {
+    background-color: #131414;
+    box-shadow: none;
+    border-bottom: none;
+}
+
+headerbar separator {
+    background-color: transparent;
+}
+
+.nautilus-window .sidebar,
+.nautilus-window sidebar,
+placessidebar,
+placessidebar list {
+    background-color: #131414;
+    color: #E4E2E3;
+    border-right: none;
+}
+
+placessidebar row {
+    background-color: transparent;
+    color: #E4E2E3;
+}
+
+placessidebar row:hover {
+    background-color: #313436;
+}
+
+placessidebar row:selected,
+placessidebar row:selected:hover {
+    background-color: #44474A;
+    color: #E4E2E3;
+}
+
+placessidebar image {
+    color: inherit;
+}
+
+.view {
+    background-color: #131414;
+}
+
+separator.sidebar {
+    background-color: transparent;
+    min-width: 0;
+}
+
+/* Context menus and popovers */
+popover,
+popover.background {
+    background-color: #1F2020;
+    color: #C5C6CA;
+}
+
+menu,
+.context-menu,
+.popup {
+    background-color: #1F2020;
+    color: #C5C6CA;
+}
+
+menuitem {
+    color: #C5C6CA;
+}
+
+menuitem:hover,
+menuitem:selected {
+    background-color: #313436;
+}
+
+menuitem:active,
+menuitem:selected:active {
+    background-color: #44474A;
+    color: #E4E2E3;
+}
+
+button:hover {
+    background-color: #313436;
+}
+
+button:active {
+    background-color: #44474A;
+    color: #E4E2E3;
+}
+
+entry:focus,
+textview:focus,
+spinbutton:focus {
+    border-color: alpha(#B8C9D6, 0.60);
+    box-shadow: 0 0 0 1px alpha(#B8C9D6, 0.25) inset;
+}
+
+menu separator {
+    background-color: alpha(#C5C6CA, 0.12);
+}

@@ -38,9 +38,15 @@ window-rule {
   // zen browser video
   match title="Picture-in-Picture"
 
-  match app-id="mpv"
+  // match app-id="mpv"
 
   open-floating true
+}
+
+window-rule {
+  match app-id="mpv"
+
+  open-maximized-to-edges true
 }
 
 window-rule {
@@ -441,6 +447,15 @@ layer-rule {
   match namespace="^noctalia-backdrop$"
   place-within-backdrop true
 }
+layer-rule {
+  match namespace="noctalia.*"
+    background-effect {
+        xray false
+        blur false
+        // noise 0.05
+        // saturation 3
+    }
+}
 
 
 layer-rule {
@@ -453,6 +468,7 @@ layer-rule {
   //   color "#00000055"
   // }
 }
+
 
 workspace "chat" {
   // open-on-output "eDP-1"
