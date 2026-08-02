@@ -255,3 +255,4 @@ binds {
 }
 
 include "rules.kdl"
+include "env.kdl"

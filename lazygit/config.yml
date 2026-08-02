@@ -231,25 +231,25 @@ promptToReturnFromSubprocess: true
 
 theme:
   activeBorderColor:
-    - "#BCC6E5"
+    - "#F9B6AA"
     - bold
   inactiveBorderColor:
-    - "#8F9097"
+    - "#84716D"
   optionsTextColor:
-    - "#BCC6E5"
+    - "#F9B6AA"
   selectedLineBgColor:
-    - "#1F1F22"
+    - "#221715"
   selectedRangeBgColor:
-    - "#1F1F22"
+    - "#221715"
   cherryPickedCommitFgColor:
-    - "#BCC6E5"
+    - "#F9B6AA"
   cherryPickedCommitBgColor:
-    - "#1F1F22"
+    - "#221715"
   markedBaseCommitFgColor:
-    - "#F9F0B2"
+    - "#FFEBD1"
   markedBaseCommitBgColor:
-    - "#1F1F22"
+    - "#221715"
   unstagedChangesColor:
-    - "#E1A9B2"
+    - "#FF9E94"
   defaultFgColor:
-    - "#E4E2E6"
+    - "#F9E0DB"

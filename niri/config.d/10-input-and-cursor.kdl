@@ -51,7 +51,7 @@ input {
         accel-profile "flat"
 
         // Adjust pointer speed: -1.0 (slowest) … 0.0 (default) … 1.0 (fastest).
-        // accel-speed 0.0
+        accel-speed 0.9
     }
 
     // Trackpoint (ThinkPad nub, etc.).

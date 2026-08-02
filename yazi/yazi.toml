@@ -12,7 +12,7 @@ edit_editor = [{ run = '$EDITOR %s', block = false, orphan = true }]
 
 gif = [{ run = 'imv-rs %s', block = false }]
 image = [
-  { run = 'imv %s', desc = "Open" },
+  { run = 'imv-rs %s', desc = "Open" },
   { run = 'pinta %s', block = false, desc = "Edit" },
   { run = '''exiftool %s1; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
 ]

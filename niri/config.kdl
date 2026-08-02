@@ -52,8 +52,10 @@ include "config.d/90-user-extra.kdl"
 
 output "HDMI-A-1" {
     mode "3840x2160@144.000"
+    scale 1.5
 }
 
 output "eDP-1" {
     mode "2560x1600@240.001"
+    scale 1.25
 }
