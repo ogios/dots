@@ -23,9 +23,9 @@ gui:
   commandLogSize: 8
   splitDiff: auto
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --dark --paging=never
+      command: delta --dark --paging=never
       useConfig: false
   commit:
     signOff: false
@@ -228,7 +228,6 @@ customCommands:
 services: {}
 notARepository: skip
 promptToReturnFromSubprocess: true
-
 theme:
   activeBorderColor:
     - "#F9B6AA"
