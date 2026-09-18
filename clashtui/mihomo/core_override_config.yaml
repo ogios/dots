@@ -1,10 +1,10 @@
 # Arbitrary configuration, for reference only.
 mixed-port: 7890
-ipv6: false
-allow-lan: false
+ipv6: true
+allow-lan: true
 log-level: silent
 unified-delay: true
-tcp-concurrent: true    # When domain has multiple IPs, attempt TCP handshake concurrently. One success is enough.
+tcp-concurrent: true # When domain has multiple IPs, attempt TCP handshake concurrently. One success is enough.
 
 secret: ""
 external-controller: 127.0.0.1:9090
@@ -51,11 +51,17 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
+  route-exclude-address:
+    - 192.168.0.0/16
+    - 10.0.0.0/8
+    - 172.16.0.0/12
 
 dns:
   enable: true
+  listen: 0.0.0.0:53
   ipv6: true
-  enhanced-mode: fake-ip
+  # enhanced-mode: fake-ip
+  enhanced-mode: redir-host
   fake-ip-filter:
     - "*"
     - "+.lan"
@@ -69,5 +75,8 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   nameserver-policy:
-    "auth-6441.wifi.com": "system://"       # use system DNS resolver
+    "auth-6441.wifi.com": "system://" # use system DNS resolver
 
+hosts:
+  irc.twitch.tv: "192.168.0.150"
+  ingest.global-contribute.live-video.net: "192.168.0.150"

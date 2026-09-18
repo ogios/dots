@@ -78,3 +78,4 @@ rules:
   - GEOIP,twitter,Entry
   - GEOSITE,pixiv,Entry
   - MATCH,Entry-LastMatch
+  - DOMAIN-SUFFIX,assrt.net,Entry
