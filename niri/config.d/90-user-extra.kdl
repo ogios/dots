@@ -78,11 +78,12 @@ cursor {
 
 
 binds {
+    Mod+Return { spawn "monstar"; }
     Mod+Ctrl+V { spawn "pavucontrol"; }
     Mod+Shift+Period { spawn "smile"; }
     Mod+V { spawn "kitty" "-T" "clipse" "clipse"; }
     Mod+T { spawn "kitty" "-T" "traytui" "tray-tui"; }
-    Mod+Ctrl+Space { spawn "nwg-drawer" "-ovl" "--closebtn" "left"; }
+    Mod+Ctrl+Space { spawn-sh "pkill -x hring || /usr/bin/hring"; }
     Mod+A { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+S { spawn-sh "wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID; wl-paste | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"; }
     // Mod+S { spawn "/home/ogios/.config/quickshell/ss.sh"; }
