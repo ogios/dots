@@ -87,7 +87,7 @@ binds {
     Mod+D { maximize-column; }
 
     // Maximize window to screen edges (no gaps, like traditional maximize).
-    // Mod+M { maximize-window-to-edges; }
+    Mod+M { toggle-windowed-fullscreen; }
 
     // Fullscreen (app goes borderless edge-to-edge).
     Mod+F { fullscreen-window; }
