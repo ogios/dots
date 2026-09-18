@@ -20,6 +20,11 @@ window-rule {
   open-maximized true
 }
 
+window-rule {
+  match app-id="^ffplay$"
+  open-floating true
+}
+
 
 window-rule {
   match title=r#"^(Open File)(.*)$"#
