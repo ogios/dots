@@ -20,6 +20,8 @@ input {
             // If this section is empty, Niri reads xkb settings from
             // org.freedesktop.locale1 (controlled via `localectl`).
             layout "us"
+
+            options "compose:ralt,ctrl:nocaps"
         }
 
         // Enable numlock at login. Remove to leave it off.
