@@ -195,7 +195,7 @@ btn {
   thickness 20
   length "40%"
   event-map {
-    mouse-left "sh -c pkill nwg-drawer || nwg-drawer -ovl --closebtn left"
+    mouse-left "sh -c 'pkill -x hring || /usr/bin/hring'"
     mouse-right "niri msg action maximize-column"
     mouse-middle "niri msg action close-window"
     mouse-side "niri msg action toggle-overview"
