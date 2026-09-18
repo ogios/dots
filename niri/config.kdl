@@ -59,3 +59,18 @@ output "eDP-1" {
     mode "2560x1600@240.001"
     scale 1.25
 }
+
+// ============================================================================
+// Layer rules added by iNiR (required for backdrop in overview)
+// ============================================================================
+layer-rule {
+    match namespace="quickshell:iiBackdrop"
+    place-within-backdrop true
+    opacity 1.0
+}
+
+layer-rule {
+    match namespace="quickshell:wBackdrop"
+    place-within-backdrop true
+    opacity 1.0
+}
