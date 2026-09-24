@@ -54,6 +54,8 @@ btop/btop.log
 !DankMaterialShell/**
 !inir
 !inir/**
+!monstar
+!monstar/**
 
 !starship.toml
 !code-flags.conf

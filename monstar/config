@@ -1,0 +1,48 @@
+# monstar config — mapped from kitty.conf
+# Reload: Ctrl+Shift+,  or `pkill -USR1 monstar`
+
+# Font (kitty: font_family JetBrains Mono Nerd Font, font_size 13)
+font-family = JetBrains Mono Nerd Font
+font-size = 13
+
+# Shell (kitty: shell bash)
+command = bash
+
+# Padding (kitty: window_margin_width 6)
+window-padding-x = 6
+window-padding-y = 6
+
+# Translucency (kitty: background_opacity 0.7; blur auto-requested)
+background-opacity = 0.7
+
+# Colors from kitty current-theme.conf (wallpaper-generated, static here)
+# background = #1E1412
+# foreground = #F9E0DB
+# cursor-color = #F9E0DB
+# cursor-text = #1E1412
+# selection-background = #F9E0DB
+# selection-foreground = #1E1412
+
+# palette = 0=#1E1412
+# palette = 1=#FF9E94
+# palette = 2=#9EF44C
+# palette = 3=#FFEBD1
+# palette = 4=#9EC7FF
+# palette = 5=#FF9FF7
+# palette = 6=#50F2D4
+# palette = 7=#B0A9A1
+# palette = 8=#84716D
+# palette = 9=#FFD1CC
+# palette = 10=#CFFFA8
+# palette = 11=#FFEED8
+# palette = 12=#E4EDFF
+# palette = 13=#FFDAFA
+# palette = 14=#B6FFED
+# palette = 15=#F9E0DB
+
+# Line scrolling (kitty scrollback equivalents; page/shift bindings are defaults)
+keybind = shift+up=scroll_page_lines:-1
+keybind = shift+down=scroll_page_lines:1
+keybind = ctrl+shift+k=scroll_page_lines:-5
+keybind = ctrl+shift+j=scroll_page_lines:5
+
