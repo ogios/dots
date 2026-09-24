@@ -11,6 +11,24 @@
 // between the desktop background color and the tiled windows.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// ── Blur defaults ───────────────────────────────────────────────────────────
+// Blur the background behind ALL layer-shell surfaces by default.
+// More generic rules must come first; later rules override them.
+layer-rule {
+    background-effect {
+        blur true
+    }
+}
+
+// Exception: Quickshell surfaces (namespace starts with "quickshell:") draw
+// their own backgrounds/blur, so force niri blur off for them.
+layer-rule {
+    match namespace="^quickshell:"
+    background-effect {
+        blur false
+    }
+}
+
 // iNiR "ii" family backdrop (wallpaper surface).
 layer-rule {
     match namespace="quickshell:iiBackdrop"

@@ -452,15 +452,7 @@ layer-rule {
   match namespace="^noctalia-backdrop$"
   place-within-backdrop true
 }
-layer-rule {
-  match namespace="noctalia.*"
-    background-effect {
-        xray false
-        blur false
-        // noise 0.05
-        // saturation 3
-    }
-}
+// noctalia.* layer surfaces get the default blur from 80-layer-rules.kdl.
 
 
 layer-rule {
