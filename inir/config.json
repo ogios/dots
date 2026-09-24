@@ -544,8 +544,8 @@
                 "useBlur": false,
                 "widgetOpacity": 100,
                 "widgetScale": 100,
-                "x": 907,
-                "y": 560
+                "x": 1163,
+                "y": 640
             },
             "dynamicOpacity": 0,
             "editGrid": {
@@ -785,7 +785,7 @@
             "battery": true,
             "clock": true,
             "leftSidebarButton": true,
-            "media": true,
+            "media": false,
             "resources": true,
             "rightSidebarButton": true,
             "sysTray": true,
@@ -1073,8 +1073,8 @@
         "ssid": "iNiR Hotspot"
     },
     "idle": {
-        "lockBeforeSleep": true,
-        "lockTimeout": 600,
+        "lockBeforeSleep": false,
+        "lockTimeout": 0,
         "screenOffTimeout": 0,
         "suspendTimeout": 0
     },
@@ -1190,7 +1190,7 @@
         },
         "security": {
             "requirePasswordToPower": false,
-            "unlockKeyring": true
+            "unlockKeyring": false
         },
         "showLockedText": true,
         "status": {
