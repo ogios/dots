@@ -544,8 +544,8 @@
                 "useBlur": false,
                 "widgetOpacity": 100,
                 "widgetScale": 100,
-                "x": 1163,
-                "y": 640
+                "x": 904,
+                "y": 560
             },
             "dynamicOpacity": 0,
             "editGrid": {
@@ -755,6 +755,7 @@
             "centerLeft": [
                 "resources",
                 "codexUsage",
+                "grokUsage",
                 "deepseekBalance",
                 "media"
             ],
@@ -794,6 +795,7 @@
             "weather": true,
             "workspaces": true,
             "codexUsage": true,
+            "grokUsage": true,
             "deepseekBalance": true
         },
         "modulesLayout": {
@@ -921,6 +923,14 @@
             "showSymbol": true,
             "cautionBelow": 0,
             "warningBelow": 5
+        },
+        "grokUsage": {
+            "enable": true,
+            "authFile": "",
+            "endpoint": "https://grok.com/rest/grok/credits",
+            "requestDelaySeconds": 60,
+            "cautionThreshold": 75,
+            "warningThreshold": 90
         }
     },
     "battery": {
