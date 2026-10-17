@@ -36,6 +36,23 @@
 //   }
 // ─────────────────────────────────────────────────────────────────────────────
 
+input {
+    touchpad {
+        // Required when overriding touchpad here: later blocks replace the whole touchpad section.
+        tap
+        tap-button-map "left-right-middle"
+
+        // macOS-style scroll direction — comment out here if you prefer traditional.
+        natural-scroll
+
+        // Adaptive: faster swipes scroll further; pair with scroll-factor for base speed.
+        accel-profile "adaptive"
+        accel-speed 0.35
+        // Overall scroll speed multiplier (1.0 = default).
+        scroll-factor 2.2
+    }
+}
+
 // blur {
 //     // off
 //     passes 3

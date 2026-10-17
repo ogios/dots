@@ -55,6 +55,15 @@ window-rule {
 }
 
 window-rule {
+  match title="^termfilechooser$"
+  match app-id="^termfilechooser$"
+
+  open-floating true
+  default-column-width { proportion 0.85; }
+  default-window-height { proportion 0.85; }
+}
+
+window-rule {
   match title="^clipse$"
   match app-id="it.mijorus.smile"
   match title="^traytui$"

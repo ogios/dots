@@ -1,6 +1,4 @@
 gui:
-  authorColors: {}
-  branchColors: {}
   scrollHeight: 2
   scrollPastBottom: true
   mouseEvents: true
@@ -22,6 +20,9 @@ gui:
   showBottomLine: true
   commandLogSize: 8
   splitDiff: auto
+  theme:
+    authorColors: {}
+    branchColorPatterns: {}
 git:
   diffRenderers:
     - colorArg: always
