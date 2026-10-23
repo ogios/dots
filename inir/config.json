@@ -754,6 +754,7 @@
             ],
             "centerLeft": [
                 "resources",
+                "separator",
                 "codexUsage",
                 "grokUsage",
                 "deepseekBalance",
