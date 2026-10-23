@@ -21,7 +21,8 @@ external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-p
 geo-auto-update: true
 geo-update-interval: 7
 
-#find-process-mode: strict
+# mode: rule
+find-process-mode: strict
 #global-client-fingerprint: chrome
 
 profile:

@@ -54,6 +54,8 @@ proxy-providers:
   #   <<: *pa_pp
 
 rules:
+  - PROCESS-NAME,qbittorrent,DIRECT
+  - PROCESS-NAME,qbittorrent-nox,DIRECT
   - DOMAIN,software.download.prss.microsoft.com,Entry
   - DOMAIN,dl.google.com,Entry
   - DOMAIN,vscode.download.prss.microsoft.com,Entry
